@@ -9,7 +9,7 @@ public class Pedido {
 	//Método construtor do Pedido
 	public Pedido(double precoHora, double precoFinal) {
 		this.precoHora = precoHora;
-		this.precoFinal = precoFinal;
+		this.precoFinal = precoFinal; 
 	}
 	
 	public double getPrecoHora() {

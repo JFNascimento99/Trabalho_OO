@@ -3,22 +3,28 @@ package Classes;
 public class Tempo {
 	
 	//Atributos
-	private double horaCheckIn;
-	private double horaCheckOut;
+	private double horaCheckin;
+	private double horaCheckout;
 	private double tempoTotal;
 	
+	//Método construtor do Tempo
+	public Tempo(double horaCheckin, double horaCheckout, double tempoTotal) {
+		this.horaCheckin = horaCheckin;
+		this.horaCheckin = horaCheckout;
+		this.tempoTotal = tempoTotal;
+  	}
 	
 	public double getHoraCheckIn() {
-		return horaCheckIn;
+		return horaCheckin;
 	}
 	public void setHoraCheckIn(double horaCheckIn) {
-		this.horaCheckIn = horaCheckIn;
+		this.horaCheckin = horaCheckIn;
 	}
 	public double getHoraCheckOut() {
-		return horaCheckOut;
+		return horaCheckout;
 	}
 	public void setHoraCheckOut(double horaCheckOut) {
-		this.horaCheckOut = horaCheckOut;
+		this.horaCheckout = horaCheckOut;
 	}
 	public double getTempoTotal() {
 		return tempoTotal;
