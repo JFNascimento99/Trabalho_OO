@@ -6,8 +6,10 @@ public class Bicicletario {
 	private String lugarCheckin;
 	private String lugarCheckout;
 	
-	public Bicicletario() {
-		
+	//Método construtor do Bicicletário
+	public Bicicletario(String lugarCheckin, String lugarCheckout) {
+		this.lugarCheckin = lugarCheckin;
+		this.lugarCheckout = lugarCheckout;
 	}
 	
 	public String getLugarCheckin() {

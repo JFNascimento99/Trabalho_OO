@@ -7,7 +7,6 @@ public class Bicicleta {
 	
 	//Método construtor da Bicicleta
 	public Bicicleta(String tipoBicicleta, boolean disponibilidadeBicicleta) {
-		super();
 		this.tipoBicicleta = tipoBicicleta;
 		this.disponibilidadeBicicleta = disponibilidadeBicicleta;
 	}
