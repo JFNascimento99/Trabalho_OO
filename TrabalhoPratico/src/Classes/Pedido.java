@@ -24,5 +24,15 @@ public class Pedido {
 	public void setPrecoFinal(double precoFinal) {
 		this.precoFinal = precoFinal;
 	}
+	//Metodos
+	public verPedido() {
+		//Vizualizar o pedido...lembrando que pedido herdatempoe precisausuario e bicicleta
+	}
+	public atualizarPedido() {
+		//Atualizar os pedidos a cada novo tempo final (já que o valor é preco por hora/minuto)
+	}
+	public listarPedido() {
+		//Listar todos os pedidos cadastrados
+	}
 	
 }
