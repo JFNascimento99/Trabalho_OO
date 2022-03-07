@@ -40,5 +40,17 @@ public class FormaDePagamento {
 	public void setTipoPagamento(boolean tipoPagamento) {
 		this.tipoPagamento = tipoPagamento;
 	}
-
+	//Metodos
+	public cadastrarFormaPagamento() {
+		//Cadastrar os cartoes.
+	}
+	public editarFormaPagamento() {
+		//Editar os cartoes cadastrados
+	}
+	public deletarFormaPagamento() {
+		//Resetar todos os dados fazendo virar null.
+	}
+	public atualizarFormaPgamento() {
+		//Atualizar todos os cartoes que forem editados
+	}
 }
