@@ -8,6 +8,8 @@ public class FormaDePagamento {
 	private int codigoSeguranca;
 	private boolean tipoPagamento;
 	
+	//Método construtor da Forma de Pagamento
+	
 	
 	public String getBandeiraCartao() {
 		return bandeiraCartao;

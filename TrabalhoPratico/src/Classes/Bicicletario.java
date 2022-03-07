@@ -1,12 +1,12 @@
 package Classes;
 
-public class Local {
+public class Bicicletario {
 
 	//Atributos
 	private String lugarCheckin;
 	private String lugarCheckout;
 	
-	public Local() {
+	public Bicicletario() {
 		
 	}
 	
