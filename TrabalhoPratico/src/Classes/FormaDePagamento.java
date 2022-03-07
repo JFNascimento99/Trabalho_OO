@@ -9,7 +9,12 @@ public class FormaDePagamento {
 	private boolean tipoPagamento;
 	
 	//Método construtor da Forma de Pagamento
-	
+	public FormaDePagamento (String bandeiraCartao, double numeroCartao, int codigoSeguranca, boolean tipoPagamento) {
+		this.bandeiraCartao = bandeiraCartao;
+		this.numeroCartao = numeroCartao;
+		this.codigoSeguranca = codigoSeguranca;
+		this.tipoPagamento = tipoPagamento;
+	}
 	
 	public String getBandeiraCartao() {
 		return bandeiraCartao;
