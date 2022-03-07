@@ -55,20 +55,20 @@ public class Usuario extends Pessoa {
 		}while(senha !=verificaSenha || (senha.length()==0)); //As senha e verifificacao devem ser iguais e nao nulas
 	}
 	public void editarUsuario() {
-		
+		//Editar os dados dos usuarios
 	}
 	public void deletarUsuario() { //Zerando email e senha do usuario
 		setEmail(null);
 		setSenha(null);
 	}
 	public void atualizarUsuario() {
-		
+		//Atualizando os dados que forem ou cadastrados ou editados
 	}
 	public void listarUsuario() {
-		
+		//Listar todos os usuarios cadastrados
 	}
 	public void buscarUsuario() {
-		
+		//Buscar usuario por nome ou cpf
 	}
 	}
 	
