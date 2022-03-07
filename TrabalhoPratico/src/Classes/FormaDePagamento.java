@@ -47,7 +47,7 @@ public class FormaDePagamento {
 	public editarFormaPagamento() {
 		//Editar os cartoes cadastrados
 	}
-	public deletarFormaPagamento() {
+	public deletarFormaPagamento() { 
 		//Resetar todos os dados fazendo virar null.
 	}
 	public atualizarFormaPgamento() {
