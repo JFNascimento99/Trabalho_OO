@@ -24,7 +24,7 @@ public class Bicicletario {
 		return lugarCheckout;
 	}
 
-	public void setLugarCheckout (String lugarCheckout) {
+	public void setLugarCheckout(String lugarCheckout) {
 		this.lugarCheckout = lugarCheckout;
 	}
 
