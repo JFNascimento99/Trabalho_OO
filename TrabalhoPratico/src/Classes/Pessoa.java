@@ -1,14 +1,14 @@
 import java.util.Date;
 import java.util.Scanner;
-public class Pessoa {
+public  abstract class Pessoa {
 	//Atributos
-	private String nome;
-	private double telefone;
-	private double identidade;
-	private String cpf;
-	private Date dataNascimento;
-	private int idade;
-	private int opcaoMenu; //Utilizarei para o menu de ediçoes.
+	protected String nome;
+	protected double telefone;
+	protected double identidade;
+	protected String cpf;
+	protected Date dataNascimento;
+	protected int idade;
+	protected int opcaoMenu; //Utilizarei para o menu de ediçoes.
 	private Usuario usuario;
 	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.
 	//Construtor
