@@ -1,7 +1,7 @@
 package Classes;
 
 public class Bicicleta {
-	//Atributos
+	//Atributos de bicicleta
 	private String tipoBicicleta;
 	private boolean disponibilidadeBicicleta;
 	
