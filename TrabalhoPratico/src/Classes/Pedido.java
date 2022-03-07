@@ -6,6 +6,12 @@ public class Pedido {
 	private double precoHora;
 	private double precoFinal;
 	
+	//Método construtor do Pedido
+	public Pedido(double precoHora, double precoFinal) {
+		this.precoHora = precoHora;
+		this.precoFinal = precoFinal;
+	}
+	
 	public double getPrecoHora() {
 		return precoHora;
 	}
