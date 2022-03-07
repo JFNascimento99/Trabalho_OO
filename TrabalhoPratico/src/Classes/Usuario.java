@@ -1,5 +1,6 @@
 import java.util.Date;
 import java.util.Scanner;
+
 public class Usuario extends Pessoa {
 	//Atributos
 	private String email;

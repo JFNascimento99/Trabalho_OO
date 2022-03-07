@@ -1,8 +1,8 @@
 package Classes;
-import java.util.Date;
 
 public class FormaDePagamento {
 	
+	//Atributos
 	private String bandeiraCartao;
 	private double numeroCartao;
 	private int codigoSeguranca;

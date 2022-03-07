@@ -1,8 +1,8 @@
 package Classes;
-import java.util.Date;
 
 public class Local {
 
+	//Atributos
 	private String lugarCheckin;
 	private String lugarCheckout;
 	

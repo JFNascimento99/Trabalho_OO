@@ -1,8 +1,8 @@
 package Classes;
-import java.util.Date;
 
 public class Tempo {
 	
+	//Atributos
 	private double horaCheckIn;
 	private double horaCheckOut;
 	private double tempoTotal;

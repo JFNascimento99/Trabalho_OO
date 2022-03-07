@@ -1,8 +1,8 @@
 package Classes;
-import java.util.Date;
 
 public class Pedido {
 	
+	//Atributos
 	private double precoHora;
 	private double precoFinal;
 	

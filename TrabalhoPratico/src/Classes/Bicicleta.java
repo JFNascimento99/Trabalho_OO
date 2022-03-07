@@ -1,11 +1,18 @@
 package Classes;
-import java.util.Date;
 
 public class Bicicleta {
-	
+	//Atributos
 	private String tipoBicicleta;
 	private boolean disponibilidadeBicicleta;
 	
+	//Método construtor da Bicicleta
+	public Bicicleta(String tipoBicicleta, boolean disponibilidadeBicicleta) {
+		super();
+		this.tipoBicicleta = tipoBicicleta;
+		this.disponibilidadeBicicleta = disponibilidadeBicicleta;
+	}
+	
+	//Getters & Setters
 	public String getTipoBicicleta() {
 		return tipoBicicleta;
 	}
