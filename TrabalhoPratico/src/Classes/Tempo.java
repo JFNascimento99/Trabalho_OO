@@ -1,7 +1,7 @@
 package Classes;
 
 public class Tempo {
-	
+	//Tempo vai herdar o tempo final para pedido para termos o valor final
 	//Atributos
 	private double horaCheckin;
 	private double horaCheckout;
@@ -33,20 +33,20 @@ public class Tempo {
 		this.tempoTotal = tempoTotal;
 	}
 	//Metodos
-	public cadastrarTempo() {
+	public void cadastrarTempo() {
 		//Cadastrar a hora de checkin e checkout e com isso ter o tempo final.
 		//Utilizaremos o tempo final pro pedido pra gerar o pedido com valor por hora
 	}
-	public editarTempo() {
+	public void editarTempo() {
 		 //Editar hora de checkin e checkout e consequentemente o tempo final
 	}
-	public deletarTempo() {
+	public void deletarTempo() {
 		//Resetar todos os dados de tempo fazendo ficar null
 	}
-	public verTempo() {
+	public void verTempo() {
 		 //Ver a hora de check in e checkout e tambem o tempo final.
 	}
-	public atualizarTempo() {
+	public void atualizarTempo() {
 		//Quando se editar ou cadastrar ver o tempo atualizado
 	}
 
