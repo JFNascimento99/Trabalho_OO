@@ -1,12 +1,13 @@
 package Classes;
 
 public class Pedido {
-	
+	//Pedido herda tempo pra calcular valor por hora.
+	//Bicicleta faz parte de pedido assim como pedido faz parte de  forma de pagamento
 	//Atributos
 	private double precoHora;
 	private double precoFinal;
 	
-	//Método construtor do Pedido
+	//Metodo construtor do Pedido
 	public Pedido(double precoHora, double precoFinal) {
 		this.precoHora = precoHora;
 		this.precoFinal = precoFinal; 
@@ -25,13 +26,13 @@ public class Pedido {
 		this.precoFinal = precoFinal;
 	}
 	//Metodos
-	public verPedido() {
+	public void verPedido() {
 		//Vizualizar o pedido...lembrando que pedido herdatempoe precisausuario e bicicleta
 	}
-	public atualizarPedido() {
+	public void atualizarPedido() {
 		//Atualizar os pedidos a cada novo tempo final (já que o valor é preco por hora/minuto)
 	}
-	public listarPedido() {
+	public void listarPedido() {
 		//Listar todos os pedidos cadastrados
 	}
 	
