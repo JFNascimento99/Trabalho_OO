@@ -1,8 +1,6 @@
 package Classes;
 
 import java.util.Date;
-import java.util.Scanner;
-
 
 public  abstract class Pessoa {
 	//Pessoa vai herdar tudo pra usuario
@@ -13,17 +11,24 @@ public  abstract class Pessoa {
 	private String cpf;
 	private Date dataNascimento;
 	private int idade;
-	private int opcaoMenu; //Utilizarei para o menu de ediçoes.
+	/*private int opcaoMenu; //Utilizarei para o menu de ediçoes.
 	private Usuario usuario;
-	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.
+	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.*/
 	//Construtor
-	public Pessoa(String n,double t, double rg, String c, Date nascimento, int anos) {
-		nome=n;
-		telefone=t;
-		identidade=rg;
-		cpf=c;
-		dataNascimento=nascimento;
-		idade=anos;
+	
+	public Pessoa() {
+		
+	}
+	
+	public Pessoa(String nome,double telefone, double identidade, String cpf,
+			Date nascimento, int idade) {
+		super();
+		this.nome = nome;
+		this.telefone = telefone;
+		this.identidade = identidade;
+		this.cpf = cpf;
+		this.dataNascimento = nascimento;
+		this.idade = idade;
 	}
 	//Gets e Sets
 	public String getNome() {
@@ -62,14 +67,14 @@ public  abstract class Pessoa {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	public Usuario getUsuario() {
+	/*public Usuario getUsuario() {
 		return usuario;
 	}
 	public void setUsuario(Usuario usuario) {
 		usuario.cadastrarUsuario();
-	}
+	}*/
 	//Metodos
-	public void cadastrarPessoa() {  //Cadastro dos dados basicos das pessoas que será herdado pra classe usuario.
+	/*public void cadastrarPessoa() {  //Cadastro dos dados basicos das pessoas que será herdado pra classe usuario.
 		System.out.print("\nDigite seu nome:");
 		setNome(ler.nextLine());
 		System.out.print("Digite seu CPF:");
@@ -85,8 +90,8 @@ public  abstract class Pessoa {
 		setUsuario(usuario);// Chama funcao que edita o usuario
 		System.out.println("\nPressione Enter para continuar...");
 		ler.nextLine();
-	}
-	public void editarPessoa() { //Editar os dados da pessoa em questão, e consequentemente alterando em usuario
+	}*/
+	/*public void editarPessoa() { //Editar os dados da pessoa em questão, e consequentemente alterando em usuario
 		System.out.println("Digite a opcao que se deseja editar: \n");
 		System.out.println(" 1 - Nome \n");
 		System.out.println(" 2 - Telefone \n");
@@ -119,8 +124,8 @@ public  abstract class Pessoa {
 				System.out.println("Senha alterada com sucesso.");
 			}
 		}
-	}
-	public void deletaPessoa() {// Zerando todos os dados da pessoa/Usuario
+	}*/
+	/*public void deletaPessoa() {// Zerando todos os dados da pessoa/Usuario
 		setCpf(null);
 		setNome(null);
 		setIdentidade(null); //Preciso descobrir como se faz pra esses dois.
@@ -129,6 +134,6 @@ public  abstract class Pessoa {
 		System.out.println("\nUsuario deletado com sucesso.");
 		System.out.println("\nPressione Enter para continuar...");
 		ler.nextLine();
-	}
+	}*/
 
 }
