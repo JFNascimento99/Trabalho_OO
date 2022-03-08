@@ -36,7 +36,7 @@ public class Bicicleta {
 	public void deletarBicicletas() { //Resetar as biclcetas cadastradas
 		//Zerando todos os dados cadastrados pras bicicletas
 		setTipoBicicleta(null); 
-		setDisponibilidadeBicicleta(null); //Corrigir esses erros
+		setDisponibilidadeBicicleta(true); //Corrigir esses erros; teoricamente ta certo agora
 		
 	}
 	public void atualizarBicicletas() { //Atualizar as bicicletas que forem editadas
