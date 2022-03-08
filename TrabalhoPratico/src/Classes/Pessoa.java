@@ -2,6 +2,7 @@ import java.util.Date;
 
 import java.util.Scanner;
 public  abstract class Pessoa {
+	//Pessoa vai herdar tudo pra usuario
 	//Atributos
 	private String nome;
 	private double telefone;
