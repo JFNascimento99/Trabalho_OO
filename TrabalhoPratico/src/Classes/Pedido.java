@@ -2,6 +2,10 @@ package Classes;
 
 import java.util.Date;
 
+public class Pedido extends Tempo{
+	
+}
+
 public class Pedido {
 	//Pedido herda tempo pra calcular valor por hora.
 	//Bicicleta faz parte de pedido assim como pedido faz parte de  forma de pagamento
