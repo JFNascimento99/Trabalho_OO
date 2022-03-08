@@ -1,6 +1,6 @@
 import java.util.Date;
 import java.util.Scanner;
-import java.util.Scanner;
+
 public class Usuario extends Pessoa {
 	//Usuario herda de pessoa...precisa arrumar pra receber isso
 	//Atributos
@@ -41,12 +41,12 @@ public class Usuario extends Pessoa {
 		do { //Validando o email.
 			System.out.print("Insira seu email: ");
 			setEmail(ler.nextLine());
-		}while(email.length==0 || email.contains=='@'); //Email tem que ter @ e nao pode ser vazia
+		}while(email.length()==0 || email.contains=='@'); //Email tem que ter @ e nao pode ser vazia
 		do {
 			System.out.print("Insira a senha: ");
 			setSenha(ler.nextLine()); 
 			System.out.print("Digite novamente a senha para se confirmar: ");
-			setverificaSenha(ler.nextLine());
+			setVerificaSenha(ler.nextLine());
 				if(senha != verificaSenha) {
 					System.out.print("As senhas não correspondem.");
 				}else {
