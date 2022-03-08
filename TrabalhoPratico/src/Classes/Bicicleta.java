@@ -1,6 +1,8 @@
 package Classes;
 
 public class Bicicleta {
+	//Bicicleta faz parte de bicicletario...agregação pois podem viver separadas.
+	//Bicicleta faz parte de pedido de forma obrigatoria...composição pois sem bicicleta sem pedido.
 	//Atributos de bicicleta
 	private String tipoBicicleta;
 	private boolean disponibilidadeBicicleta;
@@ -34,7 +36,7 @@ public class Bicicleta {
 	public void deletarBicicletas() { //Resetar as biclcetas cadastradas
 		//Zerando todos os dados cadastrados pras bicicletas
 		setTipoBicicelta(null); 
-		setIsDisponibilidadeBicicelta(null);
+		setIsDisponibilidadeBicicelta(null); //Corrigir esses erros
 		
 	}
 	public void atualizarBicicletas() { //Atualizar as bicicletas que forem editadas
