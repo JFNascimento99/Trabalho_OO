@@ -91,8 +91,8 @@ public  abstract class Pessoa {
 		setUsuario(usuario);// Chama funcao que edita o usuario
 		System.out.println("\nPressione Enter para continuar...");
 		ler.nextLine();
-	}*/
-	/*public void editarPessoa() { //Editar os dados da pessoa em questão, e consequentemente alterando em usuario
+	}
+	public void editarPessoa() { //Editar os dados da pessoa em questão, e consequentemente alterando em usuario
 		System.out.println("Digite a opcao que se deseja editar: \n");
 		System.out.println(" 1 - Nome \n");
 		System.out.println(" 2 - Telefone \n");
@@ -125,8 +125,8 @@ public  abstract class Pessoa {
 				System.out.println("Senha alterada com sucesso.");
 			}
 		}
-	}*/
-	/*public void deletaPessoa() {// Zerando todos os dados da pessoa/Usuario
+	}
+	public void deletaPessoa() {// Zerando todos os dados da pessoa/Usuario
 		setCpf(null);
 		setNome(null);
 		setIdentidade(null); //Preciso descobrir como se faz pra esses dois.

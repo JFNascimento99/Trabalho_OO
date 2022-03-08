@@ -8,7 +8,7 @@ public class Main {
 		
 		//Menu
 		
-		char chamarMenu, chamarMenuUsuario;
+		char chamarMenu, chamarMenuUsuario, chamarMenuEdidaUsuario;
 		
 		do {
 			chamarMenu = menu();
@@ -17,7 +17,14 @@ public class Main {
 				chamarMenuUsuario = menuUsuario();
 				switch(chamarMenuUsuario) {
 				case'1': // Cadastro de usuário
-					usuario[0].cadastrUsuario(usuario)
+					usuario[0].cadastrUsuario(usuario);
+					break;
+				case'2':
+					chamarMenuEdidaUsuario = menuEdidaUsuario();
+					switch (chamarMenuEdidaUsuario) {
+					case'1': //Informações do usuário
+						usuario[0].editaPessoa();
+					}
 				}
 			}
 		}
