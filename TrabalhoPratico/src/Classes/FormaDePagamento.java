@@ -1,14 +1,15 @@
 package Classes;
 
 public class FormaDePagamento {
-	
+	//Forma de pagamento é composição de pedido...vista que não tem oq pagar sem pedido.
+	//Forma de pagamento está agregada a usuario...faz parte de usuario
 	//Atributos
 	private String bandeiraCartao;
 	private double numeroCartao;
 	private int codigoSeguranca;
 	private boolean tipoPagamento;
 	
-	//Método construtor da Forma de Pagamento
+	//Metodo construtor da Forma de Pagamento
 	public FormaDePagamento (String bandeiraCartao, double numeroCartao, int codigoSeguranca, boolean tipoPagamento) {
 		this.bandeiraCartao = bandeiraCartao;
 		this.numeroCartao = numeroCartao;
@@ -41,16 +42,16 @@ public class FormaDePagamento {
 		this.tipoPagamento = tipoPagamento;
 	}
 	//Metodos
-	public cadastrarFormaPagamento() {
+	public void cadastrarFormaPagamento() {
 		//Cadastrar os cartoes.
 	}
-	public editarFormaPagamento() {
+	public void editarFormaPagamento() {
 		//Editar os cartoes cadastrados
 	}
-	public deletarFormaPagamento() { 
+	public void deletarFormaPagamento() { 
 		//Resetar todos os dados fazendo virar null.
 	}
-	public atualizarFormaPgamento() {
+	public void atualizarFormaPgamento() {
 		//Atualizar todos os cartoes que forem editados
 	}
 }
