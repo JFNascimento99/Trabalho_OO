@@ -2,6 +2,7 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.Scanner;
 public class Usuario extends Pessoa {
+	//Usuario herda de pessoa...precisa arrumar pra receber isso
 	//Atributos
 	private String email;
 	private String senha;
@@ -40,7 +41,7 @@ public class Usuario extends Pessoa {
 		do { //Validando o email.
 			System.out.print("Insira seu email: ");
 			setEmail(ler.nextLine());
-		}while(email.length==0 || email.contains==('@')); //Email tem que ter @ e nao pode ser vazia
+		}while(email.length==0 || email.contains=='@'); //Email tem que ter @ e nao pode ser vazia
 		do {
 			System.out.print("Insira a senha: ");
 			setSenha(ler.nextLine()); 
@@ -69,7 +70,7 @@ public class Usuario extends Pessoa {
 	}
 	public void buscarUsuario() {
 		//Buscar usuario por nome ou cpf
-	}
+	
 	}
 	
 
