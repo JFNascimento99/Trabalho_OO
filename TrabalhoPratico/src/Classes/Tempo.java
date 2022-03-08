@@ -1,5 +1,7 @@
 package Classes;
 
+import java.util.Date;
+
 public class Tempo {
 	//Tempo vai herdar o tempo final para pedido para termos o valor final
 	//Atributos

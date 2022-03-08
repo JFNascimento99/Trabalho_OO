@@ -1,5 +1,7 @@
 package Classes;
 
+import java.util.Date;
+
 public class FormaDePagamento {
 	//Forma de pagamento é composição de pedido...vista que não tem oq pagar sem pedido.
 	//Forma de pagamento está agregada a usuario...faz parte de usuario

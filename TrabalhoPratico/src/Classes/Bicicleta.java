@@ -1,5 +1,7 @@
 package Classes;
 
+import java.util.Date;
+
 public class Bicicleta {
 	//Bicicleta faz parte de bicicletario...agregação pois podem viver separadas.
 	//Bicicleta faz parte de pedido de forma obrigatoria...composição pois sem bicicleta sem pedido.
