@@ -2,12 +2,8 @@ package Classes;
 
 import java.util.Date;
 
-public class Pedido extends Tempo{
-	
-}
-
 public class Pedido {
-	//Pedido herda tempo pra calcular valor por hora.
+	//Pedido não pode herdar de tempo...devemos ter uma composicao
 	//Bicicleta faz parte de pedido assim como pedido faz parte de  forma de pagamento
 	//Atributos
 	private double precoHora;
@@ -33,7 +29,7 @@ public class Pedido {
 	}
 	//Metodos
 	public void verPedido() {
-		//Vizualizar o pedido...lembrando que pedido herdatempoe precisausuario e bicicleta
+		//Vizualizar o pedido...lembrando que pedido recebe composicao de tempo e precisa de usuario e bicicleta.
 	}
 	public void atualizarPedido() {
 		//Atualizar os pedidos a cada novo tempo final (já que o valor é preco por hora/minuto)

@@ -1,5 +1,5 @@
 package Classes;
-
+import java.util.Scanner;
 import java.util.Date;
 
 public class FormaDePagamento {
@@ -10,6 +10,7 @@ public class FormaDePagamento {
 	private double numeroCartao;
 	private int codigoSeguranca;
 	private boolean tipoPagamento;
+	static Scanner ler = new Scanner(System.in);
 	
 	//Metodo construtor da Forma de Pagamento
 	public FormaDePagamento (String bandeiraCartao, double numeroCartao, int codigoSeguranca, boolean tipoPagamento) {
@@ -46,12 +47,44 @@ public class FormaDePagamento {
 	//Metodos
 	public void cadastrarFormaPagamento() {
 		//Cadastrar os cartoes.
+		
+		System.out.println("Cadastrar bandeira do cartao (Visa,Mastercard,Elo):");
+		setBandeiraCartao(ler.next());
+		
+		System.out.println("\nCadastrar forma de pagamento: \n");
+		System.out.println("Forma de Pagamento(debito, credito):\n");
+		setTipoPagamento(ler.nextBoolean()); 
+		
+		System.out.println("Cadastrar numero do cartao para pagamento: \n");
+		setNumeroCartao(ler.nextDouble());
+		
+		
+		System.out.println("Cadastrar codigo de seguranca do cartao: \n");
+		setCodigoSeguranca(ler.nextInt());
 	}
 	public void editarFormaPagamento() {
 		//Editar os cartoes cadastrados
+		
+		System.out.println("Cadastrar bandeira do cartao (Visa,Mastercard,Elo):");
+		setBandeiraCartao(ler.next());
+		
+		System.out.println("\nCadastrar forma de pagamento: \n");
+		System.out.println("Forma de Pagamento(debito, credito):\n");
+		setTipoPagamento(ler.nextBoolean()); 
+		
+		System.out.println("Cadastrar numero do cartao para pagamento: \n");
+		setNumeroCartao(ler.nextDouble());
+		
+		
+		System.out.println("Cadastrar codigo de seguranca do cartao: \n");
+		setCodigoSeguranca(ler.nextInt());
 	}
 	public void deletarFormaPagamento() { 
 		//Resetar todos os dados fazendo virar null.
+		setTipoPagamento(false);
+		setNumeroCartao(0);
+		setBandeiraCartao("");
+		setCodigoSeguranca(0);
 	}
 	public void atualizarFormaPgamento() {
 		//Atualizar todos os cartoes que forem editados
