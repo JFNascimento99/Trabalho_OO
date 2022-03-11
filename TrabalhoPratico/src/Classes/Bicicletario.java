@@ -5,30 +5,30 @@ import java.util.Date;
 public class Bicicletario {
 	//Bicicleta faz parte de bicicletario...bicicleta está agregada a bicicletario.
 	//Atributos
-	private String lugarCheckin;
-	private String lugarCheckout;
+	private String endereco;
+	private String quadra;
 	static Scanner ler = new Scanner(System.in);
 	
 	//Metodo construtor do Bicicletario
-	public Bicicletario(String lugarCheckin, String lugarCheckout) {
-		this.lugarCheckin = lugarCheckin;
-		this.lugarCheckout = lugarCheckout;
+	public Bicicletario(String endereco, String quadra) {
+		this.endereco = endereco;
+		this.quadra = quadra;
 	}
 	
-	public String getLugarCheckin() {
-		return lugarCheckin;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setLugarCheckin(String lugarCheckin) {
-		this.lugarCheckin = lugarCheckin;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
-	public String getLugarCheckout() {
-		return lugarCheckout;
+	public String getQuadra() {
+		return quadra;
 	}
 
-	public void setLugarCheckout(String lugarCheckout) {
-		this.lugarCheckout = lugarCheckout;
+	public void setQuadra(String quadra) {
+		this.quadra = quadra;
 	}
 	
 	//Metodos
@@ -39,17 +39,17 @@ public class Bicicletario {
 		
 		//Ele vai poder cadastrar onde quer sair ou chegar de acordo com as estacoes pre cadastradas.
 		System.out.println("Cadastrar lugar de checkin ");
-		setLugarCheckin(ler.next());
+		setEndereco(ler.next());
 		System.out.println("Cadastrar lugar de checkout ");
-		setLugarCheckout(ler.next());
+		setQuadra(ler.next());
 	}
 	public void editarBicletario() {
 		//Editar os locais cadastrados
 	}
 	public void deletarBicicletario() {
 		//Resetar os dados cadastrados
-		setLugarCheckin(null); //
-		setLugarCheckout(null);
+		setEndereco(null); //
+		setQuadra(null);
 	}
 	public void atualizarBicicletario() {
 		//Atualizar os bicicletarios que foram editados

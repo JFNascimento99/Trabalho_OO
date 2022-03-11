@@ -6,6 +6,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		//Definição dos Bicicletários
+		Bicicletario[] bicicletarios = new Bicicletario[] {
+				
+		};
+		
+		
+		/*
 		//Menu
 		
 		char chamarMenu, chamarMenuUsuario, chamarMenuEdidaUsuario;
@@ -31,7 +38,7 @@ public class Main {
 		
 		System.out.println("---------------------------------");
 		System.out.println(" Sistema de aluguel de bicicleta ");
-		System.out.println("---------------------------------");
+		System.out.println("---------------------------------");*/
 		
 	}
 
