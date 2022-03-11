@@ -11,9 +11,11 @@ public  abstract class Pessoa {
 	private String cpf;
 	private Date dataNascimento;
 	private int idade;
+	
 	/*private int opcaoMenu; //Utilizarei para o menu de ediçoes.
 	private Usuario usuario;
 	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.*/
+	
 	//Construtor
 	
 	public Pessoa() {
@@ -30,6 +32,7 @@ public  abstract class Pessoa {
 		this.dataNascimento = nascimento;
 		this.idade = idade;
 	}
+	
 	//Gets e Sets
 	public String getNome() {
 		return nome;

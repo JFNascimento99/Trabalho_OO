@@ -8,6 +8,7 @@ public class Usuario extends Pessoa {
 	private String email;
 	private String senha;
 	private String verificaSenha;
+	
 	// Pra Main
 	//private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.
 	

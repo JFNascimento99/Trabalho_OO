@@ -34,6 +34,7 @@ public class Tempo {
 	public void setTempoTotal(double tempoTotal) {
 		this.tempoTotal = tempoTotal;
 	}
+	
 	//Metodos
 	public void cadastrarTempo() {
 		//Cadastrar a hora de checkin e checkout e com isso ter o tempo final.

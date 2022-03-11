@@ -54,25 +54,25 @@ public class Bicicleta {
 		 
 		
 		 do {
-			 System.out.println("Olá usuario, tudo bem ? \n");
-			 System.out.println("Nossa organizacao trabalha com dois tipos de bicicletas disponiveis para alugueis: \n");
+			 System.out.println("Olá usuario, tudo bem ? ");
+			 System.out.println("Nossa organizacao trabalha com dois tipos de bicicletas disponiveis para alugueis: ");
 			 System.out.println("As bicicletas eletricas e as bicicletas tradicionais.");
-			 System.out.println("\n\n");
+			 System.out.println("\n");
 			 System.out.println("Busque pela bicicleta.");
-			 System.out.println("Digite uma opcao de 1 a 3. \n");
-			 System.out.println(" 1 - Bicicletas tradicionais. \n");
-			 System.out.println(" 2 - Bicicletas eletricas. \n");
-			 System.out.println(" 3- Sair. \n");
+			 System.out.println("Digite uma opcao de 1 a 3. ");
+			 System.out.println(" 1 - Bicicletas tradicionais. ");
+			 System.out.println(" 2 - Bicicletas eletricas. ");
+			 System.out.println(" 3- Sair. ");
 			 switch(opcaoMenuBike) {
-			 case 1: System.out.println("Disponiveis 10 bicicletas tradicionais para esse bicicletario \n"); //Criar 10 bicicletas dessas pre cadastradas.
+			 case 1: System.out.println("Disponiveis 10 bicicletas tradicionais para esse bicicletario "); //Criar 10 bicicletas dessas pre cadastradas.
 			 break;
-			 case 2: System.out.println("Disponiveis 10 bicicletas eletricas para esse bicicletario \n"); //Criar 10 bicicletas dessas pre cadastraddas
+			 case 2: System.out.println("Disponiveis 10 bicicletas eletricas para esse bicicletario "); //Criar 10 bicicletas dessas pre cadastraddas
 			 break;
-			 case 3: System.out.println("\n\n"); //Saida do menu.
+			 case 3: System.out.println("\n"); //Saida do menu.
 			 break;
 			 default: //caso o usuario insira um valor diferente.
 					System.out.println("Opcao invalida. Por favor, escolha uma\n"
-							+ "opcao de 1 a 3, somente.\n");
+							+ "opcao de 1 a 3, somente.");
 					break;
 			 }
 		 }while(opcaoMenuBike==3); //Se digitar 4 sairei do menu 

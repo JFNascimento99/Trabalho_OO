@@ -3,11 +3,12 @@ import java.util.Scanner;
 import java.util.Date;
 
 public class Bicicletario {
- //Bicicleta faz parte de bicicletario...bicicleta está agregada a bicicletario.
+	//Bicicleta faz parte de bicicletario...bicicleta está agregada a bicicletario.
 	//Atributos
 	private String lugarCheckin;
 	private String lugarCheckout;
 	static Scanner ler = new Scanner(System.in);
+	
 	//Metodo construtor do Bicicletario
 	public Bicicletario(String lugarCheckin, String lugarCheckout) {
 		this.lugarCheckin = lugarCheckin;
@@ -37,9 +38,9 @@ public class Bicicletario {
 		//Deveremos ter estacoes pre cadastradas.
 		
 		//Ele vai poder cadastrar onde quer sair ou chegar de acordo com as estacoes pre cadastradas.
-		System.out.println("Cadastrar lugar de checkin\n");
+		System.out.println("Cadastrar lugar de checkin ");
 		setLugarCheckin(ler.next());
-		System.out.println("Cadastrar lugar de checkout\n");
+		System.out.println("Cadastrar lugar de checkout ");
 		setLugarCheckout(ler.next());
 	}
 	public void editarBicletario() {
@@ -57,15 +58,15 @@ public class Bicicletario {
 		//Ver todos bicicletarios cadastrados.
 		
 		//Duas estacoes que criei e seus enderecos, pode cadastrar elas e colocar elas para receberem as bicicletas.
-		System.out.println("Parque da Cidade Dona Sarah Kubitschek:");
+		System.out.println("Parque da Cidade Dona Sarah Kubitschek: ");
 		System.out.println("Endereço: Srps - Brasilia, DF, 70297-400\n"
-				+ "Horarios: Atendimento 24 horas.\n");
-		System.out.println("\n\n");
-		System.out.println("\n\n");
-		System.out.println("Torre de TV:");
+				+ "Horarios: Atendimento 24 horas. ");
+		System.out.println("\n ");
+		System.out.println("\n ");
+		System.out.println("Torre de TV: ");
 		System.out.println("Endereço:Eixo Monumental S/N, Jardim Burle Marx. Brasilia,DF,70050-901\n"
 			+ "Situado no eixo monumental.\n"
-			+ "Horarios: Atendimento 24 horas\n");
+			+ "Horarios: Atendimento 24 horas ");
 	}
 	public void listarBicicletarios() {
 		//Listar todos os bicicletrarios cadastrados

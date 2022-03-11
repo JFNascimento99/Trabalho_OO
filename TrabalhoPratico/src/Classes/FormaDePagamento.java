@@ -51,32 +51,32 @@ public class FormaDePagamento {
 		System.out.println("Cadastrar bandeira do cartao (Visa,Mastercard,Elo):");
 		setBandeiraCartao(ler.next());
 		
-		System.out.println("\nCadastrar forma de pagamento: \n");
-		System.out.println("Forma de Pagamento(debito, credito):\n");
+		System.out.println("Cadastrar forma de pagamento: ");
+		System.out.println("Forma de Pagamento(debito, credito): ");
 		setTipoPagamento(ler.nextBoolean()); 
 		
-		System.out.println("Cadastrar numero do cartao para pagamento: \n");
+		System.out.println("Cadastrar numero do cartao para pagamento: ");
 		setNumeroCartao(ler.nextDouble());
 		
 		
-		System.out.println("Cadastrar codigo de seguranca do cartao: \n");
+		System.out.println("Cadastrar codigo de seguranca do cartao: ");
 		setCodigoSeguranca(ler.nextInt());
 	}
 	public void editarFormaPagamento() {
 		//Editar os cartoes cadastrados
 		
-		System.out.println("Cadastrar bandeira do cartao (Visa,Mastercard,Elo):");
+		System.out.println("Cadastrar bandeira do cartao (Visa,Mastercard,Elo): ");
 		setBandeiraCartao(ler.next());
 		
-		System.out.println("\nCadastrar forma de pagamento: \n");
-		System.out.println("Forma de Pagamento(debito, credito):\n");
+		System.out.println("Cadastrar forma de pagamento: ");
+		System.out.println("Forma de Pagamento(debito, credito): ");
 		setTipoPagamento(ler.nextBoolean()); 
 		
-		System.out.println("Cadastrar numero do cartao para pagamento: \n");
+		System.out.println("Cadastrar numero do cartao para pagamento: ");
 		setNumeroCartao(ler.nextDouble());
 		
 		
-		System.out.println("Cadastrar codigo de seguranca do cartao: \n");
+		System.out.println("Cadastrar codigo de seguranca do cartao: ");
 		setCodigoSeguranca(ler.nextInt());
 	}
 	public void deletarFormaPagamento() { 
