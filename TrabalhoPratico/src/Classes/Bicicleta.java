@@ -6,6 +6,7 @@ public class Bicicleta {
 	//Bicicleta faz parte de bicicletario...agregação pois podem viver separadas.
 	//Bicicleta faz parte de pedido de forma obrigatoria...composição pois sem bicicleta sem pedido.
 	//Atributos de bicicleta
+	
 	private String tipoBicicleta;
 	private boolean disponibilidadeBicicleta;
 	
