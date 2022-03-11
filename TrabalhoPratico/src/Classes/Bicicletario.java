@@ -7,8 +7,7 @@ public class Bicicletario {
 	//Atributos
 	private String endereco;
 	private String quadra;
-	static Scanner ler = new Scanner(System.in);
-	
+	static Scanner ler = new Scanner(System.in);	
 	//Metodo construtor do Bicicletario
 	public Bicicletario(String endereco, String quadra) {
 		this.endereco = endereco;

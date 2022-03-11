@@ -9,6 +9,7 @@ public class Main {
 		//Definição dos Bicicletários
 		Bicicletario[] bicicletarios = new Bicicletario[] {
 				
+				
 		};
 		
 		
