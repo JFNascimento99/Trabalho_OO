@@ -8,8 +8,16 @@ public class Main {
 		
 		//Definição dos Bicicletários
 		Bicicletario[] bicicletarios = new Bicicletario[] {
-				
-				
+				new Bicicletario("Asa Norte", "SQN 116"),
+				new Bicicletario("Asa Norte", "SQN 114"),
+				new Bicicletario("Asa Norte", "SQN 112"),
+				new Bicicletario("Asa Norte", "SQN 110"),
+				new Bicicletario("Asa Norte", "SQN 108"),
+				new Bicicletario("Asa Sul", "SQS 116"),
+				new Bicicletario("Asa Sul", "SQS 114"),
+				new Bicicletario("Asa Sul", "SQS 112"),
+				new Bicicletario("Asa Sul", "SQS 110"),
+				new Bicicletario("Asa Sul", "SQS 108"),
 		};
 		
 		
