@@ -31,19 +31,19 @@ public class Bicicleta {
 	}
 	//Metodos
 	public void cadastrarBicicleta() { //Cadastrar as bicicletas que teremos
-		//Provalvel precisar de vetor e deixar elas cadastradas no propio sistema.
+		//Devemos ter um vetor de bicicletas que tambem esteja contido num vetor de bicicletarios (similar a uma matriz)
 		
 	}
 	public void editarBicicletas() { //Editar as bicicletas que teremos
 		
 	}
-	public void deletarBicicletas() { //Resetar as biclcetas cadastradas
+	public void deletarBicicletas() { //Resetar as biclcetas escolhidas pelo usuario
 		//Zerando todos os dados cadastrados pras bicicletas
 		setTipoBicicleta(null); 
 		setDisponibilidadeBicicleta(true); //Corrigir esses erros; teoricamente ta certo agora
 		
 	}
-	public void atualizarBicicletas() { //Atualizar as bicicletas que forem editadas
+	public void atualizarBicicletas() { //Atualizar as bicicletas que forem editadas e cadastradas
 		
 	}
 	public void verBicicletas() { //Listar/ ver as bicicletas cadastradas
@@ -65,9 +65,9 @@ public class Bicicleta {
 			 System.out.println(" 2 - Bicicletas eletricas. ");
 			 System.out.println(" 3- Sair. ");
 			 switch(opcaoMenuBike) {
-			 case 1: System.out.println("Disponiveis 10 bicicletas tradicionais para esse bicicletario "); //Criar 10 bicicletas dessas pre cadastradas.
+			 case 1: System.out.println("Disponiveis 10 bicicletas tradicionais para esse bicicletario "); //Criar 10 bicicletas dessas pre cadastradas...criei na main dps ve se ta legal
 			 break;
-			 case 2: System.out.println("Disponiveis 10 bicicletas eletricas para esse bicicletario "); //Criar 10 bicicletas dessas pre cadastraddas
+			 case 2: System.out.println("Disponiveis 10 bicicletas eletricas para esse bicicletario "); //Criar 10 bicicletas dessas pre cadastraddas...criei na main dps ve se ficou legal
 			 break;
 			 case 3: System.out.println("\n"); //Saida do menu.
 			 break;
@@ -79,4 +79,3 @@ public class Bicicleta {
 		 }while(opcaoMenuBike==3); //Se digitar 4 sairei do menu 
 	}
 }
-	
