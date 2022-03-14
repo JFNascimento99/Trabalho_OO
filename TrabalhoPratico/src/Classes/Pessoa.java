@@ -70,6 +70,9 @@ public  abstract class Pessoa {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
+	
+	//E interessante cadastrar cada pessoa como um vetor e que os usuarios sejam cadastrados na mesma posicao.
+	
 	// Pra Main tudo q tá em baixo
 	/*public Usuario getUsuario() {
 		return usuario;
