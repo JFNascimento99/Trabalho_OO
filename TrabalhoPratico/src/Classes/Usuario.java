@@ -41,6 +41,9 @@ public class Usuario extends Pessoa {
 	public void setVerificaSenha(String verificaSenha) {
 		this.verificaSenha = verificaSenha;
 	}
+	
+	//E interessante que cada usuario seja armazenado numa posicao de um vetor e que pegue os mesmos dados do vetor de pessoas.
+	
 	// Pra Main
 	//Metodos
 	/*public void cadastrarUsuario() { //Cadastrando email e senha, vista que os outros dados devem ser coletados na classe pessoa
