@@ -80,13 +80,13 @@ public class FormaDePagamento {
 		setCodigoSeguranca(ler.nextInt());
 	}
 	public void deletarFormaPagamento() { 
-		//Resetar todos os dados fazendo virar null.
+		// Escolher qual carta e Resetar todos os dados fazendo virar null.
 		setTipoPagamento(false);
 		setNumeroCartao(0);
 		setBandeiraCartao("");
 		setCodigoSeguranca(0);
 	}
 	public void atualizarFormaPgamento() {
-		//Atualizar todos os cartoes que forem editados
+		//Atualizar todos os cartoes que forem editados e cadastrados
 	}
 }
