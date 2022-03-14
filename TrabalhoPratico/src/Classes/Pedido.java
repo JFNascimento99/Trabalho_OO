@@ -30,6 +30,7 @@ public class Pedido {
 	//Metodos
 	public void verPedido() {
 		//Vizualizar o pedido...lembrando que pedido recebe composicao de tempo e precisa de usuario e bicicleta.
+		//Precisamos receber o tempo total e calcular o pedido.
 	}
 	public void atualizarPedido() {
 		//Atualizar os pedidos a cada novo tempo final (já que o valor é preco por hora/minuto)
