@@ -9,6 +9,7 @@ public class Bicicletario {
 	private String quadra;
 	static Scanner ler = new Scanner(System.in);	
 	//Metodo construtor do Bicicletario
+	
 	public Bicicletario(String endereco, String quadra) {
 		this.endereco = endereco;
 		this.quadra = quadra;
