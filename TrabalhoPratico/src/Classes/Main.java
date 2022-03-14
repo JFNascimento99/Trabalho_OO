@@ -1,80 +1,119 @@
 package Classes;
-import Classes.*; // O "*" importa todas as classes
 import java.util.Scanner;
+import java.util.Date;
 
-public class Main {
-
-	public static void main(String[] args) {
-		
-		//Definicao dos Bicicletarios
-		Bicicletario[] bicicletarios = new Bicicletario[] {
-				new Bicicletario("Asa Norte", "SQN 116"),
-				new Bicicletario("Asa Norte", "SQN 114"),
-				new Bicicletario("Asa Norte", "SQN 112"),
-				new Bicicletario("Asa Norte", "SQN 110"),
-				new Bicicletario("Asa Norte", "SQN 108"),
-				new Bicicletario("Asa Sul", "SQS 116"),
-				new Bicicletario("Asa Sul", "SQS 114"),
-				new Bicicletario("Asa Sul", "SQS 112"),
-				new Bicicletario("Asa Sul", "SQS 110"),
-				new Bicicletario("Asa Sul", "SQS 108"),
-		};
-		
-		//Definicao dos tipos de bicicleta
-		tipoBicicleta[][] bicicletas = new bicicletas[][] { //Matriz pq e um vetor p bicicletario e outro para os dois tipos de bicileta que teremos
-			//cadastro das 10 bicicletas tradicionais
-			new bicicletas("Bicicleta 1", "Tradicional");
-			new bicicletas("Bicicleta 2", "Tradicional");
-			new bicicletas("Bicicleta 3", "Tradicional");
-			new bicicletas("Bicicleta 4", "Tradicional");
-			new bicicletas("Bicicleta 5", "Tradicional");
-			new bicicletas("Bicicleta 6", "Tradicional");
-			new bicicletas("Bicicleta 7", "Tradicional");
-			new bicicletas("Bicicleta 8", "Tradicional");
-			new bicicletas("Bicicleta 9", "Tradicional");
-			new bicicletas("Bicicleta 10", "Tradicional");
-			//Cadastro das 10 bicicletas eletricas
-			new bicicletas("Bicicleta 11", "Eletrica");
-			new bicicletas("Bicicleta 12", "Eletrica");
-			new bicicletas("Bicicleta 13", "Eletrica");
-			new bicicletas("Bicicleta 14", "Eletrica");
-			new bicicletas("Bicicleta 15", "Eletrica");
-			new bicicletas("Bicicleta 16", "Eletrica");
-			new bicicletas("Bicicleta 17", "Eletrica");
-			new bicicletas("Bicicleta 18", "Eletrica");
-			new bicicletas("Bicicleta 19", "Eletrica");
-			new bicicletas("Bicicleta 20", "Eletrica");
-				
-		}
-		//Devemos criar uma lista de pessoas e usuarios previamente cadastrados.
-		/*
-		//Menu
-		
-		char chamarMenu, chamarMenuUsuario, chamarMenuEdidaUsuario;
-		
-		do {
-			chamarMenu = menu();
-			switch(chamarMenu) {
-			case'1': //Exibir menu usuário
-				chamarMenuUsuario = menuUsuario();
-				switch(chamarMenuUsuario) {
-				case'1': // Cadastro de usuário
-					usuario[0].cadastrUsuario(usuario);
-					break;
-				case'2':
-					chamarMenuEdidaUsuario = menuEdidaUsuario();
-					switch (chamarMenuEdidaUsuario) {
-					case'1': //Informações do usuário
-						usuario[0].editaPessoa();
-					}
-				}
-			}
-		}
-		
-		System.out.println("---------------------------------");
-		System.out.println(" Sistema de aluguel de bicicleta ");
-		System.out.println("---------------------------------");*/
-		
+public class Bicicletario {
+	//Bicicleta faz parte de bicicletario...bicicleta está agregada a bicicletario.
+	//Atributos
+	private String endereco;
+	private String quadra;
+	static Scanner ler = new Scanner(System.in);	
+	//Metodo construtor do Bicicletario
+	public Bicicletario(String endereco, String quadra) {
+		this.endereco = endereco;
+		this.quadra = quadra;
+	}
+	
+	public String getEndereco() {
+		return endereco;
 	}
 
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getQuadra() {
+		return quadra;
+	}
+
+	public void setQuadra(String quadra) {
+		this.quadra = quadra;
+	}
+	
+	//Metodos
+	//Verificar se é tudo void mesmo
+	public void cadastrarBicicletario() {
+		//Cadastrar os locais onde se pode pegar ou deixar bicicletas.
+		//Deveremos ter estacoes pre cadastradas.
+		
+		//Ele vai poder cadastrar onde quer sair ou chegar de acordo com as estacoes pre cadastradas.
+		System.out.println("Cadastrar lugar de checkin ");
+		setEndereco(ler.next());
+		System.out.println("Cadastrar lugar de checkout ");
+		setQuadra(ler.next());
+	}
+	public void editarBicletario() {
+		//Escolher um bicicletario e editar ele.
+	}
+	public void deletarBicicletario() {
+		//Resetar os dados cadastrados.
+		//Escolher um bicicletario e resetar os dados desse bicicletario
+		setEndereco(null); //
+		setQuadra(null);
+	}
+	public void atualizarBicicletario() {
+		//Atualizar os bicicletarios que foram editados.
+	}
+	public void buscarBicicletario() {
+		//buscar todos bicicletarios cadastrados...talvez fosse mais interessante o usuario digitar, agt comparar texto e mostrar se achar.
+		//Precisamos que cada bicicletario seja armazenado em uma posicao do vetor(por isso que vai ta dando esse erro ali embaixo por enquanto)
+		//Seria legal fora o horario, mostrar as bicicletas cadastradas tbm.
+		
+		String procuraBicicletario =""; //Utilizaremos para comparar o que o usuario digitou com o que temos armazenado.
+		Boolean encontrado = false; //Para vermos se achamos o bicicletario procurado
+		Scanner resposta = new Scanner(System.in); //Leitura de dados 
+	
+		//Logica de busca que usei no meu TP1.
+		for(int a=0; a<=100; a++){ //Passando por todo vetor de bicicletarios
+			System.out.println("Digite o bicicletario que se deseja buscar:");
+			procuraBicicletario = resposta.next(); //Lendo o bicicletario desejado.
+				if(bicicletario[a].equals(procuraBicicletario)) {  //Devemos arrumar e ter esse vetor de bicicletarios.
+					System.out.println("Na posicao: " + a + " foi encontrado " + bicicletario[a]); //Mostrando os dados que foram achados para esse bicicletario
+					encontrado = true; //A palavra digitada foi igual a alguma armazenada, logo existe o bicicletario
+				}
+			
+		}
+		if(!encontrado) { //Caso oq for digitado nao for igual ao que tinhamos armazenado
+			System.out.println("Este bicicletario nao existe ainda ");
+		}
+		
+	}
+	public void listarBicicletarios() {
+		//Listar todos os bicicletrarios cadastrados...esses pre cadastrados e os que o usuario adicionar.
+		//Mostrar somente os bicicletarios mesmo.
+		//Colocando as que estavam na main já.
+		
+		//Bicicletarios da Asa norte
+		System.out.println("Asa Norte: SQN 116 ");
+		System.out.println( "Horarios: Atendimento 24 horas. ");
+		
+		System.out.println("Asa Norte: SQN 114");
+		System.out.println("Horarios: Atendimento 24 horas. ");
+		
+		System.out.println("Asa Norte: SQN 112 ");
+		System.out.println( "Horarios: Atendimento 24 horas. ");
+		
+		System.out.println("Asa Norte: SQN 110");
+		System.out.println("Horarios:Atendimento 24 horas. ");
+		System.out.println("Asa Norte: SQN 108 ");
+		System.out.println( "Horarios: Atendimento 24 horas. ");
+		
+		//Bicicletarios da Asa Sul
+		
+		System.out.println("Asa Sul: SQS 116 ");
+		System.out.println( "Horarios: Atendimento 24 horas. ");
+		
+		System.out.println("Asa Sul: SQS 114 ");
+		System.out.println( "Horarios: Atendimento 24 horas. ");
+		
+		System.out.println("Asa Sul: SQS 112 ");
+		System.out.println( "Horarios: Atendimento 24 horas. ");
+		
+		System.out.println("Asa Sul: SQS 110 ");
+		System.out.println( "Horarios: Atendimento 24 horas. ");
+		
+		System.out.println("Asa Sul: SQS 108 ");
+		System.out.println( "Horarios: Atendimento 24 horas. ");
+	}
+	
 }
