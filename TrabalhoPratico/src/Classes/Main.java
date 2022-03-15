@@ -21,31 +21,31 @@ public class Main {
 		};
 		
 		//Definicao dos tipos de bicicleta
-		tipoBicicleta[][] bicicletas = new bicicletas[][] { //Matriz pq e um vetor p bicicletario e outro para os dois tipos de bicileta que teremos
+		Bicicleta[] bicicletas = new Bicicleta[] { //Matriz pq e um vetor p bicicletario e outro para os dois tipos de bicileta que teremos
 			//cadastro das 10 bicicletas tradicionais
-			new bicicletas("Bicicleta 1", "Tradicional");
-			new bicicletas("Bicicleta 2", "Tradicional");
-			new bicicletas("Bicicleta 3", "Tradicional");
-			new bicicletas("Bicicleta 4", "Tradicional");
-			new bicicletas("Bicicleta 5", "Tradicional");
-			new bicicletas("Bicicleta 6", "Tradicional");
-			new bicicletas("Bicicleta 7", "Tradicional");
-			new bicicletas("Bicicleta 8", "Tradicional");
-			new bicicletas("Bicicleta 9", "Tradicional");
-			new bicicletas("Bicicleta 10", "Tradicional");
+			new Bicicleta("Bicicleta 1", "Tradicional", true),
+			new Bicicleta("Bicicleta 2", "Tradicional", true),
+			new Bicicleta("Bicicleta 3", "Tradicional", true),
+			new Bicicleta("Bicicleta 4", "Tradicional", true),
+			new Bicicleta("Bicicleta 5", "Tradicional", true),
+			new Bicicleta("Bicicleta 6", "Tradicional", true),
+			new Bicicleta("Bicicleta 7", "Tradicional", true),
+			new Bicicleta("Bicicleta 8", "Tradicional", true),
+			new Bicicleta("Bicicleta 9", "Tradicional", true),
+			new Bicicleta("Bicicleta 10", "Tradicional", true),
 			//Cadastro das 10 bicicletas eletricas
-			new bicicletas("Bicicleta 11", "Eletrica");
-			new bicicletas("Bicicleta 12", "Eletrica");
-			new bicicletas("Bicicleta 13", "Eletrica");
-			new bicicletas("Bicicleta 14", "Eletrica");
-			new bicicletas("Bicicleta 15", "Eletrica");
-			new bicicletas("Bicicleta 16", "Eletrica");
-			new bicicletas("Bicicleta 17", "Eletrica");
-			new bicicletas("Bicicleta 18", "Eletrica");
-			new bicicletas("Bicicleta 19", "Eletrica");
-			new bicicletas("Bicicleta 20", "Eletrica");
+			new Bicicleta("Bicicleta 11", "Eletrica", true),
+			new Bicicleta("Bicicleta 12", "Eletrica", true),
+			new Bicicleta("Bicicleta 13", "Eletrica", true),
+			new Bicicleta("Bicicleta 14", "Eletrica", true),
+			new Bicicleta("Bicicleta 15", "Eletrica", true),
+			new Bicicleta("Bicicleta 16", "Eletrica", true),
+			new Bicicleta("Bicicleta 17", "Eletrica", true),
+			new Bicicleta("Bicicleta 18", "Eletrica", true),
+			new Bicicleta("Bicicleta 19", "Eletrica", true),
+			new Bicicleta("Bicicleta 20", "Eletrica", true),
 				
-		}
+		};
 		//Devemos criar uma lista de pessoas e usuarios previamente cadastrados.
 		
 		//Faltou um while nesse "do" para funcionar e testarmos n ?

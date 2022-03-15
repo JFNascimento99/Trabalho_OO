@@ -11,7 +11,7 @@ public class Bicicleta {
 	private boolean disponibilidadeBicicleta;
 	
 	//Metodo construtor da Bicicleta
-	public Bicicleta(String tipoBicicleta, boolean disponibilidadeBicicleta) {
+	public Bicicleta(String nomeBicicleta, String tipoBicicleta, boolean disponibilidadeBicicleta) {
 		this.tipoBicicleta = tipoBicicleta;
 		this.disponibilidadeBicicleta = disponibilidadeBicicleta;
 	}
