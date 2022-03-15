@@ -7,6 +7,7 @@ public class Bicicleta {
 	//Bicicleta faz parte de pedido de forma obrigatoria...composição pois sem bicicleta sem pedido.
 	//Atributos de bicicleta
 	
+	public String Bicicletario[];
 	private String tipoBicicleta;
 	private boolean disponibilidadeBicicleta;
 	
@@ -62,8 +63,8 @@ public class Bicicleta {
 		  for(int a=0; a<=100; a++){ //Passando por todo vetor de bicicletarios 
 		   System.out.println("Digite o bicicletario que se deseja buscar:"); 
 		   procuraBicicletario = resposta.next(); //Lendo o bicicletario desejado. 
-		    if(bicicletario[a].equals(procuraBicicletario)) {  //Devemos arrumar e ter esse vetor de bicicletarios. 
-		     System.out.println("Na posicao: " + a + " foi encontrado " + bicicletario[a]); //Mostrando os dados que foram achados para esse bicicletario 
+		    if(Bicicletario[a].equals(procuraBicicletario)) {  //Devemos arrumar e ter esse vetor de bicicletarios. 
+		     System.out.println("Na posicao: " + a + " foi encontrado " + Bicicletario[a]); //Mostrando os dados que foram achados para esse bicicletario 
 		     encontrado = true; //A palavra digitada foi igual a alguma armazenada, logo existe o bicicletario 
 		    } 
 		    
