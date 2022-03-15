@@ -9,10 +9,12 @@ public class Bicicleta {
 	
 	public String Bicicletario[];
 	private String tipoBicicleta;
+	private String nomeBicicleta;
 	private boolean disponibilidadeBicicleta;
 	
 	//Metodo construtor da Bicicleta
 	public Bicicleta(String nomeBicicleta, String tipoBicicleta, boolean disponibilidadeBicicleta) {
+		this.nomeBicicleta = nomeBicicleta;
 		this.tipoBicicleta = tipoBicicleta;
 		this.disponibilidadeBicicleta = disponibilidadeBicicleta;
 	}
@@ -29,6 +31,12 @@ public class Bicicleta {
 	}
 	public void setDisponibilidadeBicicleta(boolean disponibilidadeBicicleta) {
 		this.disponibilidadeBicicleta = disponibilidadeBicicleta;
+	}
+	public String getNomeBicicleta() {
+		return nomeBicicleta;
+	}
+	public void setNomeBicicleta(String nomeBicicleta) {
+		this.nomeBicicleta = nomeBicicleta;
 	}
 	//Metodos
 	public void cadastrarBicicleta() { //Cadastrar as bicicletas que teremos
