@@ -49,33 +49,66 @@ public class Bicicleta {
 	public void verBicicletas() { //Listar/ ver as bicicletas cadastradas
 		
 	}
-	public void buscarBicicletas() { //Encontrar a bicicleta pela disponibilidade dela
-		int opcaoMenuBike=0; //Para o menu de opcoes de bicicleta.
-		 Scanner resposta = new Scanner(System.in); //Leitura de dados.
-		 
-		
-		 do {
-			 System.out.println("Olá usuario, tudo bem ? ");
-			 System.out.println("Nossa organizacao trabalha com dois tipos de bicicletas disponiveis para alugueis: ");
-			 System.out.println("As bicicletas eletricas e as bicicletas tradicionais.");
-			 System.out.println("\n");
-			 System.out.println("Busque pela bicicleta.");
-			 System.out.println("Digite uma opcao de 1 a 3. ");
-			 System.out.println(" 1 - Bicicletas tradicionais. ");
-			 System.out.println(" 2 - Bicicletas eletricas. ");
-			 System.out.println(" 3- Sair. ");
-			 switch(opcaoMenuBike) {
-			 case 1: System.out.println("Disponiveis 10 bicicletas tradicionais para esse bicicletario "); //Criar 10 bicicletas dessas pre cadastradas...criei na main dps ve se ta legal
-			 break;
-			 case 2: System.out.println("Disponiveis 10 bicicletas eletricas para esse bicicletario "); //Criar 10 bicicletas dessas pre cadastraddas...criei na main dps ve se ficou legal
-			 break;
-			 case 3: System.out.println("\n"); //Saida do menu.
-			 break;
-			 default: //caso o usuario insira um valor diferente.
-					System.out.println("Opcao invalida. Por favor, escolha uma\n"
-							+ "opcao de 1 a 3, somente.");
-					break;
-			 }
-		 }while(opcaoMenuBike==3); //Se digitar 4 sairei do menu 
-	}
+	public void buscarBicicletario() { 
+		  //buscar todos bicicletarios cadastrados...talvez fosse mais interessante o usuario digitar, agt comparar texto e mostrar se achar. 
+		  //Precisamos que cada bicicletario seja armazenado em uma posicao do vetor(por isso que vai ta dando esse erro ali embaixo por enquanto) 
+		  //Seria legal fora o horario, mostrar as bicicletas cadastradas tbm. 
+		   
+		  String procuraBicicletario =""; //Utilizaremos para comparar o que o usuario digitou com o que temos armazenado. 
+		  Boolean encontrado = false; //Para vermos se achamos o bicicletario procurado 
+		  Scanner resposta = new Scanner(System.in); //Leitura de dados  
+		  
+		  //Logica de busca que usei no meu TP1. 
+		  for(int a=0; a<=100; a++){ //Passando por todo vetor de bicicletarios 
+		   System.out.println("Digite o bicicletario que se deseja buscar:"); 
+		   procuraBicicletario = resposta.next(); //Lendo o bicicletario desejado. 
+		    if(bicicletario[a].equals(procuraBicicletario)) {  //Devemos arrumar e ter esse vetor de bicicletarios. 
+		     System.out.println("Na posicao: " + a + " foi encontrado " + bicicletario[a]); //Mostrando os dados que foram achados para esse bicicletario 
+		     encontrado = true; //A palavra digitada foi igual a alguma armazenada, logo existe o bicicletario 
+		    } 
+		    
+		  } 
+		  if(!encontrado) { //Caso oq for digitado nao for igual ao que tinhamos armazenado 
+		   System.out.println("Este bicicletario nao existe ainda "); 
+		  } 
+		   
+		 } 
+		 public void listarBicicletarios() { 
+		  //Listar todos os bicicletrarios cadastrados...esses pre cadastrados e os que o usuario adicionar. 
+		  //Mostrar somente os bicicletarios mesmo. 
+		  //Colocando as que estavam na main já. 
+		   
+		  //Bicicletarios da Asa norte 
+		  System.out.println("Asa Norte: SQN 116 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Norte: SQN 114"); 
+		  System.out.println("Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Norte: SQN 112 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Norte: SQN 110"); 
+		  System.out.println("Horarios:Atendimento 24 horas. "); 
+		  System.out.println("Asa Norte: SQN 108 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  //Bicicletarios da Asa Sul 
+		   
+		  System.out.println("Asa Sul: SQS 116 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Sul: SQS 114 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Sul: SQS 112 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Sul: SQS 110 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Sul: SQS 108 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		 }
+
 }
