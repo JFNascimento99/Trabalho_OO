@@ -7,6 +7,7 @@ public class Bicicletario {
 	//Atributos
 	private String endereco;
 	private String quadra;
+	public String Bicicletario[];
 	static Scanner ler = new Scanner(System.in);
 	
 	//Metodo construtor do Bicicletario
@@ -54,22 +55,67 @@ public class Bicicletario {
 	public void atualizarBicicletario() {
 		//Atualizar os bicicletarios que foram editados
 	}
-	public void verBicicletario() {
-		//Ver todos bicicletarios cadastrados.
-		
-		//Duas estacoes que criei e seus enderecos, pode cadastrar elas e colocar elas para receberem as bicicletas.
-		System.out.println("Parque da Cidade Dona Sarah Kubitschek: ");
-		System.out.println("Endereço: Srps - Brasilia, DF, 70297-400\n"
-				+ "Horarios: Atendimento 24 horas. ");
-		System.out.println("\n ");
-		System.out.println("\n ");
-		System.out.println("Torre de TV: ");
-		System.out.println("Endereço:Eixo Monumental S/N, Jardim Burle Marx. Brasilia,DF,70050-901\n"
-			+ "Situado no eixo monumental.\n"
-			+ "Horarios: Atendimento 24 horas ");
-	}
+	public void buscarBicicletario() { 
+		  //buscar todos bicicletarios cadastrados...talvez fosse mais interessante o usuario digitar, agt comparar texto e mostrar se achar. 
+		  //Precisamos que cada bicicletario seja armazenado em uma posicao do vetor(por isso que vai ta dando esse erro ali embaixo por enquanto) 
+		  //Seria legal fora o horario, mostrar as bicicletas cadastradas tbm. 
+		   
+		  String procuraBicicletario =""; //Utilizaremos para comparar o que o usuario digitou com o que temos armazenado. 
+		  Boolean encontrado = false; //Para vermos se achamos o bicicletario procurado 
+		  Scanner resposta = new Scanner(System.in); //Leitura de dados  
+		  
+		  //Logica de busca que usei no meu TP1. 
+		  for(int a=0; a<=100; a++){ //Passando por todo vetor de bicicletarios 
+		   System.out.println("Digite o bicicletario que se deseja buscar:"); 
+		   procuraBicicletario = resposta.next(); //Lendo o bicicletario desejado. 
+		    if(Bicicletario[a].equals(procuraBicicletario)) {  //Devemos arrumar e ter esse vetor de bicicletarios. 
+		     System.out.println("Na posicao: " + a + " foi encontrado " + Bicicletario[a]); //Mostrando os dados que foram achados para esse bicicletario 
+		     encontrado = true; //A palavra digitada foi igual a alguma armazenada, logo existe o bicicletario 
+		    } 
+		    
+		  } 
+		  if(!encontrado) { //Caso oq for digitado nao for igual ao que tinhamos armazenado 
+		   System.out.println("Este bicicletario nao existe ainda "); 
+		  } 
+		   
+		 } 
 	public void listarBicicletarios() {
-		//Listar todos os bicicletrarios cadastrados
+		 //Listar todos os bicicletrarios cadastrados...esses pre cadastrados e os que o usuario adicionar. 
+		  //Mostrar somente os bicicletarios mesmo. 
+		  //Colocando as que estavam na main já. 
+		   
+		  //Bicicletarios da Asa norte 
+		  System.out.println("Asa Norte: SQN 116 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Norte: SQN 114"); 
+		  System.out.println("Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Norte: SQN 112 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Norte: SQN 110"); 
+		  System.out.println("Horarios:Atendimento 24 horas. "); 
+		  System.out.println("Asa Norte: SQN 108 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  //Bicicletarios da Asa Sul 
+		   
+		  System.out.println("Asa Sul: SQS 116 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Sul: SQS 114 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Sul: SQS 112 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Sul: SQS 110 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		   
+		  System.out.println("Asa Sul: SQS 108 "); 
+		  System.out.println( "Horarios: Atendimento 24 horas. "); 
+		 
 	}
 	
 }
