@@ -31,6 +31,11 @@ public class Pedido {
 	public void verPedido() {
 		//Vizualizar o pedido...lembrando que pedido recebe composicao de tempo e precisa de usuario e bicicleta.
 		//Precisamos receber o tempo total e calcular o pedido.
+		System.out.println("---------------------------------");
+		System.out.println("        Tabela de preços: ");
+		System.out.println("  R$ 2,00 por hora até a 3ª hora ");
+		System.out.println("  R$ 1,50 a partir da quarta hora");
+		System.out.println("---------------------------------");
 	}
 	public void atualizarPedido() {
 		//Atualizar os pedidos a cada novo tempo final (já que o valor é preco por hora/minuto)
