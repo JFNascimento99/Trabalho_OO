@@ -73,12 +73,12 @@ public class Bicicleta {
 			   procuraBicicletario = resposta.next(); //Lendo o bicicletario desejado. 
 			    if(Bicicletario[a].equals(procuraBicicletario)) {  //Devemos arrumar e ter esse vetor de bicicletarios. 
 			     System.out.println("Na posicao: " + a + " foi encontrado " + Bicicletario[a]); //Mostrando os dados que foram achados para esse bicicletario 
-			     encontrado = true; //A palavra digitada foi igual a alguma armazenada, logo existe o bicicletario 
+			     encontradoBicicleta = true; //A palavra digitada foi igual a alguma armazenada, logo existe o bicicletario 
 			     for(int b=0; b<=100; b++) { //Passando agora por todo vetor de bicicletas.
 			    	 System.out.println("Digite a bicicleta que se deseja buscar:");
 			    	 buscaBicicleta = resposta.next(); //Lendo a bicicleta que o usuario quer buscar (se pah ler o numero dela é melhor)
-			    	 if(bicicleta[a][b].equals(buscaBicicleta)) { //Comparando o que foi digitado com o que tinhamos armazenado
-			    		 System.out.println("Na posicao: " + b + "foi encontrado " + bicicleta[a][b]);
+			    	 if(Bicicleta[a][b].equals(buscaBicicleta)) { //Comparando o que foi digitado com o que tinhamos armazenado
+			    		 System.out.println("Na posicao: " + b + "foi encontrado " + Bicicleta[a][b]);
 			    		 enontradoBicicleta = true;
 			    	 }
 			    	 if(!encontradoBicicleta) {
@@ -88,7 +88,7 @@ public class Bicicleta {
 			    } 
 			    
 			  } 
-			  if(!encontrado) { //Caso oq for digitado nao for igual ao que tinhamos armazenado 
+			  if(!encontradoBicicleta) { //Caso oq for digitado nao for igual ao que tinhamos armazenado 
 			   System.out.println("Este bicicletario nao existe ainda "); 
 			  } 
 		   
