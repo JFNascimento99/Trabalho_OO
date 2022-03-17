@@ -70,16 +70,16 @@ public class Bicicleta {
 		//Logica de busca que usei no meu TP1
 		for(int a=0; a<=100; a++){ //Passando por todo vetor de bicicletarios 
 			   System.out.println("Digite o bicicletario que se deseja buscar as Bicicletas:"); 
-			   procuraBicicletario = resposta.next(); //Lendo o bicicletario desejado. 
-			    if(Bicicletario[a].equals(procuraBicicletario)) {  //Devemos arrumar e ter esse vetor de bicicletarios. 
-			     System.out.println("Na posicao: " + a + " foi encontrado " + Bicicletario[a]); //Mostrando os dados que foram achados para esse bicicletario 
+			   buscaBicicleta = resposta.next(); //Lendo o bicicletario desejado. 
+			    if(Bicicleta[a].equals(buscaBicicleta)) {  //Devemos arrumar e ter esse vetor de s. 
+			     System.out.println("Na posicao: " + a + " foi encontrado " + Bicicleta[a]); //Mostrando os dados que foram achados para esse bicicletario 
 			     encontradoBicicleta = true; //A palavra digitada foi igual a alguma armazenada, logo existe o bicicletario 
 			     for(int b=0; b<=100; b++) { //Passando agora por todo vetor de bicicletas.
 			    	 System.out.println("Digite a bicicleta que se deseja buscar:");
 			    	 buscaBicicleta = resposta.next(); //Lendo a bicicleta que o usuario quer buscar (se pah ler o numero dela é melhor)
 			    	 if(Bicicleta[a][b].equals(buscaBicicleta)) { //Comparando o que foi digitado com o que tinhamos armazenado
 			    		 System.out.println("Na posicao: " + b + "foi encontrado " + Bicicleta[a][b]);
-			    		 enontradoBicicleta = true;
+			    		 encontradoBicicleta = true;
 			    	 }
 			    	 if(!encontradoBicicleta) {
 			    		 System.out.println("Na estacao escolhida, nao ha a bicicleta buscada");
