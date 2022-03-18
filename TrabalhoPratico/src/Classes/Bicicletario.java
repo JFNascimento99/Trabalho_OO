@@ -15,7 +15,8 @@ public class Bicicletario {
 		this.endereco = endereco;
 		this.quadra = quadra;
 	}
-	
+	//Gets and sets.
+	//Ver os retornos para poder testar 
 	public String getEndereco() {
 		return endereco;
 	}
@@ -46,6 +47,10 @@ public class Bicicletario {
 	}
 	public void editarBicletario() {
 		//Editar os locais cadastrados
+		System.out.println("Cadastrar  novo lugar de checkin ");
+		setEndereco(ler.next());
+		System.out.println("Cadastrar novo lugar de checkout ");
+		setQuadra(ler.next());
 	}
 	public void deletarBicicletario() {
 		//Resetar os dados cadastrados
