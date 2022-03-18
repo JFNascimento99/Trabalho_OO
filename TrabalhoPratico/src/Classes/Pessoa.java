@@ -16,6 +16,10 @@ public  abstract class Pessoa {
 	private Usuario usuario;
 	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.*/
 	
+	
+	//precisamos arrumar os metodos da classe pessoa tbm, ter uma lista de pessoas pre cadastradas e em vetor.
+	//usuario vai corresponder as mesmas pessoas do vetor de pessoas...pessoa[a]==usuario[a] e etc
+	
 	//Construtor
 	
 	public Pessoa() {
@@ -34,6 +38,7 @@ public  abstract class Pessoa {
 	}
 	
 	//Gets e Sets
+	//Precisa ver os retornos para testar.
 	public String getNome() {
 		return nome;
 	}
