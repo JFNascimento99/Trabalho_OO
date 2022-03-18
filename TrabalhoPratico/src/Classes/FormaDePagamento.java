@@ -19,7 +19,8 @@ public class FormaDePagamento {
 		this.codigoSeguranca = codigoSeguranca;
 		this.tipoPagamento = tipoPagamento;
 	}
-	
+	//Gets and sets.
+	//Ver os retornos para poder testar
 	public String getBandeiraCartao() {
 		return bandeiraCartao;
 	}
