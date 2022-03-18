@@ -3,7 +3,7 @@ import Classes.*; // O "*" importa todas as classes
 import java.util.Scanner;
 
 public class Main {
-
+	//Precisa arrumar essa main pra ficar lisa
 	public static void main(String[] args) {
 		
 		//Definicao dos Bicicletarios
