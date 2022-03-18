@@ -21,6 +21,7 @@ public class Bicicleta {
 	}
 	
 	//Getters & Setters
+	//Ver os retornos para podermos ir testando
 	public String getTipoBicicleta() {
 		return tipoBicicleta;
 	}
