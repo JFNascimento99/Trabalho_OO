@@ -23,6 +23,9 @@ public class Usuario extends Pessoa {
 		this.senha = senha;
 		
 	}
+	
+	//Gets and sets
+	//Precisa arrumar os retornos para podermos testar.
 	public String getEmail() {
 		return email;
 	}
