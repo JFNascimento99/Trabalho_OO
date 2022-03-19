@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Main {
 	//Precisa arrumar essa main pra ficar lisa
 	public static void main(String[] args) {
+		int opcaoMenuInicial = 0;
+		Scanner resposta = new Scanner(System.in);
+		//Precisa instanciar os objetos.
 		
 		//Definicao dos Bicicletarios
 		Bicicletario[] bicicletarios = new Bicicletario[] {
@@ -48,34 +51,111 @@ public class Main {
 		};
 		//Devemos criar uma lista de pessoas e usuarios previamente cadastrados.
 		
-		//Faltou um while nesse "do" para funcionar e testarmos n ?
-		/*
-		//Menu
+		//Menus
 		
-		char chamarMenu, chamarMenuUsuario, chamarMenuEdidaUsuario;
-		
+		//menu inicial.
 		do {
-			chamarMenu = menu();
-			switch(chamarMenu) {
-			case'1': //Exibir menu usuário
-				chamarMenuUsuario = menuUsuario();
-				switch(chamarMenuUsuario) {
-				case'1': // Cadastro de usuário
-					usuario[0].cadastrUsuario(usuario);
-					break;
-				case'2':
-					chamarMenuEdidaUsuario = menuEdidaUsuario();
-					switch (chamarMenuEdidaUsuario) {
-					case'1': //Informações do usuário
-						usuario[0].editaPessoa();
-					}
-				}
+			opcaoMenuInicial = Menu(opcaoMenuInicial, resposta);
+			switch(opcaoMenuInicial) {
+			
+			case 1:
+				//Usuario
+				System.out.println("Usuario: ");
+				user.cadastrarUsuario();
+				user.editarUsuario();
+				user.deletarUsuario();
+				user.atualizarUsuario();
+				user.listarUsuario();
+				user.buscarUsuario();
+				break;
+				
+			case 2:
+				//pessoas
+				System.out.println("Pessoas: ");
+				user.cadastrarPessoa();
+				user.editarPessoa();
+				user.deletarPessoa();
+				break;
+			
+			case 3:
+				//Bicicletario
+				System.out.println("Bicicletario: ");
+				user.cadastrarBicicletario();
+				user.editarBicicletario();
+				user.deletarBicicletario();
+				user.atualizarBicicletario();
+				user.buscarBicicletario();
+				user.listarBicicletario();
+				break;
+				
+			case 4:
+				//Bicicleta
+				System.out.println("Bicicleta: ");
+				user.cadastrarBicicleta();
+				user.editarBicicleta();
+				user.deletarBicicleta();
+				user.atualizarBicicleta();
+				user.verBicicleta();
+				user.buscarBicicleta();
+				user.listarBicicleta();
+				break;
+				
+			case 5:
+				//Forma de pagamento
+				System.out.println("Forma de pagamento: ");
+				user.cadastrarFormaPagamento();
+				user.editarFormaPagamento();
+				user.deletarFormaPagamento();
+				user.atualizarFormaPagamento();
+				break;
+				
+			case 6:
+				//Pedido
+				System.out.println("Pedido: ");
+				user.verPedido();
+				user.atualizarPedido();
+				user.listarPedido();
+				break;
+				
+			case 7:
+				//Tempo
+				System.out.println("Tempo: ");
+				user.cadastrarTempo();
+				user.editarTempo();
+				user.deletarTempo();
+				user.verTempo();
+				user.atualizarTempo();
+				break;
+				
+			case 8:
+				//Sair
+				System.out.println("Obrigado pela preferencia usuario !!!");
+				break;
+				
+				default:
+					System.out.println("Opcao invalida, insira uma opcao de 1 a 8. ");
 			}
+		}while(opcaoMenuInicial==8);
+		
+		//Menu de opcoes 
+		public static int Menu(int opcaoMenuInicial, Scanner resposta) {
+			//Tem que ver essa ordem pra fazer sentido.
+			
+			System.out.print(" Menu: ");
+			System.out.print(" Opcao 1 - Usuario: ");
+			System.out.print(" Opcao 2 - Pessoa: ");
+			System.out.print(" Opcao 3 - Bicicletario: ");
+			System.out.print(" Opcao 4 - Bicicleta: ");
+			System.out.print(" Opcao 5 - Pagamento: ");
+			System.out.print(" Opcao 6 - Pedido: ");
+			System.out.print(" Opcao 7 - Tempo: ");
+			System.out.print("Opcao 8  - Sair: ");
+			System.out.print("\n");
+			System.out.println("Digite uma opcao: ");
+			opcaoMenuInicial = resposta.nextInt();
+			return opcaoMenuInicial;*/
 		}
 		
-		System.out.println("---------------------------------");
-		System.out.println(" Sistema de aluguel de bicicleta ");
-		System.out.println("---------------------------------");*/
 		
 	}
 
