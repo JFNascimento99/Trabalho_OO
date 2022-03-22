@@ -94,11 +94,11 @@ public  abstract class Pessoa {
 		Boolean validaCpf = true;
 		String respostaCpf;
 		Boolean validaTel = true;
-		String respostaTel;
+		Double respostaTel;
 		Boolean validaRg = true;
-		String respostaRg;
+		Double respostaRg;
 		Boolean validaIdade = true;
-		String respostaIdade;
+		int respostaIdade;
 		
 		//Validando nome.
 		System.out.println("Digite seu nome:");
@@ -126,7 +126,7 @@ public  abstract class Pessoa {
 		setCpf(ler.nextLine());
 			//Validando CPF, se so tem numeros e a quantidade certa.
 		respostaCpf = getCpf();
-		if(respostaCpf.length( != 11)) { //Verificando se tem apenas numeros e se tem 11 digitos
+		if(respostaCpf.length() != 11) { //Verificando se tem apenas numeros e se tem 11 digitos
 			validaCpf = false; //Nao tem 11 digitos e ou nao tem apenas numeros.
 			do {
 				System.out.println("Erro, um CPF precisa ter 11 digitos e apenas numeros.");
@@ -134,11 +134,11 @@ public  abstract class Pessoa {
 				System.out.println("Somente numeros");
 				setCpf(ler.nextLine());
 				respostaCpf = getCpf();
-				if(respostaCpf.length( != 11)) { //Verificando se tem apenas numeros e se tem 11 digitos
+				if(respostaCpf.length() != 11) { //Verificando se tem apenas numeros e se tem 11 digitos
 					validaCpf = false; //Nao tem 11 digitos e ou nao tem apenas numeros.
 				}
 				
-			}while(validaCpfc = false); //Ficarei no looping ate digitar um CPF valido.	
+			}while(validaCpf = false); //Ficarei no looping ate digitar um CPF valido.	
 		}
 		
 		//Validando Telefone
