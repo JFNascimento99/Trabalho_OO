@@ -43,12 +43,12 @@ public class Tempo {
 		
 		Scanner resposta = new Scanner(System.in); //Leitura de dados
 		//Variaveis pra brincar com a logica apenas, pq tenho que achar como fazer as funcoes de hora mais funcionais
-		 double CheckinProvisorio = 0;
+		 double checkinProvisorio = 0;
 		 double checkoutProvisorio = 0;
 		 double tempoTotalProvisorio = 0;
 		 
 		System.out.println("Insira seu horario de checkin: ");
-		checkinProvisorio = resposta.next();
+		checkinProvisorio = resposta.nextDouble();
 	}
 	public void editarTempo() {
 		 //Editar hora de checkin e checkout e consequentemente o tempo final
