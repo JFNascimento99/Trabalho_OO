@@ -1,6 +1,7 @@
 package Classes;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public  abstract class Pessoa {
 	//Pessoa vai herdar tudo pra usuario
@@ -12,7 +13,7 @@ public  abstract class Pessoa {
 	private Date dataNascimento;
 	private int idade;
 	
-	/*private int opcaoMenu; //Utilizarei para o menu de ediçoes.
+	private int opcaoMenu; //Utilizarei para o menu de ediçoes.
 	private Usuario usuario;
 	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.*/
 	
@@ -79,27 +80,127 @@ public  abstract class Pessoa {
 	//E interessante cadastrar cada pessoa como um vetor e que os usuarios sejam cadastrados na mesma posicao.
 	
 	// Pra Main tudo q tá em baixo
-	/*public Usuario getUsuario() {
+	public Usuario getUsuario() {
 		return usuario;
 	}
 	public void setUsuario(Usuario usuario) {
 		usuario.cadastrarUsuario();
-	}*/
+	}
 	//Metodos
-	/*public void cadastrarPessoa() {  //Cadastro dos dados basicos das pessoas que será herdado pra classe usuario.
-		System.out.print("\nDigite seu nome:");
+	public void cadastrarPessoa() {  //Cadastro dos dados basicos das pessoas que será herdado pra classe usuario.
+		
+		Boolean validaNome = true; 
+		String respostaNome;
+		Boolean validaCpf = true;
+		String respostaCpf;
+		Boolean validaTel = true;
+		String respostaTel;
+		Boolean validaRg = true;
+		String respostaRg;
+		Boolean validaIdade = true;
+		String respostaIdade;
+		
+		//Validando nome.
+		System.out.println("Digite seu nome:");
+		System.out.println("Insira letras minusculas apenas.");
 		setNome(ler.nextLine());
+			//Validando nome, somente letras
+		respostaNome = getNome();
+		if(!respostaNome.substring(0).matches("[a-z]*")) { //Verificando se nao e nulo e so tem letras
+			validaNome = false;
+			do {
+				System.out.println("Erro, digite um nome com apenas letras minusculas");
+				setNome(ler.nextLine());
+					//Validando nome, somente letras
+				respostaNome = getNome();
+				if(!respostaNome.substring(0).matches("[a-z]*")) { //Verificando se nao e nulo e so tem letras
+					validaNome = false;
+				}	
+				
+			}while(validaNome == false); //Ficarei no looping ate digitar um nome valido
+		}
+		
+		//Validando CPF.
 		System.out.print("Digite seu CPF:");
+		System.out.println("Somente numeros");
 		setCpf(ler.nextLine());
+			//Validando CPF, se so tem numeros e a quantidade certa.
+		respostaCpf = getCpf();
+		if(respostaCpf.length( !=11)) { //Verificando se tem apenas numeros e se tem 11 digitos
+			validaCpf = false; //Nao tem 11 digitos e ou nao tem apenas numeros.
+			do {
+				System.out.println("Erro, um CPF precisa ter 11 digitos e apenas numeros.");
+				System.out.print("Digite seu CPF:");
+				System.out.println("Somente numeros");
+				setCpf(ler.nextLine());
+				respostaCpf = getCpf();
+				if(respostaCpf.length( !=11)) { //Verificando se tem apenas numeros e se tem 11 digitos
+					validaCpf = false; //Nao tem 11 digitos e ou nao tem apenas numeros.
+				}
+				
+			}while(validaCpfc = false); //Ficarei no looping ate digitar um CPF valido.	
+		}
+		
+		//Validando Telefone
 		System.out.print("Digite seu telefone:");
+		System.out.println("Somente os numeros, insira o 9 mas não bote o DDD  ");
 		setTelefone(ler.nextDouble());
+		respostaTel = getTelefone();
+		if(respostaTel.length() != 9) { //Verificando se tem os 9 digitos
+			validaTel = false; //Nao temos 9 digitos
+			do {
+				System.out.println("Erro, um telefone e composto por 9 numeros.");
+				System.out.print("Digite seu telefone:");
+				System.out.println("Somente os numeros, insira o 9 mas não bote o DDD  ");
+				setTelefone(ler.nextDouble());
+				respostaTel = getTelefone();
+				if(respostaTel.length() != 9) { //Verificando se tem os 9 digitos e todos numeros
+					validaTel = false; //Nao temos 9 digitos
+				}
+			}while(validaTel = false); //Enquanto nao receber um telefone valido ficarei nesse looping
+			
+		}
+		
+		//Validade a Identidade
 		System.out.println("Digite seu RG:");
+		System.out.println("Somente os numeros");
 		setIdentidade(ler.nextDouble());
+		respostaRg = getIdentidade();
+		if(respostaRg.length() != 7) { //Verificando se tenho 7 digitos e todos numeros
+			validaRg = false; //Nao temos 7 digitos
+			do {
+				System.out.println("Erro, um RG e composto por 7 numeros");
+				System.out.println("Digite seu RG:");
+				System.out.println("Somente os numeros");
+				setIdentidade(ler.nextDouble());
+				respostaRg = getIdentidade();
+				if(respostaRg.length() != 7) { //Verificando se tenho 7 digitos e todos numeros
+					validaRg = false; //Nao temos 7 digitos
+				}
+			}while(validaRg == false); //Enquanto nao tivermos um RG valido ficaremos nesse looping
+		}
+		
+		//Validando a idade
 		System.out.print("Digite sua idade: ");
 		setIdade(ler.nextInt());
-		System.out.print("Digite sua data de Nascimento: ");
-		setDataNascimento(ler.nextDate()); //Preciso descobrir como se faz pra datas.
-		setUsuario(usuario);// Chama funcao que edita o usuario
+		respostaIdade = getIdade();
+		if(!respostaIdade.substring(0).matches("[1-9]+")) { //Verificando se tenho apenas numeros.
+			validaIdade = false; //Tenho letras e simbolos.
+			do {
+				System.out.println("Erro, a idade e composta apenas por numeros inteiros");
+				System.out.print("Digite sua idade: ");
+				setIdade(ler.nextInt());
+				respostaIdade = getIdade();
+				if(!respostaIdade.substring(0).matches("[1-9]+")) { //Verificando se tenho apenas numeros.
+					validaIdade = false; //Tenho letras e simbolos.
+				}
+				
+			}while(validaIdade == false); //Ficarei no looping ate digitar uma idade valida
+			
+		}
+		//System.out.print("Digite sua data de Nascimento: ");
+		//setDataNascimento(ler.nextDate()); //Preciso descobrir como se faz pra datas.
+		//setUsuario(usuario);// Chama funcao que edita o usuario
 		System.out.println("\nPressione Enter para continuar...");
 		ler.nextLine();
 	}
@@ -146,6 +247,6 @@ public  abstract class Pessoa {
 		System.out.println("\nUsuario deletado com sucesso.");
 		System.out.println("\nPressione Enter para continuar...");
 		ler.nextLine();
-	}*/
+	}
 
 }
