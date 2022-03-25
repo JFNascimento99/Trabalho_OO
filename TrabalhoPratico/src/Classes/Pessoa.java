@@ -141,6 +141,7 @@ public  abstract class Pessoa {
 			}while(validaCpf = false); //Ficarei no looping ate digitar um CPF valido.	
 		}
 		
+		//Pra arrumar, transformar em string
 		//Validando Telefone
 		System.out.print("Digite seu telefone:");
 		System.out.println("Somente os numeros, insira o 9 mas não bote o DDD  ");

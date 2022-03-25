@@ -52,7 +52,7 @@ public class Main {
 		//Devemos criar uma lista de pessoas e usuarios previamente cadastrados.
 		
 		//Menus
-		
+		/*
 		//menu inicial.
 		do {
 			opcaoMenuInicial = Menu(opcaoMenuInicial, resposta);
@@ -153,8 +153,8 @@ public class Main {
 			System.out.print("\n");
 			System.out.println("Digite uma opcao: ");
 			opcaoMenuInicial = resposta.nextInt();
-			return opcaoMenuInicial;*/
-		}
+			return opcaoMenuInicial;
+		}*/
 		
 		
 	}

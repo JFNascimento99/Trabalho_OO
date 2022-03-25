@@ -11,7 +11,7 @@ public class FormaDePagamento {
 	private int codigoSeguranca;
 	private String tipoPagamento;
 	//Variaveis extra pra implementar algumas logicas
-	 String respostaBandeira;
+	String respostaBandeira;
 	double respostaNumero;
 	int respostaSeguranca;
 	String respostaPagamento;

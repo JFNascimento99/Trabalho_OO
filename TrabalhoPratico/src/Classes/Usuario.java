@@ -218,7 +218,8 @@ public class Usuario extends Pessoa {
 		System.out.println("Informacoes dos usuarios");
 		System.out.println("Nome: \n" + getNome());
 		System.out.println("Email: \n" + getEmail());
-		System.out.println("Rg: \n" + getRg());
+		//Precisa criar o Get
+		//System.out.println("Rg: \n" + getRg());
 		System.out.println("Cpf: \n" + getCpf());
 		System.out.println("Senha: \n" + getSenha());
 		System.out.println("Telefone: \n" + getTelefone());
