@@ -5,10 +5,17 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Usuario extends Pessoa {
-	//Usuario herda de pessoa...precisa arrumar pra receber isso
+	//Usuario precisa estar em vetor para podermos fazer as buscas, o ideal seria no mesmo vetor de pessoas tbm
+	
 	//Atributos
 	private String email;
 	private String senha;
+	
+	//Outras variaveis:
+	Boolean validaEmail = true;
+	String respostaEmail;
+	Boolean validaSenha = true;
+	String respostaSenha;
 	
 	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.
 	
@@ -16,7 +23,7 @@ public class Usuario extends Pessoa {
 		
 	}
 	
-	public Usuario( String nome,double telefone, double identidade, String cpf, Date nascimento, int idade, String email,
+	public Usuario( String nome,String telefone, String identidade, String cpf, Date nascimento, String idade, String email,
 			String senha, String verificaSenha) {
 		super(nome, telefone, identidade, cpf, nascimento, idade);
 		this.email = email;
@@ -45,16 +52,11 @@ public class Usuario extends Pessoa {
 	//Metodos
 	public void cadastrarUsuario() { //Cadastrando email e senha, vista que os outros dados devem ser coletados na classe pessoa
 		
-		Boolean validaEmail = true;
-		String respostaEmail;
-		Boolean validaSenha = true;
-		String respostaSenha;
-		
+		//Validando email
 		System.out.println("Insira o email do usuario: ");
 		setEmail(ler.next());
-		  //Validando email.
 		respostaEmail = getEmail();
-		if(!respostaEmail.substring(0).matches("[@]*")){ //Verificando se o email nao e nulo e se tem arroba
+		if(!respostaEmail.substring(0).matches("[@]*")){ //Verificando se o email  tem arroba
 			validaEmail = false;
 			do {
 				System.out.println("Erro, Um e-mail precisa ter @, digite um email valido ");
@@ -63,7 +65,7 @@ public class Usuario extends Pessoa {
 				if(!respostaEmail.substring(0).matches("[@]*")){
 					validaEmail = false;
 				}
-			}while(validaEmail == false); //Enquanto nao digitar um email valido ficarei nesse looping
+			}while(validaEmail == false); //Enquanto nao tiver um @ ficarei nesse looping
 		}
 		
 		//Validando a senha
@@ -118,11 +120,7 @@ public class Usuario extends Pessoa {
 	public void editarUsuario() {
 		//Editar os dados dos usuarios
 		int opcaoEdita = 0 ; //Pro menu de edicoes que terei pra usuario.
-		Boolean validaEmail = true;
-		String respostaEmail;
-		Boolean validaSenha = true;
-		String respostaSenha;
-		
+	
 		do {
 			System.out.println("O que deseja editar?");
 			System.out.println("\n1 - E-mail\n2 Senha\n3 Sair");
@@ -212,20 +210,29 @@ public class Usuario extends Pessoa {
 	}
 	public void atualizarUsuario() {
 		//Atualizando os dados que forem ou cadastrados ou editados
-	}
-	public void listarUsuario() {
-		//Listar todos os usuarios cadastrados
+		
 		System.out.println("Informacoes dos usuarios");
 		System.out.println("Nome: \n" + getNome());
 		System.out.println("Email: \n" + getEmail());
-		//Precisa criar o Get
-		//System.out.println("Rg: \n" + getRg());
+		System.out.println("Rg: \n" + getIdentidade());
+		System.out.println("Cpf: \n" + getCpf());
+		System.out.println("Senha: \n" + getSenha());
+		System.out.println("Telefone: \n" + getTelefone());
+	}
+	public void listarUsuario() {
+		//Listar todos os usuarios cadastrados
+		
+		System.out.println("Informacoes dos usuarios");
+		System.out.println("Nome: \n" + getNome());
+		System.out.println("Email: \n" + getEmail());
+		System.out.println("Rg: \n" + getIdentidade());
 		System.out.println("Cpf: \n" + getCpf());
 		System.out.println("Senha: \n" + getSenha());
 		System.out.println("Telefone: \n" + getTelefone());
 	}
 	public void buscarUsuario() {
 		//Buscar usuario por nome ou cpf
+		//Precisamos botar usuario em vetor para poder fazer a busca certinha
 	
 	}
 	
