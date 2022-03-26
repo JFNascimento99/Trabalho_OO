@@ -7,15 +7,26 @@ public  abstract class Pessoa {
 	//Pessoa vai herdar tudo pra usuario
 	//Atributos
 	private String nome;
-	private double telefone;
-	private double identidade;
+	private String telefone;
+	private String identidade;
 	private String cpf;
 	private Date dataNascimento;
-	private int idade;
+	private String idade;
 	
-	private int opcaoMenu; //Utilizarei para o menu de ediçoes.
 	private Usuario usuario;
 	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.*/
+	
+	//Variaveis extra:
+	Boolean validaNome = true; 
+	String respostaNome;
+	Boolean validaCpf = true;
+	String respostaCpf;
+	Boolean validaTel = true;
+	String respostaTel;
+	Boolean validaRg = true;
+	String respostaRg;
+	Boolean validaIdade = true;
+	String respostaIdade;
 	
 	
 	//precisamos arrumar os metodos da classe pessoa tbm, ter uma lista de pessoas pre cadastradas e em vetor.
@@ -27,8 +38,8 @@ public  abstract class Pessoa {
 		
 	}
 	
-	public Pessoa(String nome,double telefone, double identidade, String cpf,
-			Date nascimento, int idade) {
+	public Pessoa(String nome,String telefone, String identidade, String cpf,
+			Date nascimento,String idade) {
 		super();
 		this.nome = nome;
 		this.telefone = telefone;
@@ -46,16 +57,16 @@ public  abstract class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public double getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(double telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	public double getIdentidade() {
+	public String getIdentidade() {
 		return identidade;
 	}
-	public void setIdentidade(double identidade) {
+	public void setIdentidade(String identidade) {
 		this.identidade = identidade;
 	}
 	public String getCpf() {
@@ -70,10 +81,10 @@ public  abstract class Pessoa {
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public int getIdade() {
+	public String getIdade() {
 		return idade;
 	}
-	public void setIdade(int idade) {
+	public void setIdade(String idade) {
 		this.idade = idade;
 	}
 	
@@ -88,17 +99,6 @@ public  abstract class Pessoa {
 	}
 	//Metodos
 	public void cadastrarPessoa() {  //Cadastro dos dados basicos das pessoas que será herdado pra classe usuario.
-		
-		Boolean validaNome = true; 
-		String respostaNome;
-		Boolean validaCpf = true;
-		String respostaCpf;
-		Boolean validaTel = true;
-		Double respostaTel;
-		Boolean validaRg = true;
-		Double respostaRg;
-		Boolean validaIdade = true;
-		int respostaIdade;
 		
 		//Validando nome.
 		System.out.println("Digite seu nome:");
@@ -126,7 +126,7 @@ public  abstract class Pessoa {
 		setCpf(ler.nextLine());
 			//Validando CPF, se so tem numeros e a quantidade certa.
 		respostaCpf = getCpf();
-		if(respostaCpf.length() != 11) { //Verificando se tem apenas numeros e se tem 11 digitos
+		if(respostaCpf.length() != 11) { //Verificando se temos 11 digitos
 			validaCpf = false; //Nao tem 11 digitos e ou nao tem apenas numeros.
 			do {
 				System.out.println("Erro, um CPF precisa ter 11 digitos e apenas numeros.");
@@ -134,18 +134,30 @@ public  abstract class Pessoa {
 				System.out.println("Somente numeros");
 				setCpf(ler.nextLine());
 				respostaCpf = getCpf();
-				if(respostaCpf.length() != 11) { //Verificando se tem apenas numeros e se tem 11 digitos
-					validaCpf = false; //Nao tem 11 digitos e ou nao tem apenas numeros.
+				if(respostaCpf.length() != 11) { //Verificando  se tem 11 digitos
+					validaCpf = false; //Nao tem 11 digitos 
 				}
 				
-			}while(validaCpf = false); //Ficarei no looping ate digitar um CPF valido.	
+			}while(validaCpf = false); //Ficarei no looping ate digitar 11 digitos
 		}
-		
-		//Pra arrumar, transformar em string
+		if(!respostaCpf.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+			validaCpf = false;
+			do {
+				System.out.println("Erro, um CPF precisa ter 11 digitos e apenas numeros.");
+				System.out.print("Digite seu CPF:");
+				System.out.println("Somente numeros");
+				setCpf(ler.nextLine());
+				respostaCpf = getCpf();
+				if(!respostaCpf.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+					validaCpf = false;
+				}
+			}while(validaCpf == false); //Ficarei nesse looping ate digitar apenas numeros 
+		}
+	
 		//Validando Telefone
 		System.out.print("Digite seu telefone:");
-		System.out.println("Somente os numeros, insira o 9 mas não bote o DDD  ");
-		setTelefone(ler.nextDouble());
+		System.out.println("Somente os numeros, um telefone tem 9 numeros  ");
+		setTelefone(ler.next());
 		respostaTel = getTelefone();
 		if(respostaTel.length() != 9) { //Verificando se tem os 9 digitos
 			validaTel = false; //Nao temos 9 digitos
@@ -153,46 +165,70 @@ public  abstract class Pessoa {
 				System.out.println("Erro, um telefone e composto por 9 numeros.");
 				System.out.print("Digite seu telefone:");
 				System.out.println("Somente os numeros, insira o 9 mas não bote o DDD  ");
-				setTelefone(ler.nextDouble());
+				setTelefone(ler.next());
 				respostaTel = getTelefone();
-				if(respostaTel.length() != 9) { //Verificando se tem os 9 digitos e todos numeros
+				if(respostaTel.length() != 9) { //Verificando se tem os 9 digitos 
 					validaTel = false; //Nao temos 9 digitos
 				}
-			}while(validaTel = false); //Enquanto nao receber um telefone valido ficarei nesse looping
+			}while(validaTel = false); //Enquanto nao receber 9 digitos
 			
+		}
+		if(!respostaTel.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+			validaTel = false;
+			do {
+				System.out.println("Erro, um telefone e composto por 9 numeros.");
+				System.out.print("Digite seu telefone:");
+				System.out.println("Somente os numeros, insira o 9 mas não bote o DDD  ");
+				setTelefone(ler.next());
+				respostaTel = getTelefone();
+				if(!respostaTel.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+					validaTel = false;
+				}
+			}while(validaTel == false); //Ficarei nesse looping ate por apenas numeros
 		}
 		
 		//Validade a Identidade
 		System.out.println("Digite seu RG:");
 		System.out.println("Somente os numeros");
-		setIdentidade(ler.nextDouble());
+		setIdentidade(ler.next());
 		respostaRg = getIdentidade();
-		if(respostaRg.length() != 7) { //Verificando se tenho 7 digitos e todos numeros
+		if(respostaRg.length() != 7) { //Verificando se tenho 7 digitos 
 			validaRg = false; //Nao temos 7 digitos
 			do {
 				System.out.println("Erro, um RG e composto por 7 numeros");
 				System.out.println("Digite seu RG:");
 				System.out.println("Somente os numeros");
-				setIdentidade(ler.nextDouble());
+				setIdentidade(ler.next());
 				respostaRg = getIdentidade();
 				if(respostaRg.length() != 7) { //Verificando se tenho 7 digitos e todos numeros
 					validaRg = false; //Nao temos 7 digitos
 				}
-			}while(validaRg == false); //Enquanto nao tivermos um RG valido ficaremos nesse looping
+			}while(validaRg == false); //Enquanto nao tivermos 7 numeros ficaremos nesse looping
+		}
+		if(!respostaRg.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+			validaRg = false;
+			System.out.println("Erro, um RG e composto por 7 numeros");
+			System.out.println("Digite seu RG:");
+			System.out.println("Somente os numeros");
+			setIdentidade(ler.next());
+			respostaRg = getIdentidade();
+			if(!respostaRg.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+				validaRg = false;
+			}
 		}
 		
 		//Validando a idade
 		System.out.print("Digite sua idade: ");
-		setIdade(ler.nextInt());
+		setIdade(ler.next());
 		respostaIdade = getIdade();
-		if(!respostaIdade.substring(0).matches("[1-9]+")) { //Verificando se tenho apenas numeros.
+		if(!respostaIdade.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros.
 			validaIdade = false; //Tenho letras e simbolos.
 			do {
 				System.out.println("Erro, a idade e composta apenas por numeros inteiros");
 				System.out.print("Digite sua idade: ");
-				setIdade(ler.nextInt());
+				setIdade(ler.next());
 				respostaIdade = getIdade();
-				if(!respostaIdade.substring(0).matches("[1-9]+")) { //Verificando se tenho apenas numeros.
+				if(!respostaIdade.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros.
 					validaIdade = false; //Tenho letras e simbolos.
 				}
 				
@@ -202,42 +238,148 @@ public  abstract class Pessoa {
 		//System.out.print("Digite sua data de Nascimento: ");
 		//setDataNascimento(ler.nextDate()); //Preciso descobrir como se faz pra datas.
 		//setUsuario(usuario);// Chama funcao que edita o usuario
-		System.out.println("\nPressione Enter para continuar...");
-		ler.nextLine();
+		System.out.println("Cadastrado com sucesso");
 	}
 	public void editarPessoa() { //Editar os dados da pessoa em questão, e consequentemente alterando em usuario
-		System.out.println("Digite a opcao que se deseja editar: \n");
-		System.out.println(" 1 - Nome \n");
-		System.out.println(" 2 - Telefone \n");
-		System.out.println(" 3 - Idade \n");
-		System.out.println(" 4 - Email \n");
-		System.out.println(" 5 - Senha \n");
-		opcaoMenu = ler.nextInt(); //Lendo a opcao desejada pelo usuario
-		if(opcaoMenu < 1 ||opcaoMenu>5) { //Não existe essas opcoes.
-			System.out.println("Ops, não existe essa opcao. \n");
-		}else {
-			if(opcaoMenu==1) {
-				System.out.print("Digite seu nome:");
+		//Validando nome.
+				System.out.println("Digite seu nome:");
+				System.out.println("Insira letras minusculas apenas.");
 				setNome(ler.nextLine());
-				System.out.println("Nome alterado com sucesso.");
-			}else if(opcaoMenu==2) {
-				System.out.print("Digite seu novo telefone:");
-				setTelefone(ler.nextInt());
-				System.out.println("Telefone alterado com sucesso.");
-			}else if(opcaoMenu==3) {
-				System.out.println("Digite sua idade:");
-				setIdade(ler.nextInt());
-				System.out.print("Idade alterada com sucesso.");	
-			}else if(opcaoMenu==4) {
-				System.out.print("Digite seu Email:");
-				Usuario.setEmail(ler.nextLine());
-				System.out.println("Email alterado com sucesso.");
-			}else if(opcaoMenu==5) {
-				System.out.print("Digite sua Senha:");
-				Usuario.setSenha(ler.nextLine());
-				System.out.println("Senha alterada com sucesso.");
-			}
-		}
+					//Validando nome, somente letras
+				respostaNome = getNome();
+				if(!respostaNome.substring(0).matches("[a-z]*")) { //Verificando se nao e nulo e so tem letras
+					validaNome = false;
+					do {
+						System.out.println("Erro, digite um nome com apenas letras minusculas");
+						setNome(ler.nextLine());
+							//Validando nome, somente letras
+						respostaNome = getNome();
+						if(!respostaNome.substring(0).matches("[a-z]*")) { //Verificando se nao e nulo e so tem letras
+							validaNome = false;
+						}	
+						
+					}while(validaNome == false); //Ficarei no looping ate digitar um nome valido
+				}
+				
+				//Validando CPF.
+				System.out.print("Digite seu CPF:");
+				System.out.println("Somente numeros");
+				setCpf(ler.nextLine());
+					//Validando CPF, se so tem numeros e a quantidade certa.
+				respostaCpf = getCpf();
+				if(respostaCpf.length() != 11) { //Verificando se temos 11 digitos
+					validaCpf = false; //Nao tem 11 digitos e ou nao tem apenas numeros.
+					do {
+						System.out.println("Erro, um CPF precisa ter 11 digitos e apenas numeros.");
+						System.out.print("Digite seu CPF:");
+						System.out.println("Somente numeros");
+						setCpf(ler.nextLine());
+						respostaCpf = getCpf();
+						if(respostaCpf.length() != 11) { //Verificando  se tem 11 digitos
+							validaCpf = false; //Nao tem 11 digitos 
+						}
+						
+					}while(validaCpf = false); //Ficarei no looping ate digitar 11 digitos
+				}
+				if(!respostaCpf.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+					validaCpf = false;
+					do {
+						System.out.println("Erro, um CPF precisa ter 11 digitos e apenas numeros.");
+						System.out.print("Digite seu CPF:");
+						System.out.println("Somente numeros");
+						setCpf(ler.nextLine());
+						respostaCpf = getCpf();
+						if(!respostaCpf.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+							validaCpf = false;
+						}
+					}while(validaCpf == false); //Ficarei nesse looping ate digitar apenas numeros 
+				}
+			
+				//Validando Telefone
+				System.out.print("Digite seu telefone:");
+				System.out.println("Somente os numeros, um telefone tem 9 numeros  ");
+				setTelefone(ler.next());
+				respostaTel = getTelefone();
+				if(respostaTel.length() != 9) { //Verificando se tem os 9 digitos
+					validaTel = false; //Nao temos 9 digitos
+					do {
+						System.out.println("Erro, um telefone e composto por 9 numeros.");
+						System.out.print("Digite seu telefone:");
+						System.out.println("Somente os numeros, insira o 9 mas não bote o DDD  ");
+						setTelefone(ler.next());
+						respostaTel = getTelefone();
+						if(respostaTel.length() != 9) { //Verificando se tem os 9 digitos 
+							validaTel = false; //Nao temos 9 digitos
+						}
+					}while(validaTel = false); //Enquanto nao receber 9 digitos
+					
+				}
+				if(!respostaTel.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+					validaTel = false;
+					do {
+						System.out.println("Erro, um telefone e composto por 9 numeros.");
+						System.out.print("Digite seu telefone:");
+						System.out.println("Somente os numeros, insira o 9 mas não bote o DDD  ");
+						setTelefone(ler.next());
+						respostaTel = getTelefone();
+						if(!respostaTel.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+							validaTel = false;
+						}
+					}while(validaTel == false); //Ficarei nesse looping ate por apenas numeros
+				}
+				
+				//Validade a Identidade
+				System.out.println("Digite seu RG:");
+				System.out.println("Somente os numeros");
+				setIdentidade(ler.next());
+				respostaRg = getIdentidade();
+				if(respostaRg.length() != 7) { //Verificando se tenho 7 digitos 
+					validaRg = false; //Nao temos 7 digitos
+					do {
+						System.out.println("Erro, um RG e composto por 7 numeros");
+						System.out.println("Digite seu RG:");
+						System.out.println("Somente os numeros");
+						setIdentidade(ler.next());
+						respostaRg = getIdentidade();
+						if(respostaRg.length() != 7) { //Verificando se tenho 7 digitos e todos numeros
+							validaRg = false; //Nao temos 7 digitos
+						}
+					}while(validaRg == false); //Enquanto nao tivermos 7 numeros ficaremos nesse looping
+				}
+				if(!respostaRg.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+					validaRg = false;
+					System.out.println("Erro, um RG e composto por 7 numeros");
+					System.out.println("Digite seu RG:");
+					System.out.println("Somente os numeros");
+					setIdentidade(ler.next());
+					respostaRg = getIdentidade();
+					if(!respostaRg.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+						validaRg = false;
+					}
+				}
+				
+				//Validando a idade
+				System.out.print("Digite sua idade: ");
+				setIdade(ler.next());
+				respostaIdade = getIdade();
+				if(!respostaIdade.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros.
+					validaIdade = false; //Tenho letras e simbolos.
+					do {
+						System.out.println("Erro, a idade e composta apenas por numeros inteiros");
+						System.out.print("Digite sua idade: ");
+						setIdade(ler.next());
+						respostaIdade = getIdade();
+						if(!respostaIdade.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros.
+							validaIdade = false; //Tenho letras e simbolos.
+						}
+						
+					}while(validaIdade == false); //Ficarei no looping ate digitar uma idade valida
+					
+				}
+				//System.out.print("Digite sua data de Nascimento: ");
+				//setDataNascimento(ler.nextDate()); //Preciso descobrir como se faz pra datas.
+				//setUsuario(usuario);// Chama funcao que edita o usuario
+				System.out.println("Cadastrado com sucesso");
 	}
 	public void deletaPessoa() {// Zerando todos os dados da pessoa/Usuario
 		setCpf(null);
@@ -245,9 +387,7 @@ public  abstract class Pessoa {
 		setIdentidade(null); //Preciso descobrir como se faz pra esses dois.
 		setTelefone(null);
 		setUsuario(null);
-		System.out.println("\nUsuario deletado com sucesso.");
-		System.out.println("\nPressione Enter para continuar...");
-		ler.nextLine();
+		System.out.println("Usuario deletado com sucesso.");
 	}
 
 }
