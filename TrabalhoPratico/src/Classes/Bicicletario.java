@@ -5,60 +5,141 @@ import java.util.Date;
 public class Bicicletario {
 	//Bicicleta faz parte de bicicletario...bicicleta está agregada a bicicletario.
 	//Atributos
-	private String endereco;
-	private String quadra;
+	private String chegada;
+	private String saida;
 	public String Bicicletario[];
+	
+	//Outras variaveis:
+	String respostaChegada;
+	String respostaSaida;
+	Boolean validaChegada = true;
+	Boolean validaSaida = true;
+	
 	static Scanner ler = new Scanner(System.in);
 	
 	//Metodo construtor do Bicicletario
-	public Bicicletario(String endereco, String quadra) {
-		this.endereco = endereco;
-		this.quadra = quadra;
+	public Bicicletario(String chegada, String saida) {
+		this.chegada = chegada;
+		this.saida = saida;
 	}
 	//Gets and sets.
 	//Ver os retornos para poder testar 
-	public String getEndereco() {
-		return endereco;
+	public String getChegada() {
+		return chegada;
 	}
 
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+	public void setChegada(String chegada) {
+		this.chegada = chegada;
 	}
 
-	public String getQuadra() {
-		return quadra;
+	public String getSaida() {
+		return saida;
 	}
 
-	public void setQuadra(String quadra) {
-		this.quadra = quadra;
+	public void setSaida(String saida) {
+		this.saida = saida;
 	}
 	
 	//Metodos
 	//Verificar se é tudo void mesmo
 	public void cadastrarBicicletario() {
 		//Cadastrar os locais onde se pode pegar ou deixar bicicletas.
-		//Deveremos ter estacoes pre cadastradas.
-		
+		//Devemos ter tudo em vetores
 		//Ele vai poder cadastrar onde quer sair ou chegar de acordo com as estacoes pre cadastradas.
-		System.out.println("Cadastrar lugar de checkin ");
-		setEndereco(ler.next());
-		System.out.println("Cadastrar lugar de checkout ");
-		setQuadra(ler.next());
+		
+		//Validando lugar de Checkin
+		for(int a = 0; a<=100; a++) { //Vetor de bicicletarios
+			System.out.println("Cadastrar lugar de checkin ");
+			setChegada(ler.next());
+			respostaChegada = getChegada();
+			if(respostaChegada.equals(Bicicletario[a])) { //Comparando com os bicicletarios existentes
+				validaChegada = false;
+				do {
+					System.out.println("Erro, insira um bicicletario valido");
+					System.out.println("Cadastrar lugar de checkin ");
+					setChegada(ler.next());
+					respostaChegada = getChegada();
+					if(respostaChegada.equals(Bicicletario[a])) { //Comparando com os bicicletarios existentes
+						validaChegada = false;
+					}
+				}while(validaChegada == false); //Ficarei nesse looping ate digitar um local existente
+			}
+			System.out.println("Cadastrar lugar de checkout ");
+			setSaida(ler.next());
+		}
+		
+		
+		//Validando lugar de Checkout
+				for(int a = 0; a<=100; a++) { //Vetor de bicicletarios
+					System.out.println("Cadastrar lugar de checkout");
+					setSaida(ler.next());
+					respostaSaida = getSaida();
+					if(respostaSaida.equals(Bicicletario[a])) { //Comparando com os bicicletarios existentes
+						validaSaida = false;
+						do {
+							System.out.println("Erro, insira um bicicletario valido");
+							System.out.println("Cadastrar lugar de checkin ");
+							setSaida(ler.next());
+							respostaSaida = getSaida();
+							if(respostaSaida.equals(Bicicletario[a])) { //Comparando com os bicicletarios existentes
+								validaSaida = false;
+							}
+						}while(validaSaida == false); //Ficarei nesse looping ate digitar um local existente
+				  }
+			}
 	}
 	public void editarBicletario() {
 		//Editar os locais cadastrados
-		System.out.println("Cadastrar  novo lugar de checkin ");
-		setEndereco(ler.next());
-		System.out.println("Cadastrar novo lugar de checkout ");
-		setQuadra(ler.next());
+		 
+		for(int a = 0; a<=100; a++) { //Vetor de bicicletarios
+			System.out.println("Cadastrar lugar de checkin ");
+			setChegada(ler.next());
+			respostaChegada = getChegada();
+			if(respostaChegada.equals(Bicicletario[a])) { //Comparando com os bicicletarios existentes
+				validaChegada = false;
+				do {
+					System.out.println("Erro, insira um bicicletario valido");
+					System.out.println("Cadastrar lugar de checkin ");
+					setChegada(ler.next());
+					respostaChegada = getChegada();
+					if(respostaChegada.equals(Bicicletario[a])) { //Comparando com os bicicletarios existentes
+						validaChegada = false;
+					}
+				}while(validaChegada == false); //Ficarei nesse looping ate digitar um local existente
+			}
+			System.out.println("Cadastrar lugar de checkout ");
+			setSaida(ler.next());
+		}
+		
+		
+				//Validando lugar de Checkout
+				for(int a = 0; a<=100; a++) { //Vetor de bicicletarios
+					System.out.println("Cadastrar lugar de checkout");
+					setSaida(ler.next());
+					respostaSaida = getSaida();
+					if(respostaSaida.equals(Bicicletario[a])) { //Comparando com os bicicletarios existentes
+						validaSaida = false;
+						do {
+							System.out.println("Erro, insira um bicicletario valido");
+							System.out.println("Cadastrar lugar de checkin ");
+							setSaida(ler.next());
+							respostaSaida = getSaida();
+							if(respostaSaida.equals(Bicicletario[a])) { //Comparando com os bicicletarios existentes
+								validaSaida = false;
+							}
+						}while(validaSaida == false); //Ficarei nesse looping ate digitar um local existente
+				  }
+				}
 	}
 	public void deletarBicicletario() {
 		//Resetar os dados cadastrados
-		setEndereco(null); //
-		setQuadra(null);
+		setChegada(null); //
+		setSaida(null);
 	}
 	public void atualizarBicicletario() {
 		//Atualizar os bicicletarios que foram editados
+		System.out.println("Lugar de Check-in"+getChegada());
+		System.out.println("Lugar de Check-out"+getSaida());
 	}
 	public void buscarBicicletario() { 
 		  //buscar todos bicicletarios cadastrados...talvez fosse mais interessante o usuario digitar, agt comparar texto e mostrar se achar. 
