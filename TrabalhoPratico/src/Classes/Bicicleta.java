@@ -13,6 +13,13 @@ public class Bicicleta {
 	private String nomeBicicleta;
 	private boolean disponibilidadeBicicleta;
 	
+	static Scanner ler = new Scanner(System.in);
+	//Variaveis extra:
+	String respostaTipo;
+	String respostaId;
+	Boolean validaTipo = true;
+	Boolean validaId = true;
+	
 	//Metodo construtor da Bicicleta
 	public Bicicleta(String nomeBicicleta, String tipoBicicleta, boolean disponibilidadeBicicleta) {
 		this.nomeBicicleta = nomeBicicleta;
@@ -42,11 +49,85 @@ public class Bicicleta {
 	}
 	//Metodos
 	public void cadastrarBicicleta() { //Cadastrar as bicicletas que teremos
-		//Devemos ter um vetor de bicicletas que tambem esteja contido num vetor de bicicletarios (similar a uma matriz)
+		//Precisamos arrumar em vetor aee
+		
+		//Validando o ID da bicicleta
+		System.out.println("Insira o ID desejado para a nova Bicicleta.");
+		setNomeBicicleta(ler.next());
+		respostaId = getNomeBicicleta();
+		if(!respostaId.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+			validaId = false;
+			do {
+				System.out.println("Erro, insira o numero desejado para seu ID.");
+				System.out.println("Insira o ID desejado para a nova Bicicleta.");
+				setNomeBicicleta(ler.next());
+				respostaId = getNomeBicicleta();
+				if(!respostaId.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+					validaId = false;
+				}
+			}while(validaId == false); //Ficarei nesse looping ate insirar um numero
+		}
+		
+		//Validando o tipo de bicicleta
+		System.out.println("Insira o tipo da Bicicleta:");
+		System.out.println("As bicicletas podem ser: " + "Normal ou" + "Eletrica");
+		setTipoBicicleta(ler.next());
+		respostaTipo = getTipoBicicleta();
+		if(respostaTipo.contains("Normal")||respostaTipo.contains("Eletrica")) { //Verificando se o usuario digitou os dois tipos de bicicletas que temos
+			validaTipo = false;
+			do {
+				System.out.println("Erro, insira Normal ou Eletrica.");
+				System.out.println("Insira o tipo da Bicicleta:");
+				System.out.println("As bicicletas podem ser: " + "Normal ou" + "Eletrica");
+				setTipoBicicleta(ler.next());
+				respostaTipo = getTipoBicicleta();
+				if(respostaTipo.contains("Normal")||respostaTipo.contains("Eletrica")) { //Verificando se o usuario digitou os dois tipos de bicicletas que temos
+					validaTipo = false;
+				}
+			}while(validaTipo == false); //Ficaremos nesse looping ate digitar um tipo valido de bicicletas
+		}
+		
 		
 	}
 	public void editarBicicletas() { //Editar as bicicletas que teremos
+		//Precisamos arrumar em vetor para escolher qual bicicleta editar
 		
+		//Validando o ID da bicicleta
+				System.out.println("Insira o ID desejado para a nova Bicicleta.");
+				setNomeBicicleta(ler.next());
+				respostaId = getNomeBicicleta();
+				if(!respostaId.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+					validaId = false;
+					do {
+						System.out.println("Erro, insira o numero desejado para seu ID.");
+						System.out.println("Insira o ID desejado para a nova Bicicleta.");
+						setNomeBicicleta(ler.next());
+						respostaId = getNomeBicicleta();
+						if(!respostaId.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
+							validaId = false;
+						}
+					}while(validaId == false); //Ficarei nesse looping ate insirar um numero
+				}
+				
+				//Validando o tipo de bicicleta
+				System.out.println("Insira o tipo da Bicicleta:");
+				System.out.println("As bicicletas podem ser: " + "Normal ou" + "Eletrica");
+				setTipoBicicleta(ler.next());
+				respostaTipo = getTipoBicicleta();
+				if(respostaTipo.contains("Normal")||respostaTipo.contains("Eletrica")) { //Verificando se o usuario digitou os dois tipos de bicicletas que temos
+					validaTipo = false;
+					do {
+						System.out.println("Erro, insira Normal ou Eletrica.");
+						System.out.println("Insira o tipo da Bicicleta:");
+						System.out.println("As bicicletas podem ser: " + "Normal ou" + "Eletrica");
+						setTipoBicicleta(ler.next());
+						respostaTipo = getTipoBicicleta();
+						if(respostaTipo.contains("Normal")||respostaTipo.contains("Eletrica")) { //Verificando se o usuario digitou os dois tipos de bicicletas que temos
+							validaTipo = false;
+						}
+					}while(validaTipo == false); //Ficaremos nesse looping ate digitar um tipo valido de bicicletas
+				}
+				System.out.println("Bicicleta editada com sucesso");
 	}
 	public void deletarBicicletas() { //Resetar as biclcetas escolhidas pelo usuario
 		//Zerando todos os dados cadastrados pras bicicletas
@@ -55,9 +136,72 @@ public class Bicicleta {
 		
 	}
 	public void atualizarBicicletas() { //Atualizar as bicicletas que forem editadas e cadastradas
-		
+		System.out.println("Id:" + getNomeBicicleta());
+		System.out.println("Tipo:" + getTipoBicicleta());
 	}
 	public void verBicicletas() { //Listar/ ver as bicicletas cadastradas
+		System.out.println("Bicicleta 1"); 
+		 System.out.println( "Tradiconal "); 
+		   
+		 System.out.println("Bicicleta 2"); 
+		 System.out.println("Tradicional "); 
+		   
+		 System.out.println("Bicicleta 3 "); 
+		 System.out.println( "Tradicional "); 
+		   
+		 System.out.println("Bicicleta 4"); 
+		 System.out.println("Tradicional "); 
+		 
+		 System.out.println("Bicicleta 5 "); 
+		 System.out.println( "Tradicional "); 
+		   
+		   
+		 System.out.println("Bicicleta 6 "); 
+		 System.out.println( "Tradicional "); 
+		   
+		 System.out.println("Bicicleta 7 "); 
+		 System.out.println( "Tradicional "); 
+		   
+		 System.out.println("Bicicleta 8 "); 
+		 System.out.println( "Tradicional "); 
+		   
+		 System.out.println("Bicicleta 9"); 
+		 System.out.println( "Tradicional "); 
+		   
+		 System.out.println("Bicicleta 10 "); 
+		 System.out.println( "Tradicional "); 
+		 
+		 //Bicicletas Eletricas
+		   
+		  System.out.println("Bicicleta 11 "); 
+		  System.out.println( "Eletrica "); 
+		   
+		  System.out.println("Bicicleta 12"); 
+		  System.out.println( "Eletrica "); 
+		   
+		  System.out.println("Bicicleta 13 "); 
+		  System.out.println( "Eletrica "); 
+		   
+		  System.out.println("Bicicleta 14 "); 
+		  System.out.println( "Eletrica "); 
+		   
+		  System.out.println("Bicicleta 15 "); 
+		  System.out.println( "Eletrica "); 
+		  
+		  System.out.println("Bicicleta 16 "); 
+		  System.out.println( "Eletrica "); 
+		   
+		  System.out.println("Bicicleta 17 "); 
+		  System.out.println( "Eletrica "); 
+		   
+		  System.out.println("Bicicleta 18 "); 
+		  System.out.println( "Eletrica "); 
+		   
+		  System.out.println("Bicicleta 19 "); 
+		  System.out.println( "Eletrica "); 
+		   
+		  System.out.println("Bicicleta 20 "); 
+		  System.out.println( "Eletrica "); 
 		
 	}
 	public void buscarBicicletas() { 
