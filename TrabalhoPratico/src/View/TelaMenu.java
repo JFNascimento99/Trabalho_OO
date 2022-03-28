@@ -2,7 +2,6 @@ package View;
 
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 
 public class TelaMenu implements ActionListener {
@@ -46,13 +45,18 @@ public class TelaMenu implements ActionListener {
 		Object src = e.getSource();
 		if(src == cadastrar)
 			//Ainda a criar a tela de cadastro
-			new TelaCadastro().mostraDados(dados, 1);
+			//new TelaCadastro().mostraDados(dados, 1);
+			JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
+					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);
 		
 		if(src == editar)
 			// ainda a criar tela de edição
-			new TelaEditar().mostraDados(dados, 1);
+			//new TelaEditar().mostraDados(dados, 2);
+			JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
+					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);
 		
 		if(src == vizualizar)
+			// Ainda a criar tela de vizualização
 			JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
 					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);
 	}
