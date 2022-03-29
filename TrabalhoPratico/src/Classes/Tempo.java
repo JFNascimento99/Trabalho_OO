@@ -11,6 +11,11 @@ public class Tempo {
  private int horaInicial, minInicial;
  private int horaFinal, minFinal;
  private double tempoTotal;
+ Scanner resposta = new Scanner(System.in); // Leitura de dados
+ //Outras variaveis:
+ double checkinProvisorio = 0;
+ double checkoutProvisorio = 0;
+ double tempoTotalProvisorio = 0;
 
  // Metodo construtor do Tempo
  public Tempo(String horaCheckin, String horaCheckout) {
@@ -39,7 +44,7 @@ public class Tempo {
   calcMinutos = (difHoras * 60 - minInicial) + minFinal;
 
   if (calcMinutos <= 0) {
-   return -1; // Testar se for -1, caso -1, hora inválida
+   return -1; // Testar se for -1, caso -1, hora invalida
   }
   horaDecimal = (double) (calcMinutos) / (double) (60);
   System.out.println(horaDecimal);
@@ -96,14 +101,6 @@ public class Tempo {
  public void cadastrarTempo() {
   // Cadastrar a hora de checkin e checkout e com isso ter o tempo final.
   // Utilizaremos o tempo final pro pedido pra gerar o pedido com valor por hora
-
-  Scanner resposta = new Scanner(System.in); // Leitura de dados
-  // Variaveis pra brincar com a logica apenas, pq tenho que achar como fazer as
-  // funcoes de hora mais funcionais
-  double checkinProvisorio = 0;
-  double checkoutProvisorio = 0;
-  double tempoTotalProvisorio = 0;
-
   System.out.println("Insira seu horario de checkin: ");
   checkinProvisorio = resposta.nextDouble();
   System.out.println("Insira seu horario de checkout: ");
@@ -113,18 +110,33 @@ public class Tempo {
 
  public void editarTempo() {
   // Editar hora de checkin e checkout e consequentemente o tempo final
+	 System.out.println("Insira seu novo horario de checkin: ");
+	  checkinProvisorio = resposta.nextDouble();
+	  System.out.println("Insira seu novo horario de checkout: ");
+	  checkoutProvisorio = resposta.nextDouble();
+	  tempoTotal = checkoutProvisorio - checkinProvisorio;
  }
 
  public void deletarTempo() {
   // Resetar todos os dados de tempo fazendo ficar null
+	 setHoraCheckIn(null);
+	 setHoraCheckOut(null);
+	 setTempoTotal(0);
+	
  }
 
  public void verTempo() {
   // Ver a hora de check in e checkout e tambem o tempo final.
+	 System.out.println("Hora de check-in:" + checkinProvisorio);
+	 System.out.println("Hora de Check-out: " + checkoutProvisorio);
+	 System.out.println("Tempo final: " + tempoTotal);
  }
 
  public void atualizarTempo() {
   // Quando se editar ou cadastrar ver o tempo atualizado
+	 System.out.println("Hora de check-in:" + checkinProvisorio);
+	 System.out.println("Hora de Check-out: " + checkoutProvisorio);
+	 System.out.println("Tempo final: " + tempoTotal);
  }
 
 }
