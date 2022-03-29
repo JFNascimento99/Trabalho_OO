@@ -10,7 +10,6 @@ public  abstract class Pessoa {
 	private String telefone;
 	private String identidade;
 	private String cpf;
-	private Date dataNascimento;
 	private String idade;
 	
 	private Usuario usuario;
@@ -38,14 +37,12 @@ public  abstract class Pessoa {
 		
 	}
 	
-	public Pessoa(String nome,String telefone, String identidade, String cpf,
-			Date nascimento,String idade) {
+	public Pessoa(String nome,String telefone, String identidade, String cpf,String idade) {
 		super();
 		this.nome = nome;
 		this.telefone = telefone;
 		this.identidade = identidade;
 		this.cpf = cpf;
-		this.dataNascimento = nascimento;
 		this.idade = idade;
 	}
 	
@@ -74,12 +71,6 @@ public  abstract class Pessoa {
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
-	}
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
 	}
 	public String getIdade() {
 		return idade;
@@ -235,9 +226,6 @@ public  abstract class Pessoa {
 			}while(validaIdade == false); //Ficarei no looping ate digitar uma idade valida
 			
 		}
-		//System.out.print("Digite sua data de Nascimento: ");
-		//setDataNascimento(ler.nextDate()); //Preciso descobrir como se faz pra datas.
-		//setUsuario(usuario);// Chama funcao que edita o usuario
 		System.out.println("Cadastrado com sucesso");
 	}
 	public void editarPessoa() { //Editar os dados da pessoa em questão, e consequentemente alterando em usuario
@@ -376,9 +364,6 @@ public  abstract class Pessoa {
 					}while(validaIdade == false); //Ficarei no looping ate digitar uma idade valida
 					
 				}
-				//System.out.print("Digite sua data de Nascimento: ");
-				//setDataNascimento(ler.nextDate()); //Preciso descobrir como se faz pra datas.
-				//setUsuario(usuario);// Chama funcao que edita o usuario
 				System.out.println("Cadastrado com sucesso");
 	}
 	public void deletaPessoa() {// Zerando todos os dados da pessoa/Usuario
