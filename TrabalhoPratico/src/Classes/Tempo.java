@@ -106,6 +106,9 @@ public class Tempo {
 
   System.out.println("Insira seu horario de checkin: ");
   checkinProvisorio = resposta.nextDouble();
+  System.out.println("Insira seu horario de checkout: ");
+  checkoutProvisorio = resposta.nextDouble();
+  tempoTotal = checkoutProvisorio - checkinProvisorio;
  }
 
  public void editarTempo() {
