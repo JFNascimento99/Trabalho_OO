@@ -37,13 +37,14 @@ public class Pedido {
 		System.out.println("  R$ 2,00 por hora até a 3ª hora ");
 		System.out.println("  R$ 1,50 a partir da quarta hora");
 		System.out.println("---------------------------------");
-			//Formula que tentei para precificar(as coisas de tempo ta na classe tempo)
-			tempoTotalProvisorio = (checkoutProvisorio) - (checkinProvisorio); //calculando o tempo total
-				if(tempoTotalProvisorio < 3) {
-					precoFinal = 3,00; //O preco e 3 reais nas 3 primeiras horas
-				}else {
-					precoFinal = (tempoTotalProvisorio)*1,50 //Calculando o preco pra horas superiores a 3 horas
-				}
+			//if(tempoTotal > 4) { 
+				//precoFinal = tempoTotal*1.50;
+				// System.out.println("O valor do seu aluguel ficou: " + precoFinal);
+			//}
+			//if(tempoTotal < 4){
+		         //precoFinal = 2.00;
+				//System.out.println("O valor do seu aluguel ficou: 2.00 reais");
+	        //}
 	}
 	public void atualizarPedido() {
 		//Atualizar os pedidos a cada novo tempo final (já que o valor é preco por hora/minuto)
