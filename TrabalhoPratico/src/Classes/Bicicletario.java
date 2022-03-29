@@ -15,6 +15,7 @@ public class Bicicletario {
 	Boolean validaChegada = true;
 	Boolean validaSaida = true;
 	
+	
 	static Scanner ler = new Scanner(System.in);
 	
 	//Metodo construtor do Bicicletario
@@ -107,8 +108,6 @@ public class Bicicletario {
 					}
 				}while(validaChegada == false); //Ficarei nesse looping ate digitar um local existente
 			}
-			System.out.println("Cadastrar lugar de checkout ");
-			setSaida(ler.next());
 		}
 		
 		
@@ -133,8 +132,9 @@ public class Bicicletario {
 	}
 	public void deletarBicicletario() {
 		//Resetar os dados cadastrados
-		setChegada(null); //
-		setSaida(null);
+			setChegada(null); //
+			setSaida(null);
+		
 	}
 	public void atualizarBicicletario() {
 		//Atualizar os bicicletarios que foram editados
