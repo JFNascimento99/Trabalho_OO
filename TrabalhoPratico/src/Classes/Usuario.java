@@ -19,13 +19,13 @@ public class Usuario extends Pessoa {
 	
 	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.
 	
-	public Usuario() {
+	public String Usuario[];
 		
-	}
 	
-	public Usuario( String nome,String telefone, String identidade, String cpf, Date nascimento, String idade, String email,
+	
+	public Usuario( String nome,String telefone, String identidade, String cpf,  String idade, String email,
 			String senha, String verificaSenha) {
-		super(nome, telefone, identidade, cpf, nascimento, idade);
+		super(nome, telefone, identidade, cpf, idade);
 		this.email = email;
 		this.senha = senha;
 		
@@ -231,8 +231,21 @@ public class Usuario extends Pessoa {
 		System.out.println("Telefone: \n" + getTelefone());
 	}
 	public void buscarUsuario() {
-		//Buscar usuario por nome ou cpf
-		//Precisamos botar usuario em vetor para poder fazer a busca certinha
+		//Buscar usuario por nome 
+		String buscarUsuario;
+		Boolean encontrado = false;
+		for(int b = 0; b<=100; b++) { //Vetor de usuarios
+			System.out.println("Insira o nome do usuario que se deseja buscar: ");
+			buscarUsuario = ler.next(); //Lendo o nome digitado.
+			if(Usuario[b].equals(buscarUsuario)) { //Comparando o que o usuario digitou com o que tinhamos armazenado
+				System.out.println("Na posicao " + b + "foi encontrado " + Usuario[b]);
+				encontrado = true;
+			}
+			if(!encontrado){ //Caso nao seja igual o que foi digitado
+				encontrado = false;
+				System.out.println("Esse usuario nao existe.");
+			}
+		}
 	
 	}
 	
