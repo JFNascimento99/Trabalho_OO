@@ -1,8 +1,7 @@
 package Classes;
 
-import java.util.Date;
+
 import java.util.Scanner;
-import java.util.Random;
 
 public class Usuario extends Pessoa {
 	//Usuario precisa estar em vetor para podermos fazer as buscas, o ideal seria no mesmo vetor de pessoas tbm
