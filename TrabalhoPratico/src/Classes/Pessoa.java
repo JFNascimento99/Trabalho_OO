@@ -1,6 +1,6 @@
 package Classes;
 
-import java.util.Date;
+
 import java.util.Scanner;
 
 public  abstract class Pessoa {
