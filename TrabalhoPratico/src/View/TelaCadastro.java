@@ -10,10 +10,10 @@ public class TelaCadastro implements ActionListener {
 	private JLabel titulo = new JLabel ("Cadstro de usuário");
 	
 	private JLabel nome = new JLabel("Nome");
-	private JTextField caixaNome = new JTextField(15);
+	private JTextField caixaNome = new JTextField();
 	
 	private JLabel cpf = new JLabel("CPF");
-	private JButton concluir = new JButton("Concluir");
+	private JTextField caixaCpf = new JTextField(15);
 	
 	private JLabel rg = new JLabel("RG");
 	private JTextField caixaRg = new JTextField(15);
@@ -30,21 +30,36 @@ public class TelaCadastro implements ActionListener {
 	private JLabel senha = new JLabel("Senha");
 	private JTextField caixaSenha = new JTextField(15);
 	
-	private JTextField caixaCpf = new JTextField(15);
+	private JButton concluir = new JButton("Concluir");
 	
 	public TelaCadastro() {
 		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
 		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(145, 10, 200, 30);
-		nome.setBounds(14, 50 ,180, 30);
-		//caixaNome.setBounds();
-		cpf.setBounds(14, 100 ,180, 30);
-		rg.setBounds(14, 150 ,180, 30);
-		telefone.setBounds(14, 200 ,180, 30);
-		idade.setBounds(14, 250 ,180, 30);
-		email.setBounds(14, 300 ,180, 30);
-		senha.setBounds(14, 350 ,180, 30);
+		
+		nome.setBounds(100, 50 ,180, 30);
+		caixaNome.setBounds(200, 50 ,180, 30);
+		
+		cpf.setBounds(100, 100 ,180, 30);
+		caixaCpf.setBounds(200, 100 ,180, 30);
+		
+		rg.setBounds(100, 150 ,180, 30);
+		caixaRg.setBounds(200, 150 ,180, 30);
+		
+		telefone.setBounds(100, 200 ,180, 30);
+		caixaTelefone.setBounds(200, 200 ,180, 30);
+		
+		idade.setBounds(100, 250 ,180, 30);
+		caixaIdade.setBounds(200, 250 ,180, 30);
+		
+		email.setBounds(100, 300 ,180, 30);
+		caixaEmail.setBounds(200, 300 ,180, 30);
+		
+		senha.setBounds(100, 350 ,180, 30);
+		caixaSenha.setBounds(200, 350 ,180, 30);
+		
+		concluir.setBounds(360, 400, 100, 30);
 		
 		janela.setLayout(null);
 		//chamando as informação que estarão na janela
@@ -63,6 +78,7 @@ public class TelaCadastro implements ActionListener {
 		janela.add(caixaEmail);
 		janela.add(senha);
 		janela.add(caixaSenha);
+		janela.add(concluir);
 		
 		
 		janela.setSize(480, 480);
@@ -70,7 +86,15 @@ public class TelaCadastro implements ActionListener {
 		janela.setVisible(true);
 		
 		//Retorna o texto
+		//Ver como fazer a lógica de armazenar
 		caixaNome.getText();
+		caixaCpf.getText();
+		caixaRg.getText();
+		caixaTelefone.getText();
+		caixaIdade.getText();
+		caixaEmail.getText();
+		caixaSenha.getText();
+		
 	}
 		
 		public static void main(String[] args) {
