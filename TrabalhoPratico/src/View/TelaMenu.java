@@ -46,7 +46,6 @@ public class TelaMenu implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 		if(src == cadastrar)
-			//Ainda a criar a tela de cadastro
 			new TelaCadastro();
 			/*JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
 					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);*/
@@ -58,8 +57,6 @@ public class TelaMenu implements ActionListener {
 					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);
 		
 		if(src == vizualizar)
-			// Ainda a criar tela de vizualização
-			JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
-					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);
+			new TelaBicicletas();
 	}
 }

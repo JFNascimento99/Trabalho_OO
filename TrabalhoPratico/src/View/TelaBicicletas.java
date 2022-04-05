@@ -37,4 +37,11 @@ public class TelaBicicletas implements ActionListener, ListSelectionListener{
 	//Lista de teste
 	String[] users = {"João", "Felipe", "Lucas"};
 	private JComboBox usuarios = new JComboBox(users);
+	
+	public TelaBicicletas() {
+		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
+		// definindo as medidas dos botões
+		// Legenda: X, Y, Largura, Altura
+		titulo.setBounds(145, 10, 200, 30);
+	}
 }
