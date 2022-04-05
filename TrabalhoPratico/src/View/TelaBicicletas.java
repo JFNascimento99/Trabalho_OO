@@ -75,6 +75,16 @@ public class TelaBicicletas implements ActionListener{
 	
 	private JTextField horaIn10 = new JTextField();
 	//private JTextField minIn10 = new JTextField();
+	private JTextField horaIn11 = new JTextField();
+	private JTextField horaIn12 = new JTextField();
+	private JTextField horaIn13 = new JTextField();
+	private JTextField horaIn14 = new JTextField();
+	private JTextField horaIn15 = new JTextField();
+	private JTextField horaIn16 = new JTextField();
+	private JTextField horaIn17 = new JTextField();
+	private JTextField horaIn18 = new JTextField();
+	private JTextField horaIn19 = new JTextField();
+	private JTextField horaIn20 = new JTextField();
 	
 	//Hora de CheckOut
 	private JTextField horaOut1 = new JTextField();
@@ -106,6 +116,16 @@ public class TelaBicicletas implements ActionListener{
 	
 	private JTextField horaOut10 = new JTextField();
 	//private JTextField minOut10 = new JTextField();
+	private JTextField horaOut11 = new JTextField();
+	private JTextField horaOut12 = new JTextField();
+	private JTextField horaOut13 = new JTextField();
+	private JTextField horaOut14 = new JTextField();
+	private JTextField horaOut15 = new JTextField();
+	private JTextField horaOut16 = new JTextField();
+	private JTextField horaOut17 = new JTextField();
+	private JTextField horaOut18 = new JTextField();
+	private JTextField horaOut19 = new JTextField();
+	private JTextField horaOut20 = new JTextField();
 	
 	//Lista de Dropdown
 	String[] users = {"Livre", "João", "Felipe", "Lucas"};//Lista para testar
@@ -205,6 +225,67 @@ public class TelaBicicletas implements ActionListener{
 		horaIn10.setBounds(285, 530 ,40, 30);
 		horaOut10.setBounds(365, 530 ,40, 30);
 		
+		//Linha Bike eletrica 1
+		bicicletaE1.setBounds(500, 80 ,180, 30);
+		usuario11.setBounds(620, 80 ,100, 30);
+		horaIn11.setBounds(760, 80 ,40, 30);
+		horaOut11.setBounds(840, 80 ,40, 30);
+		
+		//Linha Bike eletrica 2
+		bicicletaE2.setBounds(500, 130 ,180, 30);
+		usuario12.setBounds(620, 130 ,100, 30);
+		horaIn12.setBounds(760, 130 ,40, 30);
+		horaOut12.setBounds(840, 130 ,40, 30);
+		
+		//Linha Bike eletrica 3
+		bicicletaE3.setBounds(500, 180 ,180, 30);
+		usuario13.setBounds(620, 180 ,100, 30);
+		horaIn13.setBounds(760, 180 ,40, 30);
+		horaOut13.setBounds(840, 180 ,40, 30);
+		
+		//Linha Bike eletrica 4
+		bicicletaE4.setBounds(500, 230 ,180, 30);
+		usuario14.setBounds(620, 230 ,100, 30);
+		horaIn14.setBounds(760, 230 ,40, 30);
+		horaOut14.setBounds(840, 230 ,40, 30);
+		
+		//Linha Bike eletrica 5
+		bicicletaE5.setBounds(500, 280 ,180, 30);
+		usuario15.setBounds(620, 280 ,100, 30);
+		horaIn15.setBounds(760, 280 ,40, 30);
+		horaOut15.setBounds(840, 280 ,40, 30);
+		
+		//Linha Bike eletrica 6
+		bicicletaE6.setBounds(500, 330 ,180, 30);
+		usuario16.setBounds(620, 330 ,100, 30);
+		horaIn16.setBounds(760, 330 ,40, 30);
+		horaOut16.setBounds(840, 330 ,40, 30);
+		
+		//Linha Bike eletrica 7
+		bicicletaE7.setBounds(500, 380 ,180, 30);
+		usuario17.setBounds(620,380 ,100, 30);
+		horaIn17.setBounds(760, 380 ,40, 30);
+		horaOut17.setBounds(840, 380 ,40, 30);
+		
+		//Linha Bike eletrica 8
+		bicicletaE8.setBounds(500, 430 ,180, 30);
+		usuario18.setBounds(620, 430 ,100, 30);
+		horaIn18.setBounds(760, 430 ,40, 30);
+		horaOut18.setBounds(840, 430 ,40, 30);
+		
+		//Linha Bike eletrica 9
+		bicicletaE9.setBounds(500, 480 ,180, 30);
+		usuario19.setBounds(620,480 ,100, 30);
+		horaIn19.setBounds(760, 480 ,40, 30);
+		horaOut19.setBounds(840, 480 ,40, 30);
+		
+		//Linha Bike eletrica 10
+		bicicletaE10.setBounds(500, 530 ,180, 30);
+		usuario20.setBounds(620, 530 ,100, 30);
+		horaIn20.setBounds(760, 530 ,40, 30);
+		horaOut20.setBounds(840, 530 ,40, 30);
+		
+		
 		janela.setLayout(null);
 		//Chamando a legenda
 		janela.add(titulo);
@@ -214,6 +295,7 @@ public class TelaBicicletas implements ActionListener{
 		janela.add(horaCheckOut);
 		
 		//Chamando as informação que estarão na janela
+		//Tradicionais
 		janela.add(bicicletaT1);
 		janela.add(usuario1);
 		janela.add(horaIn1);
@@ -264,6 +346,56 @@ public class TelaBicicletas implements ActionListener{
 		janela.add(horaIn10);
 		janela.add(horaOut10);
 		
+		//Eletricas
+		janela.add(bicicletaE1);
+		janela.add(usuario11);
+		janela.add(horaIn11);
+		janela.add(horaOut11);
+		
+		janela.add(bicicletaE2);
+		janela.add(usuario12);
+		janela.add(horaIn12);
+		janela.add(horaOut12);
+		
+		janela.add(bicicletaE3);
+		janela.add(usuario13);
+		janela.add(horaIn13);
+		janela.add(horaOut13);
+		
+		janela.add(bicicletaE4);
+		janela.add(usuario14);
+		janela.add(horaIn14);
+		janela.add(horaOut14);
+		
+		janela.add(bicicletaE5);
+		janela.add(usuario15);
+		janela.add(horaIn15);
+		janela.add(horaOut15);
+		
+		janela.add(bicicletaE6);
+		janela.add(usuario16);
+		janela.add(horaIn16);
+		janela.add(horaOut16);
+		
+		janela.add(bicicletaE7);
+		janela.add(usuario17);
+		janela.add(horaIn17);
+		janela.add(horaOut17);
+		
+		janela.add(bicicletaE8);
+		janela.add(usuario18);
+		janela.add(horaIn18);
+		janela.add(horaOut18);
+		
+		janela.add(bicicletaE9);
+		janela.add(usuario19);
+		janela.add(horaIn19);
+		janela.add(horaOut19);
+		
+		janela.add(bicicletaE10);
+		janela.add(usuario20);
+		janela.add(horaIn20);
+		janela.add(horaOut20);
 		
 		//Setando dimenções e funções padrão da janela
 		janela.setSize(1200, 625);
