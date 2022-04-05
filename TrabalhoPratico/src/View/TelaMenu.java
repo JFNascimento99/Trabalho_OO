@@ -13,6 +13,7 @@ public class TelaMenu implements ActionListener {
 	private static JButton editar = new JButton("Editar usuário");
 	private static JButton vizualizar = new JButton("Vizualizar cadastrados");
 	
+	
 	public TelaMenu() {
 		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
 		// definindo as medidas dos botões

@@ -9,6 +9,7 @@ public class TelaCadastro implements ActionListener {
 	private JFrame janela = new JFrame ("Menu de Cadastro");
 	private JLabel titulo = new JLabel ("Cadstro de usuário");
 	
+	//
 	private JLabel nome = new JLabel("Nome");
 	private JTextField caixaNome = new JTextField();
 	
@@ -30,7 +31,7 @@ public class TelaCadastro implements ActionListener {
 	private JLabel senha = new JLabel("Senha");
 	private JTextField caixaSenha = new JTextField(15);
 	
-	private JButton concluir = new JButton("Concluir");
+	private static JButton concluir = new JButton("Concluir");
 	
 	public TelaCadastro() {
 		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
@@ -99,6 +100,14 @@ public class TelaCadastro implements ActionListener {
 		
 		public static void main(String[] args) {
 			TelaCadastro menu = new TelaCadastro();
-			
+			concluir.addActionListener(menu);
 	}
+		public void actionPerformed(ActionEvent e) {
+			Object src = e.getSource();
+			//Quando o botão concluir for presionado, deve pegar os valores nos getText e colocar nos respectivos lugares
+			if (src == concluir) {
+				//Fazer lógica para alterals os valores
+				new TelaMenu();
+			}
+		}
 }
