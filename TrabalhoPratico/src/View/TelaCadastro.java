@@ -81,7 +81,7 @@ public class TelaCadastro implements ActionListener {
 		janela.add(caixaSenha);
 		janela.add(concluir);
 		
-		
+		//Setando dimenções e funções padrão da janela
 		janela.setSize(480, 480);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);

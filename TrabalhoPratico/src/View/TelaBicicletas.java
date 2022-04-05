@@ -9,6 +9,12 @@ public class TelaBicicletas implements ActionListener, ListSelectionListener{
 	private JFrame janela;
 	private JLabel titulo;
 	
+	//Legenda da página
+	private JLabel tipoBicicleta = new JLabel("Tipo");
+	private JLabel locador = new JLabel("Locador");
+	private JLabel horaCheckIn = new JLabel("Check In");
+	private JLabel horaCheckOut = new JLabel("Check Out");
+	
 	//Bicicletas tradicionaois
 	private JLabel bicicletaT1 = new JLabel("Bicicleta Tradicional 01");
 	private JLabel bicicletaT2 = new JLabel("Bicicleta Tradicional 02");
@@ -33,6 +39,16 @@ public class TelaBicicletas implements ActionListener, ListSelectionListener{
 	private JLabel bicicletaE9 = new JLabel("Bicicleta Elétrica 09");
 	private JLabel bicicletaE10 = new JLabel("Bicicleta Elétrica 10");
 	
+	// Dois pontos da separação de horas
+	private JLabel separa = new JLabel(":");
+	//Hora de CheckIn
+	private JTextField horaIn1 = new JTextField();
+	private JTextField minIn1 = new JTextField();
+	
+	//Hora de CheckOut
+	private JTextField horaOut1 = new JTextField();
+	private JTextField minOut1 = new JTextField();
+	
 	//Lista de Dropdown
 	//Lista de teste
 	String[] users = {"João", "Felipe", "Lucas"};
@@ -43,5 +59,13 @@ public class TelaBicicletas implements ActionListener, ListSelectionListener{
 		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(145, 10, 200, 30);
+		
+		janela.setLayout(null);
+		//chamando as informação que estarão na janela
+		
+		//Setando dimenções e funções padrão da janela
+		janela.setSize(480, 480);
+		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		janela.setVisible(true);
 	}
 }

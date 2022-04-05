@@ -30,6 +30,7 @@ public class TelaMenu implements ActionListener {
 		janela.add(editar);
 		janela.add(vizualizar);
 		
+		//Setando dimenções e funções padrão da janela
 		janela.setSize(480, 250);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
