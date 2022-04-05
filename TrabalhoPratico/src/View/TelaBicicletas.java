@@ -115,10 +115,22 @@ public class TelaBicicletas implements ActionListener{
 	public TelaBicicletas() {
 		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
 		// Legenda: X, Y, Largura, Altura
-		titulo.setBounds(145, 10, 200, 30);
+		// Legenda da página
+		titulo.setBounds(180, 10, 200, 30);
+		tipoBicicleta.setBounds(50, 50 ,180, 30);
+		locador.setBounds(155, 50 ,180, 30);
+		horaCheckIn.setBounds(280, 50 ,180, 30);
+		horaCheckOut.setBounds(355, 50 ,180, 30);
 		
 		janela.setLayout(null);
-		//chamando as informação que estarão na janela
+		//Chamando a legenda
+		janela.add(titulo);
+		janela.add(tipoBicicleta);
+		janela.add(locador);
+		janela.add(horaCheckIn);
+		janela.add(horaCheckOut);
+		
+		//Chamando as informação que estarão na janela
 		
 		//Setando dimenções e funções padrão da janela
 		janela.setSize(480, 480);
