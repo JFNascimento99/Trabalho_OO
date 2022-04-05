@@ -8,7 +8,7 @@ import javax.swing.*;
 public class TelaBicicletas implements ActionListener{
 	//Barra de rolagem
 	
-	private JFrame janela = new JFrame ("Seleção de Bicicletas");
+	private JFrame janela = new JFrame ("Seleçao de Bicicletas");
 	//Ver com o monitor como q faz isso muito sono pra resolver
 	//Mas em teoria eh só tacar dentro do parameto do JScrollPane
 	//Do jeito q tá não precisa, mas se quiser fazer pra dar um tchan tá ai
