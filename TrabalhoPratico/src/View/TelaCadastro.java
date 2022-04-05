@@ -9,7 +9,7 @@ public class TelaCadastro implements ActionListener {
 	private JFrame janela = new JFrame ("Menu de Cadastro");
 	private JLabel titulo = new JLabel ("Cadstro de usuário");
 	
-	//
+	//Declarando Labels e caixas de texto
 	private JLabel nome = new JLabel("Nome");
 	private JTextField caixaNome = new JTextField();
 	

@@ -6,8 +6,8 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionListener;
 
 public class TelaBicicletas implements ActionListener, ListSelectionListener{
-	private JFrame janela;
-	private JLabel titulo;
+	private JFrame janela = new JFrame ("Seleção de Bicicletas");
+	private JLabel titulo = new JLabel("Bicicletas");
 	
 	//Legenda da página
 	private JLabel tipoBicicleta = new JLabel("Tipo");
@@ -41,6 +41,7 @@ public class TelaBicicletas implements ActionListener, ListSelectionListener{
 	
 	// Dois pontos da separação de horas
 	private JLabel separa = new JLabel(":");
+	
 	//Hora de CheckIn
 	private JTextField horaIn1 = new JTextField();
 	private JTextField minIn1 = new JTextField();
@@ -50,13 +51,15 @@ public class TelaBicicletas implements ActionListener, ListSelectionListener{
 	private JTextField minOut1 = new JTextField();
 	
 	//Lista de Dropdown
-	//Lista de teste
-	String[] users = {"João", "Felipe", "Lucas"};
+	String[] users = {"João", "Felipe", "Lucas"};//Lista para testar
 	private JComboBox usuarios = new JComboBox(users);
+	
+	//Botões da tela
+	private JButton deleta = new JButton("Deletar");
+	private JButton confirma = new JButton("Confirmar");
 	
 	public TelaBicicletas() {
 		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
-		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(145, 10, 200, 30);
 		
