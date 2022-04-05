@@ -98,16 +98,16 @@ public class TelaCadastro implements ActionListener {
 		
 	}
 		
-		public static void main(String[] args) {
-			TelaCadastro menu = new TelaCadastro();
-			concluir.addActionListener(menu);
+	public static void main(String[] args) {
+		TelaCadastro menu = new TelaCadastro();
+		concluir.addActionListener(menu);
 	}
-		public void actionPerformed(ActionEvent e) {
-			Object src = e.getSource();
-			//Quando o botão concluir for presionado, deve pegar os valores nos getText e colocar nos respectivos lugares
-			if (src == concluir) {
-				//Fazer lógica para alterals os valores
-				new TelaMenu();
-			}
+	public void actionPerformed(ActionEvent e) {
+		Object src = e.getSource();
+		//Quando o botão concluir for presionado, deve pegar os valores nos getText e colocar nos respectivos lugares
+		if (src == concluir) {
+			//Fazer lógica para alterals os valores
+			new TelaMenu();
 		}
+	}
 }

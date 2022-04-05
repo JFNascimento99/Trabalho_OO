@@ -3,9 +3,9 @@ package View;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.ListSelectionListener;
+//import javax.swing.event.ListSelectionListener;
 
-public class TelaBicicletas implements ActionListener, ListSelectionListener{
+public class TelaBicicletas implements ActionListener{
 	private JFrame janela = new JFrame ("Seleção de Bicicletas");
 	private JLabel titulo = new JLabel("Bicicletas");
 	
@@ -46,17 +46,71 @@ public class TelaBicicletas implements ActionListener, ListSelectionListener{
 	private JTextField horaIn1 = new JTextField();
 	private JTextField minIn1 = new JTextField();
 	
+	private JTextField horaIn2 = new JTextField();
+	private JTextField minIn2 = new JTextField();
+	
+	private JTextField horaIn3 = new JTextField();
+	private JTextField minIn3 = new JTextField();
+	
+	private JTextField horaIn4 = new JTextField();
+	private JTextField minIn4 = new JTextField();
+	
+	private JTextField horaIn5 = new JTextField();
+	private JTextField minIn5 = new JTextField();
+	
+	private JTextField horaIn6 = new JTextField();
+	private JTextField minIn6 = new JTextField();
+	
+	private JTextField horaIn7 = new JTextField();
+	private JTextField minIn7 = new JTextField();
+	
+	private JTextField horaIn8 = new JTextField();
+	private JTextField minIn8 = new JTextField();
+	
+	private JTextField horaIn9 = new JTextField();
+	private JTextField minIn9 = new JTextField();
+	
+	private JTextField horaIn10 = new JTextField();
+	private JTextField minIn10 = new JTextField();
+	
 	//Hora de CheckOut
 	private JTextField horaOut1 = new JTextField();
 	private JTextField minOut1 = new JTextField();
+	
+	private JTextField horaOut2 = new JTextField();
+	private JTextField minOut2 = new JTextField();
+	
+	private JTextField horaOut3 = new JTextField();
+	private JTextField minOut3 = new JTextField();
+	
+	private JTextField horaOut4 = new JTextField();
+	private JTextField minOut4 = new JTextField();
+	
+	private JTextField horaOut5 = new JTextField();
+	private JTextField minOut5 = new JTextField();
+	
+	private JTextField horaOut6 = new JTextField();
+	private JTextField minOut6 = new JTextField();
+	
+	private JTextField horaOut7 = new JTextField();
+	private JTextField minOut7 = new JTextField();
+	
+	private JTextField horaOut8 = new JTextField();
+	private JTextField minOut8 = new JTextField();
+	
+	private JTextField horaOut9 = new JTextField();
+	private JTextField minOut9 = new JTextField();
+	
+	private JTextField horaOut10 = new JTextField();
+	private JTextField minOut10 = new JTextField();
 	
 	//Lista de Dropdown
 	String[] users = {"João", "Felipe", "Lucas"};//Lista para testar
 	private JComboBox usuarios = new JComboBox(users);
 	
 	//Botões da tela
-	private JButton deleta = new JButton("Deletar");
-	private JButton confirma = new JButton("Confirmar");
+	private static JButton cobrar = new JButton("Cobrar");
+	private static JButton confirma = new JButton("Confirmar");
 	
 	public TelaBicicletas() {
 		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
@@ -71,4 +125,25 @@ public class TelaBicicletas implements ActionListener, ListSelectionListener{
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
 	}
+	
+	public static void main(String[] args) {
+		TelaBicicletas menu = new TelaBicicletas();
+		cobrar.addActionListener(menu);
+		confirma.addActionListener(menu);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		Object src = e.getSource();
+		if (src == cobrar) {
+			//fazer retitar o cadastro dos que possuem hora de check out e lançar o valor na tela
+			JOptionPane.showMessageDialog(null, "O valor a ser cobrado é de \n"
+					+ "R$ ", null, JOptionPane.INFORMATION_MESSAGE);
+		}
+		
+		if (src == confirma) {
+			//Aplicar logica salvar o locador
+			new TelaMenu();
+		}
+	}
+	
 }
