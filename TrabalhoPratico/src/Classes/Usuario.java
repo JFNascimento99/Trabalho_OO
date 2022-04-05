@@ -1,215 +1,97 @@
 package Classes;
 
-
 import java.util.Scanner;
 
 public class Usuario extends Pessoa {
-	//Usuario precisa estar em vetor para podermos fazer as buscas, o ideal seria no mesmo vetor de pessoas tbm
-	
-	//Atributos
+	// Usuario precisa estar em vetor para podermos fazer as buscas, o ideal seria
+	// no mesmo vetor de pessoas tbm
+
+	// Atributos
 	private String email;
 	private String senha;
-	
-	//Outras variaveis:
+
+	// Outras variaveis:
 	Boolean validaEmail = true;
 	String respostaEmail;
 	Boolean validaSenha = true;
 	String respostaSenha;
-	
-	private Scanner ler = new Scanner (System.in); // Utilizarei para fazer os metodos.
-	
+	FormaDePagamento formaDePagamento;
+
+	private Scanner ler = new Scanner(System.in); // Utilizarei para fazer os metodos.
+
 	public String Usuario[];
-		
-	
-	
-	public Usuario( String nome,String telefone, String identidade, String cpf,  String idade, String email,
-			String senha, String verificaSenha) {
+
+	public Usuario(String nome, String telefone, String identidade, String cpf, String idade, String email,
+			String senha) {
 		super(nome, telefone, identidade, cpf, idade);
 		this.email = email;
 		this.senha = senha;
-		
+
 	}
-	
-	//Gets and sets
-	//Precisa arrumar os retornos para podermos testar.
+
+	// Gets and sets
+	// Precisa arrumar os retornos para podermos testar.
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getSenha() {
 		return senha;
 	}
+
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
-	//E interessante que cada usuario seja armazenado numa posicao de um vetor e que pegue os mesmos dados do vetor de pessoas.
-	
-	// Pra Main
-	//Metodos
-	public void cadastrarUsuario() { //Cadastrando email e senha, vista que os outros dados devem ser coletados na classe pessoa
-		
-		//Validando email
-		System.out.println("Insira o email do usuario: ");
-		setEmail(ler.next());
-		respostaEmail = getEmail();
-		if(!respostaEmail.substring(0).matches("[@]*")){ //Verificando se o email  tem arroba
-			validaEmail = false;
-			do {
-				System.out.println("Erro, Um e-mail precisa ter @, digite um email valido ");
-				setEmail(ler.next());
-				respostaEmail = getEmail();
-				if(!respostaEmail.substring(0).matches("[@]*")){
-					validaEmail = false;
-				}
-			}while(validaEmail == false); //Enquanto nao tiver um @ ficarei nesse looping
+	public void addFormaPagamento(FormaDePagamento formaDePagamento) {
+		this.formaDePagamento = formaDePagamento;
+	}
+
+	public static boolean verificaEmail(String respostaEmail) {
+
+		if (!respostaEmail.substring(0).contains("@")) { // Verificando se o email nao e nulo e se tem
+															// arroba
+			return false;
 		}
-		
-		//Validando a senha
-		System.out.println("Insira a senha do usuario, a senha deve conter 2 letras maisculas e depois 3 numeros");
-		setSenha(ler.next());
-		respostaSenha = getSenha();
-		
-		//Validando se tenho 5 digitos na senha
-		if(respostaSenha.length() != 5) { //Verificando se tenho os 5 digitos
-			validaSenha = false; 
-			do {
-				System.out.println("Erro, a senha tem o tamanho de 5 digitos.");
-				System.out.println("Insira a senha do usuario, a senha deve conter 2 letras maisculas e depois 3 numeros");
-				setSenha(ler.next());
-				respostaSenha = getSenha();
-				if(respostaSenha.length() != 5) { //Verificando se tenho os 5 digitos
-					validaSenha = false; 
-				}
-			}while(validaSenha = false); //Enquanto nao tiver pelo menos 5 caracteres ficarei nesse looping
+
+		return true;
+	}
+
+	public static boolean verificaSenha(String respostaSenha) {
+		boolean validaSenha = true;
+
+		if (respostaSenha.length() != 5) { // Verificando se tenho os 5 digitos
+			validaSenha = false;
+
 		}
-			
-			//Validando se inicio a senha com duas letras maisculas
-			if(!respostaSenha.substring(0, 2).matches("[A-Z]*")){ //Verificando se comeco com 2 letras maisculas
-				validaSenha = false;
-				do {
-					System.out.println("Erro,Uma senha precisa inicialmente ter 2 letras maiusculas. ");
-					System.out.println("Insira a senha do usuario, a senha deve conter 2 letras maisculas e depois 3 numeros");
-					setSenha(ler.next());
-					respostaSenha = getSenha();
-					if(!respostaSenha.substring(0, 2).matches("[A-Z]*")){
-						validaSenha = false;
-					}
-				}while(validaSenha = false); //Enquanto nao iniciar com duas letras maisculas ficarei nesse looping
-			}
-			
-			//Validando se termino a senha com 3 numeros
-			if(!respostaSenha.substring(2).matches("[0-9]*")){ //Verificando se do 3 ao 5 digito da senha sao numeros
-				validaSenha = false;
-				do {
-					System.out.println("Erro, Uma senha precisa ter 3 numeros em seu final.");
-					setSenha(ler.next());
-					respostaSenha = getSenha();
-					if(!respostaSenha.substring(2).matches("[0-9]*")){
-						validaSenha = false;
-					}
-				}while(validaSenha == false); //Enquanto nao ter 3 numeros no final ficarei nesse looping
-			}
-		
-		
+
+		// Validando se inicio a senha com duas letras maisculas
+		if (!respostaSenha.substring(0, 2).matches("[A-Z]*")) { // Verificando se comeco com 2 letras
+																// maisculas
+			validaSenha = false;
+
+		}
+
+		// Validando se termino a senha com 3 numeros
+		if (!respostaSenha.substring(2).matches("[0-9]*")) { // Verificando se do 3 ao 5 digito da senha sao
+																// numeros
+			validaSenha = false;
+		}
+
+		return validaSenha;
 	}
-	
-	public void editarUsuario() {
-		//Editar os dados dos usuarios
-		int opcaoEdita = 0 ; //Pro menu de edicoes que terei pra usuario.
-	
-		do {
-			System.out.println("O que deseja editar?");
-			System.out.println("\n1 - E-mail\n2 Senha\n3 Sair");
-			opcaoEdita = ler.nextInt(); //Lendo qual das opcoes o usuario quer.
-			switch(opcaoEdita) {
-			
-			case 1:
-				System.out.println("1 Email");
-				System.out.println("Insira o novo email:");
-				setEmail(ler.next());
-				  //Validando email.
-				respostaEmail = getEmail();
-				if(!respostaEmail.substring(0).matches("[@]*")){ //Verificando se o email nao e nulo e se tem arroba
-					validaEmail = false;
-					do {
-						System.out.println("Erro, Um e-mail precisa ter @, digite um email valido ");
-						setEmail(ler.next());
-						respostaEmail = getEmail();
-						if(!respostaEmail.substring(0).matches("[@]*")){
-							validaEmail = false;
-						}
-					}while(validaEmail == false); //Enquanto nao digitar um email valido ficarei nesse looping
-				}
-				System.out.println("Email alterado com sucesso.");
-				
-			break;
-			case 2:
-				System.out.println("2 Senha");
-				System.out.println("Insira a  nova senha do usuario, a senha deve conter 2 letras maisculas e depois 3 numeros");
-				//Validando a  nova senha.
-				setSenha(ler.next());
-				respostaSenha = getSenha();
-				//Validando se tenho 5 digitos na senha
-				if(respostaSenha.length() != 5) { //Verificando se tenho os 5 digitos
-					validaSenha = false; 
-					do {
-						System.out.println("Erro, a senha tem o tamanho de 5 digitos.");
-						System.out.println("Insira a senha do usuario, a senha deve conter 2 letras maisculas e depois 3 numeros");
-						setSenha(ler.next());
-						respostaSenha = getSenha();
-						if(respostaSenha.length() != 5) { //Verificando se tenho os 5 digitos
-							validaSenha = false; 
-						}
-					}while(validaSenha = false); //Enquanto nao tiver pelo menos 5 caracteres ficarei nesse looping
-				}
-					
-					//Validando se inicio a senha com duas letras maisculas
-					if(!respostaSenha.substring(0, 2).matches("[A-Z]*")){ //Verificando se comeco com 2 letras maisculas
-						validaSenha = false;
-						do {
-							System.out.println("Erro,Uma senha precisa inicialmente ter 2 letras maiusculas. ");
-							System.out.println("Insira a senha do usuario, a senha deve conter 2 letras maisculas e depois 3 numeros");
-							setSenha(ler.next());
-							respostaSenha = getSenha();
-							if(!respostaSenha.substring(0, 2).matches("[A-Z]*")){
-								validaSenha = false;
-							}
-						}while(validaSenha = false); //Enquanto nao iniciar com duas letras maisculas ficarei nesse looping
-					}
-					
-					//Validando se termino a senha com 3 numeros
-					if(!respostaSenha.substring(2).matches("[0-9]*")){ //Verificando se do 3 ao 5 digito da senha sao numeros
-						validaSenha = false;
-						do {
-							System.out.println("Erro, Uma senha precisa ter 3 numeros em seu final.");
-							setSenha(ler.next());
-							respostaSenha = getSenha();
-							if(!respostaSenha.substring(2).matches("[0-9]*")){
-								validaSenha = false;
-							}
-						}while(validaSenha == false); //Enquanto nao ter 3 numeros no final ficarei nesse looping
-					}
-					System.out.println("Senha alterada com sucesso.");
-				
-			break;
-			case 3: //Saida do menu
-			break;
-			default:
-				System.out.println("Essa opcao nao existe, tente novamente.");
-			}
-		}while(opcaoEdita==3); //Saida do menu
-		
+
+	public void deletarUsuario() { // Zerando email e senha do usuario
+		Dados.getUsuarios().remove(this);
 	}
-	public void deletarUsuario() { //Zerando email e senha do usuario
-		setEmail(null);
-		setSenha(null);
-	}
+
 	public void atualizarUsuario() {
-		//Atualizando os dados que forem ou cadastrados ou editados
-		
+		// Atualizando os dados que forem ou cadastrados ou editados
+
 		System.out.println("Informacoes dos usuarios");
 		System.out.println("Nome: \n" + getNome());
 		System.out.println("Email: \n" + getEmail());
@@ -218,9 +100,10 @@ public class Usuario extends Pessoa {
 		System.out.println("Senha: \n" + getSenha());
 		System.out.println("Telefone: \n" + getTelefone());
 	}
+
 	public void listarUsuario() {
-		//Listar todos os usuarios cadastrados
-		
+		// Listar todos os usuarios cadastrados
+
 		System.out.println("Informacoes dos usuarios");
 		System.out.println("Nome: \n" + getNome());
 		System.out.println("Email: \n" + getEmail());
@@ -229,23 +112,24 @@ public class Usuario extends Pessoa {
 		System.out.println("Senha: \n" + getSenha());
 		System.out.println("Telefone: \n" + getTelefone());
 	}
+
 	public void buscarUsuario() {
-		//Buscar usuario por nome 
+		// Buscar usuario por nome
 		String buscarUsuario;
 		Boolean encontrado = false;
-		for(int b = 0; b<=100; b++) { //Vetor de usuarios
+		for (int b = 0; b <= 100; b++) { // Vetor de usuarios
 			System.out.println("Insira o nome do usuario que se deseja buscar: ");
-			buscarUsuario = ler.next(); //Lendo o nome digitado.
-			if(Usuario[b].equals(buscarUsuario)) { //Comparando o que o usuario digitou com o que tinhamos armazenado
+			buscarUsuario = ler.next(); // Lendo o nome digitado.
+			if (Usuario[b].equals(buscarUsuario)) { // Comparando o que o usuario digitou com o que tinhamos armazenado
 				System.out.println("Na posicao " + b + "foi encontrado " + Usuario[b]);
 				encontrado = true;
 			}
-			if(!encontrado){ //Caso nao seja igual o que foi digitado
+			if (!encontrado) { // Caso nao seja igual o que foi digitado
 				encontrado = false;
 				System.out.println("Esse usuario nao existe.");
 			}
 		}
-	
+
 	}
-	
+
 }

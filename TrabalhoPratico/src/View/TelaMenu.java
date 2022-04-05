@@ -4,60 +4,74 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import Classes.Dados;
+import Classes.Usuario;
+
 public class TelaMenu implements ActionListener {
-	
-	private static JFrame janela = new JFrame("Controle de Bicicletas"); //nome da janela
+
+	private static JFrame janela = new JFrame("Controle de Bicicletas"); // nome da janela
 	private static JLabel titulo = new JLabel("Menu principal"); // Texto que aparece na janela
-	//Nomes dos botões
-	private static JButton cadastrar = new JButton("Cadastrar usuário");
-	private static JButton editar = new JButton("Editar usuário");
+	// Nomes dos botï¿½es
+	private static JButton cadastrar = new JButton("Cadastrar usuÃ¡rio");
+	private static JButton editar = new JButton("Editar usuÃ¡rio");
 	private static JButton vizualizar = new JButton("Vizualizar cadastrados");
-	
-	
+
 	public TelaMenu() {
-		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
-		// definindo as medidas dos botões
+		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do tï¿½tulo
+		// definindo as medidas dos botï¿½es
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(165, 10, 150, 30);
-		cadastrar.setBounds(140, 50 ,180, 30);
+		cadastrar.setBounds(140, 50, 180, 30);
 		editar.setBounds(140, 100, 180, 30);
 		vizualizar.setBounds(140, 150, 180, 30);
-		
+
 		janela.setLayout(null);
-		//chamando as informação que estarão na janela
+		// chamando as informaï¿½ï¿½o que estarï¿½o na janela
 		janela.add(titulo);
 		janela.add(cadastrar);
 		janela.add(editar);
 		janela.add(vizualizar);
-		
-		//Setando dimenções e funções padrão da janela
+
+		// Setando dimenï¿½ï¿½es e funï¿½ï¿½es padrï¿½o da janela
 		janela.setSize(480, 250);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
+
+		// Setando a tela para aparecer no centro
+		janela.setLocationRelativeTo(null);
 	}
-	
+
 	public static void main(String[] args) {
 		TelaMenu menu = new TelaMenu();
-		//Implementação do Action Listener
+
+		// ImplementaÃ§Ã£o do Action Listener
 		cadastrar.addActionListener(menu);
 		editar.addActionListener(menu);
 		vizualizar.addActionListener(menu);
 	}
-	
+
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
-		if(src == cadastrar)
-			new TelaCadastro();
-			/*JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
-					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);*/
-		
-		if(src == editar)
-			// ainda a criar tela de edição
-			new TelaEdita();
-			/*JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
-					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);*/
-		
-		if(src == vizualizar)
-			new TelaBicicletas();
+		if (src == cadastrar)
+			TelaCadastro.main(null);
+		/*
+		 * JOptionPane.showMessageDialog(null,
+		 * "Ainda precisam ser implementadas funcionalidades\n"
+		 * + "relacionadas ao curso e a matrï¿½cula", null,
+		 * JOptionPane.INFORMATION_MESSAGE);
+		 */
+
+		if (src == editar)
+			// ainda a criar tela de ediï¿½ï¿½o
+			TelaEdita.main(null);
+		/*
+		 * JOptionPane.showMessageDialog(null,
+		 * "Ainda precisam ser implementadas funcionalidades\n"
+		 * + "relacionadas ao curso e a matrï¿½cula", null,
+		 * JOptionPane.INFORMATION_MESSAGE);
+		 */
+
+		if (src == vizualizar)
+			TelaBicicletas.main(null);
 	}
 }
