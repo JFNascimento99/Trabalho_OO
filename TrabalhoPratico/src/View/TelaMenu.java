@@ -53,9 +53,9 @@ public class TelaMenu implements ActionListener {
 		
 		if(src == editar)
 			// ainda a criar tela de edição
-			//new TelaEditar().mostraDados(dados, 2);
-			JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
-					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);
+			new TelaEdita();
+			/*JOptionPane.showMessageDialog(null, "Ainda precisam ser implementadas funcionalidades\n"
+					+ "relacionadas ao curso e a matrícula", null, JOptionPane.INFORMATION_MESSAGE);*/
 		
 		if(src == vizualizar)
 			new TelaBicicletas();

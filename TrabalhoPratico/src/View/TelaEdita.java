@@ -4,9 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-//Fazer antes uma tela de seleção de usuário
-
-public class TelaCadastro implements ActionListener {
+public class TelaEdita implements ActionListener {
 
 	private JFrame janela = new JFrame ("Menu de Cadastro");
 	private JLabel titulo = new JLabel ("Cadstro de usuário");
@@ -35,7 +33,7 @@ public class TelaCadastro implements ActionListener {
 	
 	private static JButton concluir = new JButton("Concluir");
 	
-	public TelaCadastro() {
+	public TelaEdita() {
 		titulo.setFont(new Font("Arial" , Font.BOLD, 20)); // definindo fonte do título
 		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
@@ -101,7 +99,7 @@ public class TelaCadastro implements ActionListener {
 	}
 		
 	public static void main(String[] args) {
-		TelaCadastro menu = new TelaCadastro();
+		TelaEdita menu = new TelaEdita();
 		concluir.addActionListener(menu);
 	}
 	public void actionPerformed(ActionEvent e) {
