@@ -7,6 +7,7 @@ public class Dados {
     private static final ArrayList<Bicicleta> Bicicletas = new ArrayList<>();
     private static final ArrayList<Bicicletario> Bicicletarios = new ArrayList<>();
     private static final ArrayList<Pedido> Pedidos = new ArrayList<>();
+    private static final ArrayList<FormaDePagamento>Pagamentos = new ArrayList<>();
     private Dados() {
 
     }
@@ -25,5 +26,8 @@ public class Dados {
     //Array de de pedidos que usamos nas telas relacionadas a pedidos
     public static ArrayList<Pedido> getPedidos(){
     	return Pedidos;
+    }
+    public static ArrayList<FormaDePagamento> getFormaDePagamento(){
+    	return Pagamentos;
     }
 }
