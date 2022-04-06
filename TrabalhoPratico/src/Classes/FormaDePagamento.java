@@ -63,109 +63,36 @@ public class FormaDePagamento {
 		this.tipoPagamento = tipoPagamento;
 	}
 	
-	//Metodos
-	public void cadastrarFormaPagamento() {
-		//Cadastrar os cartoes.
-		
-		//Validando Bandeira do cartao, so aceitaremos esses 3 cartoes escritos nessa forma.
-		System.out.println("Cadastrar bandeira do cartao (Visa,Mastercard,Elo):");
-		setBandeiraCartao(ler.next());
-		respostaBandeira = getBandeiraCartao();
-		  if(respostaBandeira.contains ("Visa") || respostaBandeira.contains ("Mastercard") || respostaBandeira.contains ("Elo")) {
-			  validaBandeira = false;
-			  do {
-			  		System.out.println("Erro, so aceitamos as seguintes bandeiras" + "Visa, " + "MasterCard, " + "Elo. ");
-			  		System.out.println("Cadastrar bandeira do cartao (Visa,Mastercard,Elo):");
-					setBandeiraCartao(ler.next());
-					respostaBandeira = getBandeiraCartao();
-					  if(respostaBandeira.contains ("Visa") || respostaBandeira.contains ("Mastercard") || respostaBandeira.contains ("Elo")) {
-						  validaBandeira = false;
-					  }  
-			  }while(validaBandeira == false); //Ficarei nesse looping ate colocar uma bandeira valida		
+	//Adaptacao para usar esses dados na tela
+	public static boolean verificaBandeira(String respostaBandeira) {
+		  if(!respostaBandeira.contains ("Visa") || !respostaBandeira.contains ("Mastercard") || !respostaBandeira.contains ("Elo")) {
+			  return false;
 		  }
-		
-		//Validando forma de pagamento  
-		System.out.println("Cadastrar forma de pagamento: ");
-		System.out.println("Forma de Pagamento(debito, credito): ");
-		setTipoPagamento(ler.next());
-		respostaPagamento = getTipoPagamento();
-			if(respostaPagamento.contains ("debito") || respostaPagamento.contains ("Credito")) { //So aceitaremos esses dois e escritos assim
-				validaPagamento = false;
-				do {
-					System.out.println("Erro, so aceitamos credito ou debito, escritos dessa forma.");
-					System.out.println("Cadastrar forma de pagamento: ");
-					System.out.println("Forma de Pagamento(debito, credito): ");
-					setTipoPagamento(ler.next());
-					respostaPagamento = getTipoPagamento();
-						if(respostaPagamento.contains ("debito") || respostaPagamento.contains ("Credito")) { //So aceitaremos esses dois e escritos assim
-							validaPagamento = false;
-						}
-				}while(validaPagamento == false); //Ficarei nesse looping ate pelo menos 16 digitos
-			}
-			
-		//Validando numero do cartao
-		System.out.println("Cadastrar numero do cartao para pagamento: ");
-		setNumeroCartao(ler.next());
-		respostaNumero = getNumeroCartao();
-			if(respostaNumero.length() != 16) { //Verificando se tenho 16 digitos
-				validaNumero = false;
-				do {
-					System.out.println("Erro, um cartao precisa ter 16 numeros.");
-					System.out.println("Cadastrar numero do cartao para pagamento: ");
-					setNumeroCartao(ler.next());
-					respostaNumero = getNumeroCartao();
-						if(respostaNumero.length() != 16) {
-							validaNumero = false;
-						}
-				}while(validaNumero == false); //Ficarei nesse looping ate por uma resposta valida
-			}
-			if(!respostaNumero.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
-				validaNumero = false;
-				do {
-					System.out.println("Erro, um cartao precisa ter 16 numeros.");
-					System.out.println("Cadastrar numero do cartao para pagamento: ");
-					setNumeroCartao(ler.next());
-					respostaNumero = getNumeroCartao();
-					if(!respostaNumero.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
-						validaNumero = false;
-					}
-				}while(validaNumero == false); //Ficarei nesse looping ate digitar apenas numeros
-			}
-		
-		//Validando codigo de seguranca
-		System.out.println("Cadastrar codigo de seguranca do cartao: ");
-		setCodigoSeguranca(ler.next());
-		respostaSeguranca = getCodigoSeguranca();
-		if(respostaSeguranca.length() != 3) { //Verificando que temos 3 digitos
-			validaCodigo = false;
-			do {
-				System.out.println("Erro, um codigo de seguranca precisa ter 3 digitos");
-				System.out.println("Cadastrar codigo de seguranca do cartao: ");
-				setCodigoSeguranca(ler.next());
-				respostaSeguranca = getCodigoSeguranca();
-				if(respostaSeguranca.length() != 3) { //Verificando que temos 3 digitos
-					validaCodigo = false;
-				}
-			}while(validaCodigo == false); //Ficarei nesse looping ate por pelo menos 3 digitos
-			
-		}
-		if(!respostaSeguranca.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
-			validaCodigo = false;
-			do {
-				System.out.println("Erro, um codigo de seguranca precisa ter 3 digitos");
-				System.out.println("Cadastrar codigo de seguranca do cartao: ");
-				setCodigoSeguranca(ler.next());
-				respostaSeguranca = getCodigoSeguranca();
-				if(!respostaSeguranca.substring(0).matches("[0-9]*")) { //Verificando se tenho apenas numeros
-					validaCodigo = false;
-				}
-				
-			}while(validaCodigo == false); //Ficarei nesse looping ate por apenas digitos
-			
-		}
-		System.out.println("Cartao cadastrado com sucesso");
+			  return true;
 	}
+	//Adaptacao para usar esses dados na tela
+	public static boolean verificaTipo(String respostaPagamento) {
+		if(!respostaPagamento.contains ("debito") || !respostaPagamento.contains ("Credito")) { //So aceitaremos esses dois e escritos assim
+			return  false;
+		}
+			return  true;
+	}
+	//Adaptacao para usar esses dados na tela
+	public static boolean verificaNumero(String respostaNumero) {
+		if(respostaNumero.length() != 16) { //Verificando se tenho 16 digitos
+			return false;
+		}
+			return true;
+	}
+	public static boolean verificaCodigo(String respostaSeguranca) {
+		if(respostaSeguranca.length() != 3) { //Verificando que temos 3 digitos
+			return false;
+		}
+			return true;
+	}
+
 	public void editarFormaPagamento() {
+		//Versao antiga do que fiz sem adaptar pra tentar por na tela, se der ruim usar esse
 		//Editar os cartoes cadastrados
 		
 		//Validando Bandeira do cartao, so aceitaremos esses 3 cartoes escritos nessa forma.
@@ -268,10 +195,12 @@ public class FormaDePagamento {
 	}
 	public void deletarFormaPagamento() { 
 		// Escolher qual carta e Resetar todos os dados fazendo virar null.
-		setTipoPagamento(null);
-		setNumeroCartao(null);
-		setBandeiraCartao(null);
-		setCodigoSeguranca(null);
+		//Versao antiga delecao
+		//setTipoPagamento(null);
+		//setNumeroCartao(null);
+		//setBandeiraCartao(null);
+		//setCodigoSeguranca(null);
+		Dados.getFormaDePagamento().remove(this);
 	}
 	public void atualizarFormaPgamento() {
 		//Atualizar todos os cartoes que forem editados e cadastrados
