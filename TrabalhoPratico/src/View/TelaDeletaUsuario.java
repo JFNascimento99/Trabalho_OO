@@ -11,7 +11,7 @@ import Classes.Usuario;
 
 public class TelaDeletaUsuario implements ActionListener {
 
-	private JFrame janela = new JFrame("Menu de Cadastro");
+	private JFrame janela = new JFrame("Menu de delecao");
 	private JLabel titulo = new JLabel("Deletar usuário");
 
 	// Declarando Labels e caixas de texto
@@ -106,7 +106,7 @@ public class TelaDeletaUsuario implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		TelaCadastroUsuario menu = new TelaCadastroUsuario();
+		TelaDeletaUsuario menu = new TelaDeletaUsuario();
 		System.out.println("teste");
 		confirmar.addActionListener(menu);
 	}
