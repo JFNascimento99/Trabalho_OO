@@ -426,7 +426,7 @@ public class TelaBicicletas implements ActionListener{
 		
 		if (src == confirma) {
 			//Aplicar logica salvar o locador
-			new TelaMenu();
+			new TelaMenuPrincipal();
 		}
 	}
 }

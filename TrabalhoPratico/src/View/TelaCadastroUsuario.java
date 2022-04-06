@@ -7,12 +7,12 @@ import javax.swing.*;
 import Classes.Dados;
 import Classes.Usuario;
 
-//Fazer antes uma tela de seleção de usuário
+//Fazer antes uma tela de selecao de usuario
 
 public class TelaCadastroUsuario implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de Cadastro");
-	private JLabel titulo = new JLabel("Cadastro de usuário");
+	private JLabel titulo = new JLabel("Cadastro de usuario");
 
 	// Declarando Labels e caixas de texto
 	private JLabel nome = new JLabel("Nome");
@@ -39,8 +39,8 @@ public class TelaCadastroUsuario implements ActionListener {
 	private static JButton concluir = new JButton("Concluir");
 
 	public TelaCadastroUsuario() {
-		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
-		// definindo as medidas dos botões
+		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
+		// definindo as medidas dos botoes
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(145, 10, 200, 30);
 
@@ -68,7 +68,7 @@ public class TelaCadastroUsuario implements ActionListener {
 		concluir.setBounds(360, 400, 100, 30);
 
 		janela.setLayout(null);
-		// chamando as informação que estarão na janela
+		// chamando as informacoes que estarao na janela
 		janela.add(titulo);
 		janela.add(nome);
 		janela.add(caixaNome);
@@ -86,12 +86,12 @@ public class TelaCadastroUsuario implements ActionListener {
 		janela.add(caixaSenha);
 		janela.add(concluir);
 
-		// Setando dimensões e funções padrão da janela
+		// Setando dimencoes e funcoes padrao da janela
 		janela.setSize(480, 480);
 		janela.setVisible(true);
 
 		// Retorna o texto
-		// Ver como fazer a l�gica de armazenar
+		// Ver como fazer a logica de armazenar
 		caixaNome.getText();
 		caixaCpf.getText();
 		caixaRg.getText();
@@ -111,7 +111,7 @@ public class TelaCadastroUsuario implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
-		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
+		// Quando o botao concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == concluir) {
 
@@ -129,31 +129,31 @@ public class TelaCadastroUsuario implements ActionListener {
 				String mensagemErro = "";
 
 				if (!Usuario.verificaNome(caixaNome.getText())) {
-					mensagemErro += "NOME INVÁLIDO - valida somente com letras minusculas\n";
+					mensagemErro += "NOME INVALIDO - valida somente com letras minusculas\n";
 
 				}
 				if (!Usuario.verificaCpf(caixaCpf.getText())) {
-					mensagemErro += "CPF INVÁLIDO - valida somente com 11 numeros \n";
+					mensagemErro += "CPF INVALIDO - valida somente com 11 numeros \n";
 
 				}
 				if (!Usuario.verificaRg(caixaRg.getText())) {
-					mensagemErro += "RG INVÁLIDO - valida somente com 7 numeros\n";
+					mensagemErro += "RG INVALIDO - valida somente com 7 numeros\n";
 
 				}
 				if (!Usuario.verificaTelefone(caixaTelefone.getText())) {
-					mensagemErro += "TELEFONE INVÁLIDO - valida somente com 9 numeros\n";
+					mensagemErro += "TELEFONE INVALIDO - valida somente com 9 numeros\n";
 
 				}
 				if (!Usuario.verificaIdade(caixaIdade.getText())) {
-					mensagemErro += "IDADE INVÁLIDA - valida somente com numeros inteiros\n";
+					mensagemErro += "IDADE INVALIDA - valida somente com numeros inteiros\n";
 
 				}
 				if (!Usuario.verificaEmail(caixaEmail.getText())) {
-					mensagemErro += "EMAIL INVÁLIDO - valida somente com @ \n";
+					mensagemErro += "EMAIL INVALIDO - valida somente com @ \n";
 
 				}
 				if (!Usuario.verificaSenha(caixaSenha.getText())) {
-					mensagemErro += "SENHA INVÁLIDA - valida somente com duas letras maisculas e posteriormente 3 numeros\n";
+					mensagemErro += "SENHA INVALIDA - valida somente com duas letras maisculas e posteriormente 3 numeros\n";
 
 				}
 
@@ -165,7 +165,7 @@ public class TelaCadastroUsuario implements ActionListener {
 							caixaCpf.getText(), caixaIdade.getText(), caixaEmail.getText(), caixaSenha.getText()));// salvar
 					System.out.println(Dados.getUsuarios().get(0).getNome());
 					janela.dispose();
-					TelaMenu.main(null);
+					TelaMenuPrincipal.main(null);
 				}
 
 			}

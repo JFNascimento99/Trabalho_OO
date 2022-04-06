@@ -128,7 +128,7 @@ public class TelaCadastraPagamento implements ActionListener {
 
 			}
 
-			// Fazer lÃ³gica para alterals os valores
+			// Fazer lógica para alterals os valores
 		}
 	}
 }

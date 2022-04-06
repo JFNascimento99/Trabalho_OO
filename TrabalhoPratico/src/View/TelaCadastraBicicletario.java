@@ -7,7 +7,7 @@ import javax.swing.*;
 import Classes.Dados;
 import Classes.Bicicletario;
 
-//Fazer antes uma tela de seleção de usuário
+//Fazer antes uma tela de selecao de usuario
 
 public class TelaCadastraBicicletario implements ActionListener {
 
@@ -23,8 +23,8 @@ public class TelaCadastraBicicletario implements ActionListener {
 	private static JButton concluir = new JButton("Concluir");
 
 	public TelaCadastraBicicletario() {
-		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
-		// definindo as medidas dos botões
+		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
+		// definindo as medidas dos botoes
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(145, 10, 200, 30);
 
@@ -76,11 +76,11 @@ public class TelaCadastraBicicletario implements ActionListener {
 				String mensagemErro = "";
 
 				if (!Bicicletario.verificaCheckIn(caixaCheckIn.getText())) {
-					mensagemErro += "CheckIn invalido - valida somente estacoes existentes\n";
+					mensagemErro += "Check In INVALIDO - valida somente estacoes existentes\n";
 
 				}
 				if (!Bicicletario.verificaCheckOut(caixaCheckOut.getText())) {
-					mensagemErro += "CheckOut INVÁLIDO - valida somente estacoes existentes \n";
+					mensagemErro += "Check Out INVALIDO - valida somente estacoes existentes \n";
 
 				}
 				if (mensagemErro.length() > 0) {
