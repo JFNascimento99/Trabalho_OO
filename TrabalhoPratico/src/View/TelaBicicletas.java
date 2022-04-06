@@ -129,6 +129,8 @@ public class TelaBicicletas implements ActionListener{
 	
 	//Lista de Dropdown
 	String[] users = {"Livre", "João", "Felipe", "Lucas"};//Lista para testar
+	
+	//Pra usar uma lista eh so chamar ela dentro do new JComboBox('nome da lista')
 	private JComboBox usuario1 = new JComboBox(users);
 	private JComboBox usuario2 = new JComboBox(users);
 	private JComboBox usuario3 = new JComboBox(users);
