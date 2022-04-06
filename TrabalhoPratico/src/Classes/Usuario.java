@@ -52,7 +52,7 @@ public class Usuario extends Pessoa {
 	}
 
 	public static boolean verificaEmail(String respostaEmail) {
-
+		//Adaptacao do que havia feito para tentar por na tela do Swing
 		if (!respostaEmail.substring(0).contains("@")) { // Verificando se o email nao e nulo e se tem
 															// arroba
 			return false;
@@ -62,23 +62,24 @@ public class Usuario extends Pessoa {
 	}
 
 	public static boolean verificaSenha(String respostaSenha) {
+		//Adaptacao do que havia feito para tentar por na tela do Swing
 		boolean validaSenha = true;
 
 		if (respostaSenha.length() != 5) { // Verificando se tenho os 5 digitos
-			validaSenha = false;
+			return  false;
 
 		}
 
 		// Validando se inicio a senha com duas letras maisculas
 		if (!respostaSenha.substring(0, 2).matches("[A-Z]*")) { // Verificando se comeco com 2 letras
-																// maisculas
+			//Adaptacao do que havia feito para tentar por na tela do Swing													// maisculas
 			validaSenha = false;
 
 		}
 
 		// Validando se termino a senha com 3 numeros
 		if (!respostaSenha.substring(2).matches("[0-9]*")) { // Verificando se do 3 ao 5 digito da senha sao
-																// numeros
+			//Adaptacao do que havia feito para tentar por na tela do Swing													// numeros
 			validaSenha = false;
 		}
 
@@ -86,6 +87,7 @@ public class Usuario extends Pessoa {
 	}
 
 	public void deletarUsuario() { // Zerando email e senha do usuario
+		//Adaptacao do que havia feito para tentar por na tela do Swing
 		Dados.getUsuarios().remove(this);
 	}
 
