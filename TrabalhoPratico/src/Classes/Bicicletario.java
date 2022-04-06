@@ -7,7 +7,7 @@ public class Bicicletario {
 	//Atributos
 	private String chegada;
 	private String saida;
-	public String Bicicletario[];
+	public String Bicicletario;
 	
 	//Outras variaveis:
 	String respostaChegada;
@@ -44,15 +44,17 @@ public class Bicicletario {
 	//Metodos
 	//Modificacoes que fizemos para tentar mostrar na tela
 	public static Boolean verificaCheckIn(String respostaChegada) {
-			if(respostaChegada.equals(Bicicletarios)) { //Comparando com os bicicletarios existentes
+			if(respostaChegada.equals(Bicicletario)) { //Comparando com os bicicletarios existentes
 				return  false;
 			}
+			return true;
 	}
 	//Modificacoes que fizemos para tentar mostrar na tela
 	public static Boolean verificaCheckOut(String respostaSaida) {
-			if(respostaSaida.equals(Bicicletarios)) { //Comparando com os bicicletarios existentes
+			if(respostaSaida.equals(Bicicletario)) { //Comparando com os bicicletarios existentes
 				return false;
 			}
+			return true;
 	}
 	public void editarBicletario() {
 		//Editar os locais cadastrados
