@@ -63,18 +63,18 @@ public class TelaMenuPrincipal implements ActionListener {
 		if (src == Usuario)
 			TelaMenuUsuario.main(null);
 		/*
-		 * JOptionPane.showMessageDialog(null,
-		 * "Ainda precisam ser implementadas funcionalidades\n"
-		 * + "relacionadas ao curso e a matr�cula", null,
-		 * JOptionPane.INFORMATION_MESSAGE);
+		  JOptionPane.showMessageDialog(null,
+		  "Ainda precisam ser implementadas funcionalidades\n"
+		  + "relacionadas ao curso e a matr�cula", null,
+		  JOptionPane.INFORMATION_MESSAGE);
 		 */
 
 		if (src == Bicicletario)
 			TelaCadastraBicicletario.main(null);
 		/*
-		 * JOptionPane.showMessageDialog(null,
-		 * "Ainda precisam ser implementadas funcionalidades\n"
-		 * + "relacionadas ao curso e a matr�cula", null,
+		  JOptionPane.showMessageDialog(null,
+		  "Ainda precisam ser implementadas funcionalidades\n"
+		  + "relacionadas ao curso e a matr�cula", null,
 		 * JOptionPane.INFORMATION_MESSAGE);
 		 */
 

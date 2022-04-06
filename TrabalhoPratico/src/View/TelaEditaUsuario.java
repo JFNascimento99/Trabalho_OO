@@ -7,12 +7,10 @@ import javax.swing.*;
 import Classes.Dados;
 import Classes.Usuario;
 
-
-
 public class TelaEditaUsuario implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de Edicao");
-	private JLabel titulo = new JLabel("Edicao de usuário");
+	private JLabel titulo = new JLabel("Edicao de usuario");
 
 	// Declarando Labels e caixas de texto
 	private JLabel nome = new JLabel("Nome");
@@ -129,31 +127,31 @@ public class TelaEditaUsuario implements ActionListener {
 				String mensagemErro = "";
 
 				if (!Usuario.verificaNome(caixaNome.getText())) {
-					mensagemErro += "NOME INVÁLIDO - valida somente com letras minusculas\n";
+					mensagemErro += "NOME INVALIDO - valida somente com letras minusculas\n";
 
 				}
 				if (!Usuario.verificaCpf(caixaCpf.getText())) {
-					mensagemErro += "CPF INVÁLIDO valida somente com 11 numeros\n";
+					mensagemErro += "CPF INVALIDO valida somente com 11 numeros\n";
 
 				}
 				if (!Usuario.verificaRg(caixaRg.getText())) {
-					mensagemErro += "RG INVÁLIDO - valida somente com 7 numeros\n";
+					mensagemErro += "RG INVALIDO - valida somente com 7 numeros\n";
 
 				}
 				if (!Usuario.verificaTelefone(caixaTelefone.getText())) {
-					mensagemErro += "TELEFONE INVÁLIDO - valida somente com 9 numeros\n";
+					mensagemErro += "TELEFONE INVALIDO - valida somente com 9 numeros\n";
 
 				}
 				if (!Usuario.verificaIdade(caixaIdade.getText())) {
-					mensagemErro += "IDADE INVÁLIDA - valida somente com numeros inteiros\n";
+					mensagemErro += "IDADE INVALIDO - valida somente com numeros inteiros\n";
 
 				}
 				if (!Usuario.verificaEmail(caixaEmail.getText())) {
-					mensagemErro += "EMAIL INVÁLIDO - valida somente com @\n";
+					mensagemErro += "EMAIL INVALIDO - valida somente com @\n";
 
 				}
 				if (!Usuario.verificaSenha(caixaSenha.getText())) {
-					mensagemErro += "SENHA INVÁLIDA - valida somente com duas letras maisculas e posteriormente 3 numeros\n";
+					mensagemErro += "SENHA INVALIDO - valida somente com duas letras maisculas e posteriormente 3 numeros\n";
 
 				}
 
@@ -165,9 +163,8 @@ public class TelaEditaUsuario implements ActionListener {
 							caixaCpf.getText(), caixaIdade.getText(), caixaEmail.getText(), caixaSenha.getText()));// salvar
 					System.out.println(Dados.getUsuarios().get(0).getNome());
 					janela.dispose();
-					TelaMenu.main(null);
+					TelaMenuPrincipal.main(null);
 				}
-
 			}
 
 			// Fazer lógica para alterals os valores

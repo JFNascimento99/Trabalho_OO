@@ -9,7 +9,7 @@ import Classes.Bicicletario;
 
 //Fazer antes uma tela de seleção de usuário
 
-public class TelaVisualizaBicicletario implements ActionListener {
+public class TelaVisualizarBicicletario implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de Visualizacao");
 	private JLabel titulo = new JLabel("Visualizar Bicicletarios");
@@ -17,7 +17,7 @@ public class TelaVisualizaBicicletario implements ActionListener {
 
 	private static JButton ver = new JButton("ver");
 
-	public TelaVisualizaBicicletario() {
+	public TelaVisualizarBicicletario() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
 		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
@@ -39,7 +39,7 @@ public class TelaVisualizaBicicletario implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		TelaVisualizaBicicletario menu = new TelaVisualizaBicicletario();
+		TelaVisualizarBicicletario menu = new TelaVisualizarBicicletario();
 		System.out.println("teste");
 		ver.addActionListener(menu);
 	}

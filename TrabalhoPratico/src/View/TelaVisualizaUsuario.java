@@ -49,7 +49,7 @@ public class TelaVisualizaUsuario implements ActionListener {
 		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == ver) {
-			("nome : " + Dados.getUsuario(nome));
+			("Nome : " + Dados.getUsuarios(nome);
 			("Telefone: " + Dados.getUsuario(telefone));
 			("RG: " + Dados.getUsuario(identidade));
 			("CPF: " + Dados.getUsuario(cpf));

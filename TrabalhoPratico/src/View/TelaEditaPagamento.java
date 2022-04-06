@@ -12,19 +12,19 @@ import Classes.FormaDePagamento;
 public class TelaEditaPagamento implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de Edicao");
-	private JLabel titulo = new JLabel("Edicao de forma de pagamento");
+	private JLabel titulo = new JLabel("Edicao de Forma de Pagamento");
 
 	// Declarando Labels e caixas de texto
-	private JLabel Bandeira = new JLabel("Bandeira do cartao");
+	private JLabel Bandeira = new JLabel("Bandeira do Cartao");
 	private JTextField caixaBandeira = new JTextField();
 
-	private JLabel Numero = new JLabel("Numero do cartao");
+	private JLabel Numero = new JLabel("Numero do Cartao");
 	private JTextField caixaNumero = new JTextField(15);
 
-	private JLabel Codigo = new JLabel("Codigo de seguranca");
+	private JLabel Codigo = new JLabel("Codigo de Seguranca");
 	private JTextField caixaCodigo = new JTextField(15);
 
-	private JLabel Tipo = new JLabel("Tipo de pagamento");
+	private JLabel Tipo = new JLabel("Tipo de Pagamento");
 	private JTextField caixaTipo = new JTextField(15);
 
 	private static JButton Edita = new JButton("Edita");

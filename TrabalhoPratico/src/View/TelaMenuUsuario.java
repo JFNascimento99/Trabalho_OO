@@ -12,10 +12,10 @@ public class TelaMenuUsuario implements ActionListener {
 	private static JFrame janela = new JFrame("Controle de Bicicletas"); // nome da janela
 	private static JLabel titulo = new JLabel("Menu principal"); // Texto que aparece na janela
 	// Nomes dos botoes
-	private static JButton cadastrar = new JButton("Cadastrar usuário");
-	private static JButton editar = new JButton("Editar usuário");
+	private static JButton cadastrar = new JButton("Cadastrar usuario");
+	private static JButton editar = new JButton("Editar usuario");
 	private static JButton visualizar = new JButton("Vizualizar usuario");
-	private static JButton deletar = new JButton("deletar usuario");
+	private static JButton deletar = new JButton("Deletar usuario");
 
 	public TelaMenuUsuario() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
@@ -59,19 +59,19 @@ public class TelaMenuUsuario implements ActionListener {
 		if (src == cadastrar)
 			TelaCadastroUsuario.main(null);
 		/*
-		 * JOptionPane.showMessageDialog(null,
-		 * "Ainda precisam ser implementadas funcionalidades\n"
-		 * + "relacionadas ao curso e a matr�cula", null,
-		 * JOptionPane.INFORMATION_MESSAGE);
+		  JOptionPane.showMessageDialog(null,
+		  "Ainda precisam ser implementadas funcionalidades\n"
+		  + "relacionadas ao curso e a matr�cula", null,
+		  JOptionPane.INFORMATION_MESSAGE);
 		 */
 
 		if (src == editar)
 			TelaEditaUsuario.main(null);
 		/*
-		 * JOptionPane.showMessageDialog(null,
-		 * "Ainda precisam ser implementadas funcionalidades\n"
-		 * + "relacionadas ao curso e a matr�cula", null,
-		 * JOptionPane.INFORMATION_MESSAGE);
+		  JOptionPane.showMessageDialog(null,
+		  "Ainda precisam ser implementadas funcionalidades\n"
+		  + "relacionadas ao curso e a matr�cula", null,
+		  JOptionPane.INFORMATION_MESSAGE);
 		 */
 
 		if (src == visualizar)

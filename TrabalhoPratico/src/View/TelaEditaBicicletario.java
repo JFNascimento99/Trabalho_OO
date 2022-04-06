@@ -15,10 +15,10 @@ public class TelaEditaBicicletario implements ActionListener {
 	private JLabel titulo = new JLabel("Edicao de Bicicletario");
 
 	// Declarando Labels e caixas de texto
-	private JLabel Checkin = new JLabel("Lugar de Check-in");
+	private JLabel Checkin = new JLabel("Lugar de Check-In");
 	private JTextField caixaCheckIn = new JTextField();
 
-	private JLabel Checkout = new JLabel("Lugar de Check-out");
+	private JLabel Checkout = new JLabel("Lugar de Check-Out");
 	private JTextField caixaCheckOut = new JTextField(15);
 	private static JButton concluir = new JButton("Concluir");
 
@@ -76,11 +76,11 @@ public class TelaEditaBicicletario implements ActionListener {
 				String mensagemErro = "";
 
 				if (!Bicicletario.verificaCheckIn(caixaCheckIn.getText())) {
-					mensagemErro += "CheckIn invalido - valida somente estacoes existentes\n";
+					mensagemErro += "Check-In INVALIDO - valida somente estacoes existentes\n";
 
 				}
 				if (!Bicicletario.verificaCheckOut(caixaCheckOut.getText())) {
-					mensagemErro += "CheckOut INVÁLIDO - valida somente estacoes existentes \n";
+					mensagemErro += "Check-Out INVALIDO - valida somente estacoes existentes \n";
 
 				}
 				if (mensagemErro.length() > 0) {

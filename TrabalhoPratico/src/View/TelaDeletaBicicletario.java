@@ -12,7 +12,7 @@ import Classes.Bicicletario;
 public class TelaDeletaBicicletario implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de delecao");
-	private JLabel titulo = new JLabel("Deletar usuário");
+	private JLabel titulo = new JLabel("Deletar usuario");
 	// Declarando Labels e caixas de texto
 
 	private static JButton deletar = new JButton("deletar");

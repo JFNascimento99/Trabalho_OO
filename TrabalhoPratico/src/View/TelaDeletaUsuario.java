@@ -11,11 +11,11 @@ import Classes.Usuario;
 
 public class TelaDeletaUsuario implements ActionListener {
 
-	private JFrame janela = new JFrame("Menu de delecao");
-	private JLabel titulo = new JLabel("Deletar usuário");
+	private JFrame janela = new JFrame("Menu de Delecao");
+	private JLabel titulo = new JLabel("Deletar Usuario");
 	// Declarando Labels e caixas de texto
 
-	private static JButton deletar = new JButton("deletar");
+	private static JButton deletar = new JButton("Deletar");
 
 	public TelaDeletaUsuario() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
@@ -23,7 +23,7 @@ public class TelaDeletaUsuario implements ActionListener {
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(145, 10, 200, 30);
 
-		confirmar.setBounds(360, 400, 100, 30);
+		deletar.setBounds(360, 400, 100, 30);
 
 		janela.setLayout(null);
 		// chamando as informação que estarão na janela
@@ -42,7 +42,7 @@ public class TelaDeletaUsuario implements ActionListener {
 	public static void main(String[] args) {
 		TelaDeletaUsuario menu = new TelaDeletaUsuario();
 		System.out.println("teste");
-		confirmar.addActionListener(menu);
+		deletar.addActionListener(menu);
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -51,7 +51,7 @@ public class TelaDeletaUsuario implements ActionListener {
 		// colocar nos respectivos lugares
 		if (src == deletar) {
 			Dados.getUsuarios().remove(this); 
-			System.out.println("Usuario deletado.");
+			System.out.println("Usuario Deletado.");
 		}
 				} 
 		

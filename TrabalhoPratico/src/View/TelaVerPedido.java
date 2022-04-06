@@ -9,15 +9,15 @@ import Classes.Pedido;
 
 //Fazer antes uma tela de seleção de usuário
 
-public class TelaVisualizaPedido implements ActionListener {
+public class TelaVerPedido implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de Visualizacao");
 	private JLabel titulo = new JLabel("Visualizar Pedidos");
 
 
-	private static JButton ver = new JButton("ver");
+	private static JButton ver = new JButton("Ver");
 
-	public TelaVisualizaPedido() {
+	public TelaVerPedido() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
 		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
@@ -39,7 +39,7 @@ public class TelaVisualizaPedido implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-		TelaVisualizaPedido menu = new TelaVisualizaPedido();
+		TelaVerPedido menu = new TelaVerPedido();
 		System.out.println("teste");
 		ver.addActionListener(menu);
 	}

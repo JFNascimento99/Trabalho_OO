@@ -11,11 +11,11 @@ import Classes.FormaDePagamento;
 
 public class TelaDeletaPagamento implements ActionListener {
 
-	private JFrame janela = new JFrame("Menu de delecao");
+	private JFrame janela = new JFrame("Menu de Delecao");
 	private JLabel titulo = new JLabel("Deletar Forma de Pagamento");
 	// Declarando Labels e caixas de texto
 
-	private static JButton deletar = new JButton("deletar");
+	private static JButton deletar = new JButton("Deletar");
 
 	public TelaDeletaPagamento() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
@@ -53,6 +53,5 @@ public class TelaDeletaPagamento implements ActionListener {
 			Dados.getFormaDePagamento().remove(this); 
 			System.out.println("Forma de Pagamento deletado.");
 		}
-				} 
-		
-	}
+	} 		
+}
