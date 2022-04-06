@@ -11,10 +11,11 @@ public class TelaMenu implements ActionListener {
 
 	private static JFrame janela = new JFrame("Controle de Bicicletas"); // nome da janela
 	private static JLabel titulo = new JLabel("Menu principal"); // Texto que aparece na janela
-	// Nomes dos bot�es
+	// Nomes dos botoes
 	private static JButton cadastrar = new JButton("Cadastrar usuário");
 	private static JButton editar = new JButton("Editar usuário");
-	private static JButton visualizar = new JButton("Vizualizar cadastrados");
+	private static JButton visualizar = new JButton("Vizualizar usuario");
+	private static JButton deletar = new JButton("deletar usuario");
 
 	public TelaMenu() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
@@ -24,6 +25,7 @@ public class TelaMenu implements ActionListener {
 		cadastrar.setBounds(140, 50, 180, 30);
 		editar.setBounds(140, 100, 180, 30);
 		visualizar.setBounds(140, 150, 180, 30);
+		deletar.setBounds(140, 150, 180, 30);
 
 		janela.setLayout(null);
 		// chamando as informa��o que estar�o na janela
@@ -31,8 +33,9 @@ public class TelaMenu implements ActionListener {
 		janela.add(cadastrar);
 		janela.add(editar);
 		janela.add(visualizar);
+		janela.add(deletar);
 
-		// Setando dimen��es e fun��es padr�o da janela
+		// Setando dimensoes e funcoes padrao da janela
 		janela.setSize(480, 250);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
@@ -47,7 +50,8 @@ public class TelaMenu implements ActionListener {
 		// Implementação do Action Listener
 		cadastrar.addActionListener(menu);
 		editar.addActionListener(menu);
-		vizualizar.addActionListener(menu);
+		visualizar.addActionListener(menu);
+		deletar.addActionListener(menu);
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -62,7 +66,6 @@ public class TelaMenu implements ActionListener {
 		 */
 
 		if (src == editar)
-			// ainda a criar tela de edi��o
 			TelaEditaUsuario.main(null);
 		/*
 		 * JOptionPane.showMessageDialog(null,
@@ -71,7 +74,10 @@ public class TelaMenu implements ActionListener {
 		 * JOptionPane.INFORMATION_MESSAGE);
 		 */
 
-		if (src == vizualizar)
+		if (src == visualizar)
 			TelaBicicletas.main(null);
+			//TelaVisusalizarUsuario.main(null);
+		//if(src == deletar)
+			//TelaDeletaUsuario.main(null);
 	}
 }
