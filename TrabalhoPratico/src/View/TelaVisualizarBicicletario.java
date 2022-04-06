@@ -49,7 +49,8 @@ public class TelaVisualizarBicicletario implements ActionListener {
 		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == ver) {
-			("Bicicletarios : \n" + Dados.getBicicletarios());
+			//("Bicicletarios : \n" + Dados.getBicicletarios());
+			JOptionPane.showMessageDialog(null,"Bicicletario: \n" + Dados.getBicicletarios(), null, JOptionPane.INFORMATION_MESSAGE);
 			
 
 	}

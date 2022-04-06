@@ -49,13 +49,29 @@ public class TelaVisualizaUsuario implements ActionListener {
 		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == ver) {
-			("Nome : " + Dados.getUsuarios(nome);
-			("Telefone: " + Dados.getUsuario(telefone));
-			("RG: " + Dados.getUsuario(identidade));
-			("CPF: " + Dados.getUsuario(cpf));
-			("Idade" + Dados.getUsuario(idade));
-			("Email" + Dados.getUsuario(email));
-			("Senha" + Dados.getUsuario(senha));
+			//Descobrir como que faz pra importar doGetUsusrios na posicao certa
+			
+			//("Nome : " + Dados.getUsuarios(nome);
+			JOptionPane.showMessageDialog(null,"Nome: \n" + 
+					Dados.getUsuarios(nome), null, JOptionPane.INFORMATION_MESSAGE);
+			//("Telefone: " + Dados.getUsuario(telefone));
+			JOptionPane.showMessageDialog(null,"Telefone: \n" +
+					Dados.getUsuarios(telefone), null, JOptionPane.INFORMATION_MESSAGE);
+			//("RG: " + Dados.getUsuario(identidade));
+			JOptionPane.showMessageDialog(null,"RG: \n" +
+					Dados.getUsuarios(identidade), null, JOptionPane.INFORMATION_MESSAGE);
+			//("CPF: " + Dados.getUsuario(cpf));
+			JOptionPane.showMessageDialog(null,"CPF: \n" +
+					Dados.getUsuarios(cpf), null, JOptionPane.INFORMATION_MESSAGE);
+			//("Idade" + Dados.getUsuario(idade));
+			JOptionPane.showMessageDialog(null,"Idade: \n" +
+					Dados.getUsuarios(idade), null, JOptionPane.INFORMATION_MESSAGE);
+			//("Email" + Dados.getUsuario(email));
+			JOptionPane.showMessageDialog(null,"Email: \n" +
+					Dados.getUsuarios(email), null, JOptionPane.INFORMATION_MESSAGE);
+			//("Senha" + Dados.getUsuario(senha));
+			JOptionPane.showMessageDialog(null,"Senha: \n" +
+					Dados.getUsuarios(senha), null, JOptionPane.INFORMATION_MESSAGE);
 
 	}
 			}

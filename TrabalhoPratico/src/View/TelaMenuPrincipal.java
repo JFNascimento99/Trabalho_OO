@@ -75,7 +75,7 @@ public class TelaMenuPrincipal implements ActionListener {
 		  JOptionPane.showMessageDialog(null,
 		  "Ainda precisam ser implementadas funcionalidades\n"
 		  + "relacionadas ao curso e a matr�cula", null,
-		 * JOptionPane.INFORMATION_MESSAGE);
+		  JOptionPane.INFORMATION_MESSAGE);
 		 */
 
 		if (src == Bicicleta)

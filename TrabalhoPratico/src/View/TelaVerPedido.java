@@ -49,8 +49,8 @@ public class TelaVerPedido implements ActionListener {
 		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == ver) {
-			("Pedidos : \n" + Dados.getPedidos());
-			
+			//("Pedidos : \n" + Dados.getPedidos());
+			JOptionPane.showMessageDialog(null,"Pedodos: \n" + Dados.getPedidos(), null, JOptionPane.INFORMATION_MESSAGE);
 
 	}
 			}

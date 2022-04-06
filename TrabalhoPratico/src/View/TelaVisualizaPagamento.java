@@ -49,7 +49,8 @@ public class TelaVisualizaPagamento implements ActionListener {
 		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == ver) {
-			("Cartoes : \n" + Dados.getFormaDePagamento());
+			//("Cartoes : \n" + Dados.getFormaDePagamento());
+			JOptionPane.showMessageDialog(null,"Cartoes: \n" + Dados.getFormaDePagamento(), null, JOptionPane.INFORMATION_MESSAGE);
 			
 
 	}
