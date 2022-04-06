@@ -97,8 +97,9 @@ public class Bicicletario {
 	}
 	public void deletarBicicletario() {
 		//Resetar os dados cadastrados
-			setChegada(null); //
-			setSaida(null);
+			//setChegada(null); 
+			//setSaida(null);
+		Dados.getBicicletarios().remove(this);
 		
 	}
 	public void atualizarBicicletario() {
