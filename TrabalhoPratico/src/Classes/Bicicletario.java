@@ -42,12 +42,13 @@ public class Bicicletario {
 	}
 	
 	//Metodos
-	//Verificar se é tudo void mesmo
+	//Modificacoes que fizemos para tentar mostrar na tela
 	public static Boolean verificaCheckIn(String respostaChegada) {
 			if(respostaChegada.equals(Bicicletarios)) { //Comparando com os bicicletarios existentes
 				return  false;
 			}
 	}
+	//Modificacoes que fizemos para tentar mostrar na tela
 	public static Boolean verificaCheckOut(String respostaSaida) {
 			if(respostaSaida.equals(Bicicletarios)) { //Comparando com os bicicletarios existentes
 				return false;
@@ -56,7 +57,7 @@ public class Bicicletario {
 	public void editarBicletario() {
 		//Editar os locais cadastrados
 		 
-		//Se der ruim pega daqui dnv
+		//Se der ruim pega daqui dnv que era a versao antiga antes de mexer com telas
 		for(int a = 0; a<=100; a++) { //Vetor de bicicletarios
 			System.out.println("Cadastrar lugar de checkin ");
 			setChegada(ler.next());
