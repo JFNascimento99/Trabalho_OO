@@ -17,7 +17,7 @@ public class TelaVisualizaBicicletario implements ActionListener {
 
 	private static JButton ver = new JButton("ver");
 
-	public TelaVisualizaUsuario() {
+	public TelaVisualizaBicicletario() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
 		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
