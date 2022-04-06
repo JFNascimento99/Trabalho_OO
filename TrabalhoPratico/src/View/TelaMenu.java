@@ -14,7 +14,7 @@ public class TelaMenu implements ActionListener {
 	// Nomes dos bot�es
 	private static JButton cadastrar = new JButton("Cadastrar usuário");
 	private static JButton editar = new JButton("Editar usuário");
-	private static JButton vizualizar = new JButton("Vizualizar cadastrados");
+	private static JButton visualizar = new JButton("Vizualizar cadastrados");
 
 	public TelaMenu() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
@@ -23,14 +23,14 @@ public class TelaMenu implements ActionListener {
 		titulo.setBounds(165, 10, 150, 30);
 		cadastrar.setBounds(140, 50, 180, 30);
 		editar.setBounds(140, 100, 180, 30);
-		vizualizar.setBounds(140, 150, 180, 30);
+		visualizar.setBounds(140, 150, 180, 30);
 
 		janela.setLayout(null);
 		// chamando as informa��o que estar�o na janela
 		janela.add(titulo);
 		janela.add(cadastrar);
 		janela.add(editar);
-		janela.add(vizualizar);
+		janela.add(visualizar);
 
 		// Setando dimen��es e fun��es padr�o da janela
 		janela.setSize(480, 250);
@@ -53,7 +53,7 @@ public class TelaMenu implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 		if (src == cadastrar)
-			TelaCadastro.main(null);
+			TelaCadastroUsuario.main(null);
 		/*
 		 * JOptionPane.showMessageDialog(null,
 		 * "Ainda precisam ser implementadas funcionalidades\n"
@@ -63,7 +63,7 @@ public class TelaMenu implements ActionListener {
 
 		if (src == editar)
 			// ainda a criar tela de edi��o
-			TelaEdita.main(null);
+			TelaEditaUsuario.main(null);
 		/*
 		 * JOptionPane.showMessageDialog(null,
 		 * "Ainda precisam ser implementadas funcionalidades\n"
