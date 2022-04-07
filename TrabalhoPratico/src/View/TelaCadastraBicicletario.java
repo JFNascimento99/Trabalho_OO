@@ -26,17 +26,17 @@ public class TelaCadastraBicicletario implements ActionListener {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
 		// definindo as medidas dos botoes
 		// Legenda: X, Y, Largura, Altura
-		titulo.setBounds(145, 10, 200, 30);
+		titulo.setBounds(120, 10, 230, 30);
 
-		Checkin.setBounds(100, 50, 180, 30);
+		Checkin.setBounds(80, 50, 180, 30);
 		caixaCheckIn.setBounds(200, 50, 180, 30);
 
-		Checkout.setBounds(100, 100, 180, 30);
+		Checkout.setBounds(80, 100, 180, 30);
 		caixaCheckOut.setBounds(200, 100, 180, 30);
-		concluir.setBounds(360, 400, 100, 30);
+		concluir.setBounds(350, 170, 100, 30);
 
 		janela.setLayout(null);
-		// chamando as informação que estarão na janela
+		// chamando as informacao que estarao na janela
 		janela.add(titulo);
 		janela.add(Checkin);
 		janela.add(caixaCheckIn);
@@ -44,8 +44,8 @@ public class TelaCadastraBicicletario implements ActionListener {
 		janela.add(caixaCheckOut);
 		janela.add(concluir);
 
-		// Setando dimensões e funções padrão da janela
-		janela.setSize(480, 480);
+		// Setando dimencoes e funcoes padrao da janela
+		janela.setSize(480, 250);
 		janela.setVisible(true);
 
 		// Retorna o texto
@@ -63,7 +63,7 @@ public class TelaCadastraBicicletario implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
-		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
+		// Quando o botao concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == concluir) {
 
@@ -94,8 +94,6 @@ public class TelaCadastraBicicletario implements ActionListener {
 				}
 
 			}
-
-			// Fazer lógica para alterals os valores
 		}
 	}
 }
