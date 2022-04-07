@@ -9,7 +9,7 @@ import Classes.Usuario;
 
 public class TelaMenuUsuario implements ActionListener {
 
-	private static JFrame janela = new JFrame("Controle de Bicicletas"); // nome da janela
+	private static JFrame janela = new JFrame("Controle de Usuarios"); // nome da janela
 	private static JLabel titulo = new JLabel("Menu do Usuario"); // Texto que aparece na janela
 	// Nomes dos botoes
 	private static JButton cadastrar = new JButton("Cadastrar usuario");

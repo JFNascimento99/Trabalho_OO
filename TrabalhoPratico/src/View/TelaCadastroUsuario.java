@@ -11,7 +11,7 @@ import Classes.Usuario;
 
 public class TelaCadastroUsuario implements ActionListener {
 
-	private JFrame janela = new JFrame("Menu de Cadastro");
+	private JFrame janela = new JFrame("Cadastro");
 	private JLabel titulo = new JLabel("Cadastro de usuario");
 
 	// Declarando Labels e caixas de texto

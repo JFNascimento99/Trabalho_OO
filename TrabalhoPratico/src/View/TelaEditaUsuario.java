@@ -9,7 +9,7 @@ import Classes.Usuario;
 
 public class TelaEditaUsuario implements ActionListener {
 
-	private JFrame janela = new JFrame("Menu de Edicao");
+	private JFrame janela = new JFrame("Edicao");
 	private JLabel titulo = new JLabel("Edicao de usuario");
 
 	// Declarando Labels e caixas de texto
