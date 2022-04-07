@@ -7,7 +7,7 @@ import javax.swing.*;
 import Classes.Dados;
 import Classes.FormaDePagamento;
 
-//Fazer antes uma tela de seleção de usuário
+//Fazer antes uma tela de selecao de usuario
 
 public class TelaVisualizaPagamento implements ActionListener {
 
@@ -18,18 +18,18 @@ public class TelaVisualizaPagamento implements ActionListener {
 	private static JButton ver = new JButton("ver");
 
 	public TelaVisualizaPagamento() {
-		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
+		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
 		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(145, 10, 200, 30);
 		ver.setBounds(360, 400, 100, 30);
 
 		janela.setLayout(null);
-		// chamando as informação que estarão na janela
+		// chamando as informacoo que estarao na janela
 		janela.add(titulo);
 		janela.add(ver);
 
-		// Setando dimensões e funções padrão da janela
+		// Setando dimensões e funcoes padrao da janela
 		janela.setSize(480, 480);
 		janela.setVisible(true);
 
@@ -46,18 +46,12 @@ public class TelaVisualizaPagamento implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
-		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
+		// Quando o botao concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == ver) {
 			//("Cartoes : \n" + Dados.getFormaDePagamento());
-			JOptionPane.showMessageDialog(null,"Cartoes: \n" + Dados.getFormaDePagamento(), null, JOptionPane.INFORMATION_MESSAGE);
-			
-
+			JOptionPane.showMessageDialog(null,"Cartoes: \n" + 
+					Dados.getFormaDePagamento(), null, JOptionPane.INFORMATION_MESSAGE);
+		}
 	}
-			}
-
-			// Fazer lógica para alterals os valores
-		
-	}
-
-
+}

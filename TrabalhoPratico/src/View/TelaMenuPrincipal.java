@@ -19,8 +19,8 @@ public class TelaMenuPrincipal implements ActionListener {
 	private static JButton Pagamento = new JButton("Forma de pagamento");
 
 	public TelaMenuPrincipal() {
-		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
-		// definindo as medidas dos bot�es
+		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
+		// definindo as medidas dos botoes
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(165, 10, 150, 30);
 		Usuario.setBounds(140, 50, 180, 30);
@@ -30,7 +30,7 @@ public class TelaMenuPrincipal implements ActionListener {
 		Pagamento.setBounds(140, 150, 180, 30);
 
 		janela.setLayout(null);
-		// chamando as informa��o que estar�o na janela
+		// chamando as informacoes que estarao na janela
 		janela.add(titulo);
 		janela.add(Usuario);
 		janela.add(Bicicletario);
@@ -50,7 +50,7 @@ public class TelaMenuPrincipal implements ActionListener {
 	public static void main(String[] args) {
 		TelaMenuPrincipal menu = new TelaMenuPrincipal();
 
-		// Implementação do Action Listener
+		// Implementacao do Action Listener
 		Usuario.addActionListener(menu);
 		Bicicletario.addActionListener(menu);
 		Bicicleta.addActionListener(menu);
@@ -62,29 +62,11 @@ public class TelaMenuPrincipal implements ActionListener {
 		Object src = e.getSource();
 		if (src == Usuario)
 			TelaMenuUsuario.main(null);
-		/*
-		  JOptionPane.showMessageDialog(null,
-		  "Ainda precisam ser implementadas funcionalidades\n"
-		  + "relacionadas ao curso e a matr�cula", null,
-		  JOptionPane.INFORMATION_MESSAGE);
-		 */
 
 		if (src == Bicicletario)
 			TelaCadastraBicicletario.main(null);
-		/*
-		  JOptionPane.showMessageDialog(null,
-		  "Ainda precisam ser implementadas funcionalidades\n"
-		  + "relacionadas ao curso e a matr�cula", null,
-		  JOptionPane.INFORMATION_MESSAGE);
-		 */
 
 		if (src == Bicicleta)
 			TelaBicicletas.main(null);
-		
-		//if (src == Pedido)
-			//TelaPedido.main(null);
-		
-		//if (src == Pagamento)
-			//TelaCadastrarPagamento.main(null);
 	}
 }

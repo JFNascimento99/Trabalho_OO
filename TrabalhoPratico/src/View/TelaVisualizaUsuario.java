@@ -6,8 +6,9 @@ import javax.swing.*;
 
 import Classes.Dados;
 import Classes.Usuario;
+import Classes.Pessoa;
 
-//Fazer antes uma tela de seleção de usuário
+//Fazer antes uma tela de selecao de usuario
 
 public class TelaVisualizaUsuario implements ActionListener {
 
@@ -72,12 +73,6 @@ public class TelaVisualizaUsuario implements ActionListener {
 			//("Senha" + Dados.getUsuario(senha));
 			JOptionPane.showMessageDialog(null,"Senha: \n" +
 					Dados.getUsuarios(senha), null, JOptionPane.INFORMATION_MESSAGE);
-
+		}
 	}
-			}
-
-			// Fazer lógica para alterals os valores
-		
-	}
-
-
+}

@@ -10,7 +10,7 @@ import Classes.Usuario;
 public class TelaMenuUsuario implements ActionListener {
 
 	private static JFrame janela = new JFrame("Controle de Bicicletas"); // nome da janela
-	private static JLabel titulo = new JLabel("Menu principal"); // Texto que aparece na janela
+	private static JLabel titulo = new JLabel("Menu do Usuario"); // Texto que aparece na janela
 	// Nomes dos botoes
 	private static JButton cadastrar = new JButton("Cadastrar usuario");
 	private static JButton editar = new JButton("Editar usuario");
@@ -18,10 +18,10 @@ public class TelaMenuUsuario implements ActionListener {
 	private static JButton deletar = new JButton("Deletar usuario");
 
 	public TelaMenuUsuario() {
-		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
-		// definindo as medidas dos bot�es
+		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
+		// definindo as medidas dos botoes
 		// Legenda: X, Y, Largura, Altura
-		titulo.setBounds(165, 10, 150, 30);
+		titulo.setBounds(155, 10, 165, 30);
 		cadastrar.setBounds(140, 50, 180, 30);
 		editar.setBounds(140, 100, 180, 30);
 		visualizar.setBounds(140, 150, 180, 30);
@@ -58,26 +58,11 @@ public class TelaMenuUsuario implements ActionListener {
 		Object src = e.getSource();
 		if (src == cadastrar)
 			TelaCadastroUsuario.main(null);
-		/*
-		  JOptionPane.showMessageDialog(null,
-		  "Ainda precisam ser implementadas funcionalidades\n"
-		  + "relacionadas ao curso e a matr�cula", null,
-		  JOptionPane.INFORMATION_MESSAGE);
-		 */
 
 		if (src == editar)
 			TelaEditaUsuario.main(null);
-		/*
-		  JOptionPane.showMessageDialog(null,
-		  "Ainda precisam ser implementadas funcionalidades\n"
-		  + "relacionadas ao curso e a matr�cula", null,
-		  JOptionPane.INFORMATION_MESSAGE);
-		 */
 
 		if (src == visualizar)
 			TelaBicicletas.main(null);
-			//TelaVisusalizarUsuario.main(null);
-		//if(src == deletar)
-			//TelaDeletaUsuario.main(null);
 	}
 }
