@@ -54,25 +54,25 @@ public class TelaVisualizaUsuario implements ActionListener {
 			
 			//("Nome : " + Dados.getUsuarios(nome);
 			JOptionPane.showMessageDialog(null,"Nome: \n" + 
-					Dados.getUsuarios(nome), null, JOptionPane.INFORMATION_MESSAGE);
+					Dados.getUsuarios().get(0).getNome(), null, JOptionPane.INFORMATION_MESSAGE);
 			//("Telefone: " + Dados.getUsuario(telefone));
 			JOptionPane.showMessageDialog(null,"Telefone: \n" +
-					Dados.getUsuarios(telefone), null, JOptionPane.INFORMATION_MESSAGE);
+					Dados.getUsuarios().get(1).getTelefone(), null, JOptionPane.INFORMATION_MESSAGE);
 			//("RG: " + Dados.getUsuario(identidade));
 			JOptionPane.showMessageDialog(null,"RG: \n" +
-					Dados.getUsuarios(identidade), null, JOptionPane.INFORMATION_MESSAGE);
+					Dados.getUsuarios().get(2).getIdentidade(), null, JOptionPane.INFORMATION_MESSAGE);
 			//("CPF: " + Dados.getUsuario(cpf));
 			JOptionPane.showMessageDialog(null,"CPF: \n" +
-					Dados.getUsuarios(cpf), null, JOptionPane.INFORMATION_MESSAGE);
+					Dados.getUsuarios().get(3).getCpf(), null, JOptionPane.INFORMATION_MESSAGE);
 			//("Idade" + Dados.getUsuario(idade));
 			JOptionPane.showMessageDialog(null,"Idade: \n" +
-					Dados.getUsuarios(idade), null, JOptionPane.INFORMATION_MESSAGE);
+					Dados.getUsuarios().get(4).getIdade(), null, JOptionPane.INFORMATION_MESSAGE);
 			//("Email" + Dados.getUsuario(email));
 			JOptionPane.showMessageDialog(null,"Email: \n" +
-					Dados.getUsuarios(email), null, JOptionPane.INFORMATION_MESSAGE);
+					Dados.getUsuarios().get(5).getEmail(), null, JOptionPane.INFORMATION_MESSAGE);
 			//("Senha" + Dados.getUsuario(senha));
 			JOptionPane.showMessageDialog(null,"Senha: \n" +
-					Dados.getUsuarios(senha), null, JOptionPane.INFORMATION_MESSAGE);
+					Dados.getUsuarios().get(6).getSenha(), null, JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
 }

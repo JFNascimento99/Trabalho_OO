@@ -18,7 +18,6 @@ public class TelaBuscaUsuario implements ActionListener {
 	
 	public TelaBuscaUsuario() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
-		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(145, 10, 200, 30);
 		
@@ -28,7 +27,7 @@ public class TelaBuscaUsuario implements ActionListener {
 		buscar.setBounds(300, 160, 130, 30);
 		
 		janela.setLayout(null);
-		// chamando as informação que estarão na janela
+		// chamando as informacao que estarao na janela
 		janela.add(titulo);
 		janela.add(nome);
 		janela.add(caixaNome);
@@ -52,6 +51,17 @@ public class TelaBuscaUsuario implements ActionListener {
 		Object src = e.getSource();
 		if (src == buscar) {
 			
+			if (caixaNome.getText().length() == 0) {
+				JOptionPane.showMessageDialog(null, "Preencha o campo para poder ", "Erro",
+						JOptionPane.ERROR_MESSAGE);
+			}else {
+			String mensagemErro = "";
+			
+			if (!Usuario.verificaNome(caixaNome.getText())) 
+				mensagemErro += "NOME INEXISTENTE - confira se o nome esta escrito corretamente\n";
+			} else {
+				janela.dispose();
+			}
 		}
 	}
 }
