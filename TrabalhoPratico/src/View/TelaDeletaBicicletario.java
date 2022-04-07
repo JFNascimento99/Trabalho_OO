@@ -11,8 +11,8 @@ import Classes.Bicicletario;
 
 public class TelaDeletaBicicletario implements ActionListener {
 
-	private JFrame janela = new JFrame("Menu de delecao");
-	private JLabel titulo = new JLabel("Deletar usuario");
+	private JFrame janela = new JFrame("Menu de Delecao");
+	private JLabel titulo = new JLabel("Deletar Usuario");
 	// Declarando Labels e caixas de texto
 
 	private static JButton deletar = new JButton("deletar");

@@ -15,7 +15,7 @@ public class TelaCadastraPagamento implements ActionListener {
 	private JLabel titulo = new JLabel("Cadastro de forma de pagamento");
 
 	// Declarando Labels e caixas de texto
-	private JLabel Bandeira = new JLabel("Bandeira do cartao");
+	private JLabel bandeira = new JLabel("Bandeira do cartao");
 	private JTextField caixaBandeira = new JTextField();
 
 	private JLabel Numero = new JLabel("Numero do cartao");
@@ -33,26 +33,26 @@ public class TelaCadastraPagamento implements ActionListener {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do t�tulo
 		// definindo as medidas dos botões
 		// Legenda: X, Y, Largura, Altura
-		titulo.setBounds(145, 10, 200, 30);
+		titulo.setBounds(80, 10, 320, 30);
 
-		Bandeira.setBounds(100, 50, 180, 30);
-		caixaBandeira.setBounds(200, 50, 180, 30);
+		bandeira.setBounds(80, 50, 180, 30);
+		caixaBandeira.setBounds(220, 50, 180, 30);
 
-		Numero.setBounds(100, 100, 180, 30);
-		caixaNumero.setBounds(200, 100, 180, 30);
+		Numero.setBounds(80, 100, 180, 30);
+		caixaNumero.setBounds(220, 100, 180, 30);
 
-		Codigo.setBounds(100, 150, 180, 30);
-		caixaCodigo.setBounds(200, 150, 180, 30);
+		Codigo.setBounds(80, 150, 180, 30);
+		caixaCodigo.setBounds(220, 150, 180, 30);
 
-		Tipo.setBounds(100, 200, 180, 30);
-		caixaTipo.setBounds(200, 200, 180, 30);
+		Tipo.setBounds(80, 200, 180, 30);
+		caixaTipo.setBounds(220, 200, 180, 30);
 
-		concluir.setBounds(360, 400, 100, 30);
+		concluir.setBounds(350, 250, 100, 30);
 
 		janela.setLayout(null);
 		// chamando as informação que estarão na janela
 		janela.add(titulo);
-		janela.add(Bandeira);
+		janela.add(bandeira);
 		janela.add(caixaBandeira);
 		janela.add(Numero);
 		janela.add(caixaNumero);
@@ -63,7 +63,7 @@ public class TelaCadastraPagamento implements ActionListener {
 		janela.add(concluir);
 
 		// Setando dimensões e funções padrão da janela
-		janela.setSize(480, 480);
+		janela.setSize(480, 330);
 		janela.setVisible(true);
 
 		// Retorna o texto
