@@ -19,7 +19,7 @@ public class TelaBuscaUsuario implements ActionListener {
 	public TelaBuscaUsuario() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
 		// Legenda: X, Y, Largura, Altura
-		titulo.setBounds(145, 10, 200, 30);
+		titulo.setBounds(155, 10, 200, 30);
 		
 		nome.setBounds(100, 55, 180, 30);
 		caixaNome.setBounds(200, 55, 180, 30);
@@ -50,17 +50,20 @@ public class TelaBuscaUsuario implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 		if (src == buscar) {
-			
+
 			if (caixaNome.getText().length() == 0) {
-				JOptionPane.showMessageDialog(null, "Preencha o campo para poder ", "Erro",
+				JOptionPane.showMessageDialog(null, "Todos os campos devem ser prenchidos", "Erro",
 						JOptionPane.ERROR_MESSAGE);
-			}else {
-			String mensagemErro = "";
-			
-			if (!Usuario.verificaNome(caixaNome.getText())) 
-				mensagemErro += "NOME INEXISTENTE - confira se o nome esta escrito corretamente\n";
 			} else {
-				janela.dispose();
+				String mensagemErro = "";
+
+				if (!Usuario.verificaNome(caixaNome.getText())) {
+					mensagemErro += "NOME INVALIDO - valida somente com letras minusculas\n";
+				}else {
+					System.out.println(Dados.getUsuarios().get(0).getNome());
+					janela.dispose();
+					TelaVisualizaUsuario.main(null);
+				}
 			}
 		}
 	}
