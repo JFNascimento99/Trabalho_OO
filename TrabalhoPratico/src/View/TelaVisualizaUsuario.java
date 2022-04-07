@@ -13,7 +13,7 @@ import Classes.Pessoa;
 public class TelaVisualizaUsuario implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de Visualizacao");
-	private JLabel titulo = new JLabel("Visualizar usuários");
+	private JLabel titulo = new JLabel("Visualizar usuarios");
 
 
 	private static JButton ver = new JButton("ver");

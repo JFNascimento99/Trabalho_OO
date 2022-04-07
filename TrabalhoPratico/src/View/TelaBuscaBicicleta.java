@@ -7,7 +7,7 @@ import javax.swing.*;
 import Classes.Dados;
 import Classes.Usuario;
 
-public class TelaBuscaUsuario implements ActionListener {
+public class TelaBuscaBicicleta implements ActionListener {
 	private static JFrame janela = new JFrame("Busca"); // nome da janela
 	private static JLabel titulo = new JLabel("Buscar Usuario"); // Texto que aparece na janela
 	
@@ -16,7 +16,7 @@ public class TelaBuscaUsuario implements ActionListener {
 	
 	private static JButton buscar = new JButton("Buscar");
 	
-	public TelaBuscaUsuario() {
+	public TelaBuscaBicicleta() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20)); // definindo fonte do titulo
 		// Legenda: X, Y, Largura, Altura
 		titulo.setBounds(155, 10, 200, 30);
@@ -42,7 +42,7 @@ public class TelaBuscaUsuario implements ActionListener {
 	}
 	
 	public static void main(String[] args) {
-		TelaBuscaUsuario menu = new TelaBuscaUsuario();
+		TelaBuscaBicicleta menu = new TelaBuscaBicicleta();
 		System.out.println("teste");
 		buscar.addActionListener(menu);
 	}

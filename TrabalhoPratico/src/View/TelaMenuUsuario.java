@@ -64,6 +64,6 @@ public class TelaMenuUsuario implements ActionListener {
 
 		if (src == visualizar)
 			//colocar a tela de buscar usuario
-			TelaVisualizaUsuario.main(null);
+			TelaBuscaUsuario.main(null);
 	}
 }
