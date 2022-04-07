@@ -1,11 +1,11 @@
-package View;
+package view;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import Classes.Dados;
-import Classes.Usuario;
+import classes.Dados;
+import classes.Usuario;
 
 //Fazer antes uma tela de selecao de usuario
 

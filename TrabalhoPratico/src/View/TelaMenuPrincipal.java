@@ -1,11 +1,12 @@
-package View;
+package view;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import Classes.Dados;
-import Classes.Usuario;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class TelaMenuPrincipal implements ActionListener {
 
@@ -13,7 +14,7 @@ public class TelaMenuPrincipal implements ActionListener {
 	private static JLabel titulo = new JLabel("Menu principal"); // Texto que aparece na janela
 	// Nomes dos botoes
 	private static JButton Usuario = new JButton("Usuario");
-	private static JButton Bicicletario= new JButton("Bicicletario");
+	private static JButton Bicicletario = new JButton("Bicicletario");
 	private static JButton Bicicleta = new JButton("Bicicleta");
 	private static JButton Pedido = new JButton("pedido");
 	private static JButton Pagamento = new JButton("Forma de pagamento");

@@ -1,6 +1,4 @@
-package Classes;
-
-import java.util.Scanner;
+package classes;
 
 public abstract class Pessoa {
 	// Pessoa vai herdar tudo pra usuario
@@ -12,7 +10,6 @@ public abstract class Pessoa {
 	private String idade;
 
 	private Usuario usuario;
-	private Scanner ler = new Scanner(System.in); // Utilizarei para fazer os metodos.
 
 	// Variaveis extra:
 	Boolean validaNome = true;
@@ -94,7 +91,9 @@ public abstract class Pessoa {
 	public Usuario getUsuario() {
 		return usuario;
 	}
-	//Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao que e basicamente a mesma coisa
+
+	// Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao
+	// que e basicamente a mesma coisa
 	public static boolean verificaNome(String respostaNome) {
 		if (!respostaNome.substring(0).matches("[a-z]*"))
 
@@ -103,7 +102,9 @@ public abstract class Pessoa {
 		}
 		return true;
 	}
-	//Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao que e basicamente a mesma coisa
+
+	// Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao
+	// que e basicamente a mesma coisa
 	public static boolean verificaCpf(String respostaCpf) {
 		if (respostaCpf.length() != 11) { // Verificando se temos 11 digitos
 			return false; // Nao tem 11 digitos e ou nao tem apenas numeros.
@@ -113,7 +114,9 @@ public abstract class Pessoa {
 		}
 		return true;
 	}
-	//Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao que e basicamente a mesma coisa
+
+	// Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao
+	// que e basicamente a mesma coisa
 	public static boolean verificaRg(String respostaRg) {
 		if (!respostaRg.substring(0).matches("[0-9]*")) {
 			return false;
@@ -123,14 +126,18 @@ public abstract class Pessoa {
 		}
 		return true;
 	}
-	//Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao que e basicamente a mesma coisa
+
+	// Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao
+	// que e basicamente a mesma coisa
 	public static boolean verificaIdade(String respostaIdade) {
 		if (!respostaIdade.substring(0).matches("[0-9]*")) {
 			return false;
 		}
 		return true;
 	}
-	//Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao que e basicamente a mesma coisa
+
+	// Mudancas que tivemos que fazer aqui para usar na tela de cadastro e edicao
+	// que e basicamente a mesma coisa
 	public static boolean verificaTelefone(String respostaTel) {
 		if (respostaTel.length() != 9) { // Verificando se tem os 9 digitos
 			return false; // Nao temos 9 digitos

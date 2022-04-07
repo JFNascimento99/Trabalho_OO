@@ -1,11 +1,14 @@
-package View;
+package view;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import Classes.Dados;
-import Classes.Usuario;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import classes.Dados;
 
 //Fazer antes uma tela de seleção de usuário
 
@@ -50,9 +53,9 @@ public class TelaDeletaUsuario implements ActionListener {
 		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == deletar) {
-			Dados.getUsuarios().remove(this); 
+			Dados.getUsuarios().remove(this);
 			System.out.println("Usuario Deletado.");
 		}
-				} 
-		
 	}
+
+}

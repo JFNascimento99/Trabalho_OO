@@ -1,11 +1,15 @@
-package View;
+package view;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import Classes.Dados;
-import Classes.FormaDePagamento;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import classes.Dados;
 
 //Fazer antes uma tela de selecao de usuario
 
@@ -13,7 +17,6 @@ public class TelaVisualizaPagamento implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de Visualizacao");
 	private JLabel titulo = new JLabel("Visualizar cartoes cadastrados");
-
 
 	private static JButton ver = new JButton("ver");
 
@@ -49,8 +52,8 @@ public class TelaVisualizaPagamento implements ActionListener {
 		// Quando o botao concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == ver) {
-			//("Cartoes : \n" + Dados.getFormaDePagamento());
-			JOptionPane.showMessageDialog(null,"Cartoes: \n" + 
+			// ("Cartoes : \n" + Dados.getFormaDePagamento());
+			JOptionPane.showMessageDialog(null, "Cartoes: \n" +
 					Dados.getFormaDePagamento(), null, JOptionPane.INFORMATION_MESSAGE);
 		}
 	}

@@ -1,11 +1,11 @@
-package View;
+package view;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import Classes.Dados;
-import Classes.Bicicletario;
+import classes.Dados;
+import classes.Bicicletario;
 
 //Fazer antes uma tela de selecao de usuario
 
@@ -68,7 +68,7 @@ public class TelaCadastraBicicletario implements ActionListener {
 		if (src == concluir) {
 
 			if (caixaCheckIn.getText().length() == 0 ||
-					caixaCheckOut.getText().length() == 0 ) {
+					caixaCheckOut.getText().length() == 0) {
 				JOptionPane.showMessageDialog(null, "Todos os campos devem ser prenchidos", "Erro",
 						JOptionPane.ERROR_MESSAGE);
 

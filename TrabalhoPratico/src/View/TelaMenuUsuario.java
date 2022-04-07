@@ -1,11 +1,12 @@
-package View;
+package view;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import Classes.Dados;
-import Classes.Usuario;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class TelaMenuUsuario implements ActionListener {
 
@@ -37,7 +38,6 @@ public class TelaMenuUsuario implements ActionListener {
 
 		// Setando dimensoes e funcoes padrao da janela
 		janela.setSize(480, 250);
-		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
 
 		// Setando a tela para aparecer no centro
@@ -63,7 +63,7 @@ public class TelaMenuUsuario implements ActionListener {
 			TelaEditaUsuario.main(null);
 
 		if (src == visualizar)
-			//colocar a tela de buscar usuario
+			// colocar a tela de buscar usuario
 			TelaBuscaUsuario.main(null);
 	}
 }

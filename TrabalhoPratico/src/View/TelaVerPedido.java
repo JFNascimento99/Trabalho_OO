@@ -1,11 +1,15 @@
-package View;
+package view;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import Classes.Dados;
-import Classes.Pedido;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import classes.Dados;
 
 //Fazer antes uma tela de seleção de usuário
 
@@ -13,7 +17,6 @@ public class TelaVerPedido implements ActionListener {
 
 	private JFrame janela = new JFrame("Menu de Visualizacao");
 	private JLabel titulo = new JLabel("Visualizar Pedidos");
-
 
 	private static JButton ver = new JButton("Ver");
 
@@ -49,14 +52,13 @@ public class TelaVerPedido implements ActionListener {
 		// Quando o botão concluir for presionado, deve pegar os valores nos getText e
 		// colocar nos respectivos lugares
 		if (src == ver) {
-			//("Pedidos : \n" + Dados.getPedidos());
-			JOptionPane.showMessageDialog(null,"Pedodos: \n" + Dados.getPedidos(), null, JOptionPane.INFORMATION_MESSAGE);
+			// ("Pedidos : \n" + Dados.getPedidos());
+			JOptionPane.showMessageDialog(null, "Pedodos: \n" + Dados.getPedidos(), null,
+					JOptionPane.INFORMATION_MESSAGE);
 
-	}
-			}
-
-			// Fazer lógica para alterals os valores
-		
+		}
 	}
 
+	// Fazer lógica para alterals os valores
 
+}

@@ -1,11 +1,11 @@
-package View;
+package view;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import Classes.Dados;
-import Classes.FormaDePagamento;
+import classes.Dados;
+import classes.FormaDePagamento;
 
 //Fazer antes uma tela de seleção de usuário
 
@@ -119,8 +119,10 @@ public class TelaEditaPagamento implements ActionListener {
 					JOptionPane.showMessageDialog(null, mensagemErro, "Erro",
 							JOptionPane.ERROR_MESSAGE);
 				} else {
-					Dados.getFormaDePagamento().add(new FormaDePagamento(caixaBandeira.getText(), caixaNumero.getText(), caixaCodigo.getText(),
-							caixaTipo.getText()));// salvar
+					Dados.getFormaDePagamento()
+							.add(new FormaDePagamento(caixaBandeira.getText(), caixaNumero.getText(),
+									caixaCodigo.getText(),
+									caixaTipo.getText()));// salvar
 					System.out.println(Dados.getFormaDePagamento().get(0).getBandeiraCartao());
 					janela.dispose();
 					TelaMenuUsuario.main(null);
