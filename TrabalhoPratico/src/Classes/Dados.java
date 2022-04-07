@@ -8,6 +8,7 @@ public class Dados {
     private static final ArrayList<Bicicletario> Bicicletarios = new ArrayList<>();
     private static final ArrayList<Pedido> Pedidos = new ArrayList<>();
     private static final ArrayList<FormaDePagamento>Pagamentos = new ArrayList<>();
+    
     private Dados() {
 
     }

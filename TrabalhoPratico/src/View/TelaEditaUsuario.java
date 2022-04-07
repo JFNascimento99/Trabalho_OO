@@ -84,12 +84,12 @@ public class TelaEditaUsuario implements ActionListener {
 		janela.add(caixaSenha);
 		janela.add(concluir);
 
-		// Setando dimensões e funções padrão da janela
+		// Setando dimensoes e funcoes padrao da janela
 		janela.setSize(480, 480);
 		janela.setVisible(true);
 
 		// Retorna o texto
-		// Ver como fazer a l�gica de armazenar
+		// Ver como fazer a logica de armazenar
 		caixaNome.getText();
 		caixaCpf.getText();
 		caixaRg.getText();

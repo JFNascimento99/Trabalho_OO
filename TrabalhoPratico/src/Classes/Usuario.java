@@ -26,7 +26,6 @@ public class Usuario extends Pessoa {
 		super(nome, telefone, identidade, cpf, idade);
 		this.email = email;
 		this.senha = senha;
-
 	}
 
 	// Gets and sets
