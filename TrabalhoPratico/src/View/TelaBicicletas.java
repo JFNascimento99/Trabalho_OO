@@ -9,10 +9,6 @@ public class TelaBicicletas implements ActionListener{
 	//Barra de rolagem
 	
 	private JFrame janela = new JFrame ("Seleçao de Bicicletas");
-	//Ver com o monitor como q faz isso muito sono pra resolver
-	//Mas em teoria eh só tacar dentro do parameto do JScrollPane
-	//Do jeito q tá não precisa, mas se quiser fazer pra dar um tchan tá ai
-	private JScrollPane scroll = new JScrollPane();
 	private JLabel titulo = new JLabel("Bicicletas");
 	
 	//Legenda da página
@@ -20,6 +16,11 @@ public class TelaBicicletas implements ActionListener{
 	private JLabel locador = new JLabel("Locador");
 	private JLabel horaCheckIn = new JLabel("Check In");
 	private JLabel horaCheckOut = new JLabel("Check Out");
+	
+	private JLabel tipoBicicletaE = new JLabel("Bicicleta");
+	private JLabel locadorE = new JLabel("Locador");
+	private JLabel horaCheckInE = new JLabel("Check In");
+	private JLabel horaCheckOutE = new JLabel("Check Out");
 	
 	//Bicicletas tradicionaois
 	private JLabel bicicletaT1 = new JLabel("Tradicional 01");
@@ -128,7 +129,7 @@ public class TelaBicicletas implements ActionListener{
 	private JTextField horaOut20 = new JTextField();
 	
 	//Lista de Dropdown
-	String[] users = {"Livre", "João", "Felipe", "Lucas"};//Lista para testar
+	String[] users = {"livre", "joao", "felipe", "lucas"};//Lista para testar
 	
 	//Pra usar uma lista eh so chamar ela dentro do new JComboBox('nome da lista')
 	private JComboBox usuario1 = new JComboBox(users);
@@ -166,6 +167,11 @@ public class TelaBicicletas implements ActionListener{
 		locador.setBounds(170, 50 ,180, 30);
 		horaCheckIn.setBounds(280, 50 ,180, 30);
 		horaCheckOut.setBounds(355, 50 ,180, 30);
+		
+		tipoBicicletaE.setBounds(505, 50 ,180, 30);
+		locadorE.setBounds(645, 50 ,180, 30);
+		horaCheckInE.setBounds(755, 50 ,180, 30);
+		horaCheckOutE.setBounds(830, 50 ,180, 30);
 		
 		//Linha Bike trad 1
 		bicicletaT1.setBounds(25, 80 ,180, 30);
@@ -296,6 +302,11 @@ public class TelaBicicletas implements ActionListener{
 		janela.add(horaCheckIn);
 		janela.add(horaCheckOut);
 		
+		janela.add(tipoBicicletaE);
+		janela.add(locadorE);
+		janela.add(horaCheckInE);
+		janela.add(horaCheckOutE);
+		
 		//Chamando as informação que estarão na janela
 		//Tradicionais
 		janela.add(bicicletaT1);
@@ -403,7 +414,6 @@ public class TelaBicicletas implements ActionListener{
 		janela.setSize(1200, 625);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
-		//janela.add(scroll);
 	}
 	
 	public static void main(String[] args) {

@@ -12,7 +12,7 @@ public abstract class Pessoa {
 	private String idade;
 
 	private Usuario usuario;
-	private Scanner ler = new Scanner(System.in); // Utilizarei para fazer os metodos.*/
+	private Scanner ler = new Scanner(System.in); // Utilizarei para fazer os metodos.
 
 	// Variaveis extra:
 	Boolean validaNome = true;

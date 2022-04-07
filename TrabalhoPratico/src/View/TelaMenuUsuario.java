@@ -28,7 +28,7 @@ public class TelaMenuUsuario implements ActionListener {
 		deletar.setBounds(140, 150, 180, 30);
 
 		janela.setLayout(null);
-		// chamando as informa��o que estar�o na janela
+		// chamando as informacoes que estarao na janela
 		janela.add(titulo);
 		janela.add(cadastrar);
 		janela.add(editar);
@@ -47,7 +47,7 @@ public class TelaMenuUsuario implements ActionListener {
 	public static void main(String[] args) {
 		TelaMenuUsuario menu = new TelaMenuUsuario();
 
-		// Implementação do Action Listener
+		// Implementacao do Action Listener
 		cadastrar.addActionListener(menu);
 		editar.addActionListener(menu);
 		visualizar.addActionListener(menu);
@@ -63,6 +63,7 @@ public class TelaMenuUsuario implements ActionListener {
 			TelaEditaUsuario.main(null);
 
 		if (src == visualizar)
-			TelaBicicletas.main(null);
+			//colocar a tela de buscar usuario
+			TelaVisualizaUsuario.main(null);
 	}
 }

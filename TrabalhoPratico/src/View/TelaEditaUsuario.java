@@ -166,8 +166,6 @@ public class TelaEditaUsuario implements ActionListener {
 					TelaMenuPrincipal.main(null);
 				}
 			}
-
-			// Fazer lógica para alterals os valores
 		}
 	}
 }

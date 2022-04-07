@@ -167,10 +167,7 @@ public class TelaCadastroUsuario implements ActionListener {
 					janela.dispose();
 					TelaMenuPrincipal.main(null);
 				}
-
 			}
-
-			// Fazer lógica para alterals os valores
 		}
 	}
 }
